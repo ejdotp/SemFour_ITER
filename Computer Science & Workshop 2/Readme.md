@@ -7,4 +7,8 @@
 * Two Rules :
   1. Declare class attribute/variaqbles as private.
   2. Use GET & SET method to access &  update the private attributes/variables.
-* Example: [TestEncapsulation.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/TestEncapsulation.java)
+* Example: [TestEncapsulation.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/TestEncapsulation.java)  
+
+## Inheritance:  
+
+* It's a mechanism in which one object aquires all the properties  and behaviors (attributes and methods) of a parent object.
