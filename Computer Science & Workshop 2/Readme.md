@@ -11,4 +11,6 @@
 
 ## Inheritance:  
 
-* It's a mechanism in which one object aquires all the properties  and behaviors (attributes and methods) of a parent object.
+* It's a mechanism in which one object aquires all the properties  and behaviors (attributes and methods) of a parent object.  
+* You can build a new class upon an existing class which will poses all the properties of parent class.  
+* Syntax: class SubClassName extends SuperClassName{//methods}
