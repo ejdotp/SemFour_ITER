@@ -5,4 +5,4 @@
 * Two Rules :
   1. Declare class attribute/variaqbles as private.
   2. Use GET & SET method to access &  update the private attributes/variables.
-* Example: /12_Object Oriented Programming/TestEncapsulation
+* Example: /12_Object Oriented Programming/TestEncapsulation.JAVA
