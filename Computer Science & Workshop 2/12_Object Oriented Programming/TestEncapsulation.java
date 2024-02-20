@@ -1,38 +1,27 @@
-class DemoEncap
+class Person
 {
-	private int ssnValue;
-	private int employeeAge;
-	private String employeeName;
+	private int Age;
+	private String Name;
 	
 	// We will employ get and set methods to use the class objects
-	public int getEmployeeSSN()
+	public String getName()
 	{
-		return ssnValue;
+		return Name;
 	}
 	
-	public String getEmployeeName()
+	public int getAge()
 	{
-		return employeeName;
+		return Age;
 	}
 	
-	public int getEmployeeAge()
+	public void setAge(int newValue)
 	{
-		return employeeAge;
+		Age = newValue;
 	}
 	
-	public void setEmployeeAge(int newValue)
+	public void setName(String newValue)
 	{
-		employeeAge = newValue;
-	}
-	
-	public void setEmployeeName(String newValue)
-	{
-		employeeName = newValue;
-	}
-	
-	public void setEmployeeSSN(int newValue)
-	{
-		ssnValue = newValue;
+		Name = newValue;
 	}
 }
 
@@ -40,12 +29,10 @@ public class TestEncapsulation
 {
 	public static void main(String args[])
 	{
-		DemoEncap obj = new DemoEncap();
-		obj.setEmployeeName("Mark");
-		obj.setEmployeeAge(30);
-		obj.setEmployeeSSN(12345);
-		System.out.println("Employee Name is: " + obj.getEmployeeName());
-		System.out.println("Employee SSN Code is: " + obj.getEmployeeSSN());
-		System.out.println("Employee Age is: " + obj.getEmployeeAge());
+		Person obj = new Person();
+		obj.setName("Mark");
+		obj.setAge(30);
+		System.out.println("Name is: " + obj.getName());
+		System.out.println("Age is: " + obj.getAge());
 	}
 }
