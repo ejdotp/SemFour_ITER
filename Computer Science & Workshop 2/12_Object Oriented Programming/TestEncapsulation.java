@@ -14,14 +14,14 @@ class Person
 		return Age;
 	}
 	
-	public void setAge(int newValue)
+	public void setAge(int Age)
 	{
-		Age = newValue;
+		this.Age = Age;
 	}
 	
-	public void setName(String newValue)
+	public void setName(String Name)
 	{
-		Name = newValue;
+		this.Name = Name;
 	}
 }
 
