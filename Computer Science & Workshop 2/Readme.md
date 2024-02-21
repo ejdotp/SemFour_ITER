@@ -18,4 +18,14 @@
 * 3 Types:
   1. Single Inheritance [class A] <-- [class B]
   2. Multilevel Inheritance [class A] <-- [class B] <-- [class C]
-  3. Heirarchial Inheritance [class C] --> [class A] <-- [class B]
+  3. Heirarchial Inheritance [class C] --> [class A] <-- [class B]  
+
+## Abstraction:  
+
+* It's the process in which we only show essential details/functionality to the user.
+* The non-essential things are hidden from user.
+* Two ways to achieve Abstraction:  
+  1. Abstract class -> (o - 100%)
+  2. Interface -> (100%)
+* An abstract class must be declared with an abstract keyword:  
+  > abstract class A{ //code }
