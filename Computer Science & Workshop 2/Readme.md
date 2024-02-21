@@ -28,4 +28,5 @@
   1. Abstract class -> (o - 100%)
   2. Interface -> (100%)
 * An abstract class must be declared with an abstract keyword:  
-  > abstract class A{ //code }
+  > abstract class A{ //code } 
+* Example: [Abstraction.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/Abstraction/Abstraction.java)
