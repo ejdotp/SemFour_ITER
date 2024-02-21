@@ -9,8 +9,11 @@ class Yamaha extends Bike
     {
         System.out.println("running safely");
     }
+}
 
-    public static void main(String args[])
+public class Abstraction
+{
+	public static void main(String args[])
     {
         Bike b = new Yamaha();
         b.run();
