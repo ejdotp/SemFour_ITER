@@ -29,4 +29,16 @@
   2. Interface -> (100%)
 * An abstract class must be declared with an abstract keyword:  
   > abstract class A{ //code } 
-* Example: [Abstraction.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/3_Abstraction/Abstraction.java)
+* Example: [Abstraction.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/3_Abstraction/Abstraction.java)  
+
+## Polymorphism:
+
+* Poly -> Many ; Morph -> Forms (from Greek)  
+* Like: Woman -> Mother -> Sister -> Wife -> Daughter  
+* To perform a single action in different ways  
+* The ability of a message to be displayed in more than one form  
+* Two Types:
+  1. Compile Time/Static Polymorphism  
+    + Function Overloading  
+    + Operator Overloading [Not supported by java]  
+  2. Run Time Polymorphism  
