@@ -39,6 +39,21 @@
 * The ability of a message to be displayed in more than one form  
 * Two Types:
   1. Compile Time/Static Polymorphism  
-    + Function Overloading  
-    + Operator Overloading [Not supported by java]  
+      + Function Overloading  
+      + Operator Overloading [Not supported by java]  
   2. Run Time Polymorphism  
+* <b>Interface:</b>  
+  + Blue print of a class  
+  + It has static constants and abstract methods.
+  + Interface can't be used to create objects.  
+  + "Implement" - used to achieve interface.  
+  + By default all attributes of interface are public, static & final.  
+  + One implementation - you must override all its methods.  
+    <pre>
+    //Syntax:
+          interface A{  
+            static int a =10; //declare constant fields.
+            void move(); //declare abstract methods
+          }</pre>  
+  + A class only extend to one class but can imlement infinite interfaces.  
+  
