@@ -83,5 +83,5 @@
         + when a class knows everything about another class.
         + If all the members are public, class B can access directly from class A using operators.  
         + [class A] --Tight Coupling--> [class B] 
-        + Example: [testInterface1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/5_Interface/testInterface1.java)
+        + Example: [testTightCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/6_Coupling/testTightCoupling1.java)
     
