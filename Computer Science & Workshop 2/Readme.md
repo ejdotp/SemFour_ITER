@@ -43,7 +43,8 @@
      + Function Overloading
      + Operator Overloading [Not supported by java]
   2. Run Time Polymorphism
-* `<b>`Interface:`</b>`
+
+## Interface:
   + Blue print of a class
   + It has static constants and abstract methods.
   + Interface can't be used to create objects.
@@ -67,3 +68,10 @@
     | Instantiate an object                                 | You can't instantiate an object                             |
     | class can have any method ( declaration & body )      | It can only have abstract method(only declaration, no body) |
     | The access specifiers are: Public Private & protected | Only Public                                                 |
+
+## Coupling and Cohesion:  
+
+* It is used to solve complex problems.  
+* To deliver quality codes.  
+* Loose coupling and high cohesion is desirable for good practice of coding.  
+* ![alt text](https://static.javatpoint.com/tutorial/software-engineering/images/software-engineering-coupling-and-cohesion.png)
