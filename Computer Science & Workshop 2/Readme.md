@@ -90,5 +90,26 @@
 * <B>Cohesion[intraclass]: </B>  
   + It refers to the extent which a class is defined to do a specific specialized task.
   + Two Types: 
-    1. High Cohesion [Bad Programming Style]
-    2. Low Cohesion [Good Programming Style]
+    1. High Cohesion [Bad Programming Style]  
+        * when a class is designed to do a specific specialized task.  
+        * Example:  
+          <pre>
+          class player_data{
+            class coonect_toplayer{connect_toplayer ctp = new connect_toplayer};
+            class details_player{...};
+            class player_rankiing{...};
+            class game_details{...};
+            class player_travel{...};
+          }
+          </pre>
+    2. Low Cohesion [Good Programming Style]  
+        * when a class is designed to many tasks rather than a single task, it's calles a "low cohesive" class. 
+        * Example: [testLowCohesive1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/6_Coupling/testLowCohesive1.java)
+          <pre>
+          class player_data{
+            public void connect_toplayer();
+            public void details_player();
+            public void player_rankiing();
+            public void game_details();
+            public void player_travel();
+          }</pre>
