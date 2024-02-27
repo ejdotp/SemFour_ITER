@@ -23,7 +23,7 @@ class testLooseCoupling1
 {
     public static void main(String[] args) {
         A a = new A();
-        a.setName("Advitya");
+        a.setName(null);
         System.out.println("Name is " + a.getName());
     }
 }

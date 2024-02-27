@@ -74,7 +74,7 @@
 * It is used to solve complex problems.  
 * To deliver quality codes.  
 * Loose coupling and high cohesion is desirable for good practice of coding.  
-* <B>Coupling: </B>
+* <B>Coupling[interclass]: </B>
   + Pairing, Interdependency
   + The extend to which a class knows about another class  
   + Two Types: 
@@ -87,6 +87,8 @@
         + If all the members are public, class B can access directly from class A using operators.  
         + [class A] --Tight Coupling--> [class B] 
         + Example: [testTightCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/6_Coupling/testTightCoupling1.java)
-* <B>Cohesion: </B>  
-  + When a class does many things then it is said to be Highly Cohesive.  
-  + Class should do only one thing or related functionality. 
+* <B>Cohesion[intraclass]: </B>  
+  + It refers to the extent which a class is defined to do a specific specialized task.
+  + Two Types: 
+    1. High Cohesion [Bad Programming Style]
+    2. Low Cohesion [Good Programming Style]
