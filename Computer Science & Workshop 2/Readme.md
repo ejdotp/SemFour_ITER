@@ -74,4 +74,11 @@
 * It is used to solve complex problems.  
 * To deliver quality codes.  
 * Loose coupling and high cohesion is desirable for good practice of coding.  
-* ![alt text](https://static.javatpoint.com/tutorial/software-engineering/images/software-engineering-coupling-and-cohesion.png)
+* <B>Coupling: </B>
+  + Pairing, Interdependency
+  + The extend to which a class knows about another class  
+  + Two Types: 
+    1. Loose Coupling
+    2. Tight Coupling 
+    
+   ![alt text](https://static.javatpoint.com/tutorial/software-engineering/images/software-engineering-coupling-and-cohesion.png)
