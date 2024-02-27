@@ -79,6 +79,9 @@
   + The extend to which a class knows about another class  
   + Two Types: 
     1. Loose Coupling
-    2. Tight Coupling 
+    2. Tight Coupling
+        + when a class knows everything about another class.
+        + If all the members are public, class B can access directly from class A using operators.  
+        + [class A] --Tight Coupling--> [class B] 
+        + Example: [testInterface1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/5_Interface/testInterface1.java)
     
-   ![alt text](https://static.javatpoint.com/tutorial/software-engineering/images/software-engineering-coupling-and-cohesion.png)
