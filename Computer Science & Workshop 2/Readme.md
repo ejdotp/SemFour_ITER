@@ -78,7 +78,10 @@
   + Pairing, Interdependency
   + The extend to which a class knows about another class  
   + Two Types: 
-    1. Loose Coupling
+    1. Loose Coupling  
+        + when class A doesn't have public variables
+        + class A can't be accessed by any other class. 
+        + Example: [testLooseCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/6_Coupling/testLooseCoupling1.java) 
     2. Tight Coupling
         + when a class knows everything about another class.
         + If all the members are public, class B can access directly from class A using operators.  

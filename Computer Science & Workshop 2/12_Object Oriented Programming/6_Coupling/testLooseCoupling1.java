@@ -1,6 +1,6 @@
 class A
 {
-    public String name; //public data member of A class
+    private String name; //public data member of A class
 
     public String getName()
     {
@@ -19,14 +19,15 @@ class A
     }
 }
 
-class testTightCoupling1
+class testLooseCoupling1
 {
     public static void main(String[] args) {
         A a = new A();
-        a.name = null;
-        System.out.println("Name is " + a.name);
+        a.setName(null);
+        System.out.println("Name is " + a.getName());
     }
 }
-/*
-Name is null
+/*output:
+cant initialize to a null dude
+Name is not initialized
  */
