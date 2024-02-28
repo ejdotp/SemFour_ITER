@@ -203,4 +203,24 @@
       printArray(charArray);
     }
   }</pre>
+
+  <pre>
+  class Test&lt;T, U&gt;{
+    T obj1;
+    U obj2;
+    Test(T obj1, U obj2){
+      this.obj1=obj1;
+      this.obj2=obj2;
+    }
+    public static void print(){
+      System.out.println(obj1);
+      System.out.println(obj2);
+    }
+  }
+  class Test_Generic{
+    public static void main(String[] args){
+      Test&lt;String, Integer&gt; obj = new Test&lt;String, Integer&gt;("Hello", 17);
+      obj.print();
+    }
+  }</pre>
   
