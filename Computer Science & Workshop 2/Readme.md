@@ -169,7 +169,7 @@
      list.add(32); //compiletime Error
      </pre>
 
-### Generic class  
+### Generic class :- 
 * A class that can refer to any type is a generic class. 
 * You have to pass different parameters during the declaration of class.
 * Types of parameters:
@@ -186,4 +186,21 @@
     T get(){
       return obj;
     }
+  }</pre>  
+
+  ### Generic Method :-  
+  <pre>
+  public class Test_Generic_Method{
+    public static &lt;T&gt; void printArray(E[] elements){
+      for(E element:elements){
+        System.out.println(element;)
+      }
+    }
+    public static void main(String[] args){
+      Integer[] intArray = {10, 20, 30, 40, 50, 60};
+      Character[] charArray = {'A', 'B', 'C', 'D', 'E'};
+      printArray(intArray);
+      printArray(charArray);
+    }
   }</pre>
+  
