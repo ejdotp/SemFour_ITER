@@ -131,3 +131,4 @@
 * Advantage of Generics:  
    1. Type-Safety :
       * You can hold a single type of objects in generics. It doesn't allow to store other objects. 
+      > [testGenerics1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/7_Generics/testGenerics1.java)
