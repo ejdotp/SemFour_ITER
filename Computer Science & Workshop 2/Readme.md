@@ -178,7 +178,7 @@
    3. K-Key  
    4. N-Number
    5. V-Values
-* <pre>class MyGen&lt;T&gt;{
+  <pre>class MyGen&lt;T&gt;{
     T obj;
     void add(T obj){
       this.obj=obj;
