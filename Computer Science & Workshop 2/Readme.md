@@ -119,4 +119,15 @@
             public void player_rankiing();
             public void game_details();
             public void player_travel();
-          }</pre>
+          }</pre>  
+
+## Generics: 
+
+* The java generics programming is introduced to deal with type-safe objects.  
+* It makes the code stable by detecting the bugs at compile time.  
+* Before generics you can store any type of objects in the collection i.e. non-generics.
+   > [testArrayList1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/7_Generics/testArrayList1.java)
+* Now generics force the java programmer to store a specific type of objects.  
+* Advantage of Generics:  
+   1. Type-Safety :
+      * You can hold a single type of objects in generics. It doesn't allow to store other objects. 
