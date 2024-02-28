@@ -102,7 +102,7 @@
 * It is used to solve complex problems.
 * To deliver quality codes.
 * Loose coupling and high cohesion is desirable for good practice of coding.
-* ** Coupling[interclass]: **
+* **Coupling[interclass]:** 
   + Pairing, Interdependency
   + The extend to which a class knows about another class
   + Two Types:
@@ -115,7 +115,7 @@
        + If all the members are public, class B can access directly from class A using operators.
        + [class A] --Tight Coupling--> [class B]
        + Example: [testTightCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/6_Coupling/testTightCoupling1.java)
-* `<B>`Cohesion[intraclass]: `</B>`
+* **Cohesion[intraclass]:**
   + It refers to the extent which a class is defined to do a specific specialized task.
   + Two Types:
     1. High Cohesion [Bad Programming Style]
@@ -150,7 +150,7 @@
   > [testNonGenerics1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/7_Generics/testNonGenerics1.java)
   >
 * Now generics force the java programmer to store a specific type of objects.
-* Advantage of Generics:
+* **Advantage of Generics:**
   1. Type-Safety :
 
      * You can hold a single type of objects in generics. It doesn't allow to store other objects.
@@ -188,7 +188,7 @@
     }
   }</pre>  
 
-  ### Generic Method :-  
+### Generic Method :-  
   <pre>
   public class Test_Generic_Method{
     public static &lt;T&gt; void printArray(E[] elements){
