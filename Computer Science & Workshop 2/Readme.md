@@ -102,7 +102,7 @@
 * It is used to solve complex problems.
 * To deliver quality codes.
 * Loose coupling and high cohesion is desirable for good practice of coding.
-* `<B>`Coupling[interclass]: `</B>`
+* <B>Coupling[interclass]: </B>
   + Pairing, Interdependency
   + The extend to which a class knows about another class
   + Two Types:
