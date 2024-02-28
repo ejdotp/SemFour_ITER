@@ -10,7 +10,7 @@ class Rat extends Animal{
     }
 }
 
-class snake extends Animal{
+class Snake extends Animal{
     void eat(){
         System.out.println("eating rat");
     }
