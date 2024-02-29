@@ -239,7 +239,7 @@
 ## toString Overriding:  
 
 **The Problem:**  
-<pre>
+<pre lang=lisp>
 <code class="language-java">class complex
 {
     private double re, in;
