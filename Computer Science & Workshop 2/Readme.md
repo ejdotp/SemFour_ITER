@@ -1,4 +1,9 @@
-# [12. ](https://github.com/ejdotp/SemFour_ITER/tree/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming)Object Oriented Programming
+# [12. ](https://github.com/ejdotp/SemFour_ITER/tree/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming)Object Oriented Programming  
+
+## Index: 
+
+    *  [1. Encapsulation](#encapsulation)
+    *  [7. Generics](#generics)
 
 ## Encapsulation:
 
