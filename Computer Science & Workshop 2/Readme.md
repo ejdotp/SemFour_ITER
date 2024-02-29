@@ -92,12 +92,12 @@
 + By default all attributes of interface are public, static & final.
 + One implementation - you must override all its methods.
 
-  <pre>
-  //Syntax:
+  <pre lang=lisp>
+  <code class="language-java">//Syntax:
         interface A{  
           static int a = 10; //declare constant fields.
           void move(); //declare abstract methods
-        }</pre>
+        }</code></pre>
 + A class only extend to one class but can implement infinite interfaces.
 + Example: [testInterface1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/5_Interface/testInterface1.java)
 + [class] -- extends --> [class]
@@ -133,26 +133,26 @@
     1. High Cohesion [Bad Programming Style]
        * when a class is designed to do a specific specialized task.
        * Example:
-         <pre>
-         class player_data{
+         <pre lang=lisp>
+         <code class="language-java">class player_data{
            class coonect_toplayer{connect_toplayer ctp = new connect_toplayer};
            class details_player{...};
            class player_rankiing{...};
            class game_details{...};
            class player_travel{...};
          }
-         </pre>
+         </code></pre>
     2. Low Cohesion [Good Programming Style]
        * when a class is designed to many tasks rather than a single task, it's calles a "low cohesive" class.
        * Example:
-         <pre>
-         class player_data{
+         <pre lang=lisp>
+         <code class="language-java">class player_data{
            public void connect_toplayer();
            public void details_player();
            public void player_rankiing();
            public void game_details();
            public void player_travel();
-         }</pre>
+         }</code></pre>
 
 # 13. Generics:
 
@@ -175,11 +175,11 @@
        + [Non Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/7_Generics/testNonGenerics2.java)
        + [Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/7_Generics/testGenerics2.java)
   3. It detects the bug in compile time.
-     <pre>
-     List&lt;String&gt; list = newArrayList&lt;String&gt;();
+     <pre lang=lisp>
+     <code class="language-java">List&lt;String&gt; list = newArrayList&lt;String&gt;();
      list.add("hello");
      list.add(32); //compiletime Error
-     </pre>
+     </code></pre>
 
 ## Generic class :- 
 * A class that can refer to any type is a generic class. 
@@ -190,7 +190,8 @@
    3. K-Key  
    4. N-Number
    5. V-Values
-  <pre>class MyGen&lt;T&gt;{
+<pre lang=lisp>
+<code class="language-java">class MyGen&lt;T&gt;{
     T obj;
     void add(T obj){
       this.obj=obj;
@@ -198,11 +199,11 @@
     T get(){
       return obj;
     }
-  }</pre>  
+  }</code></pre>  
 
 ## Generic Method :-  
-  <pre>
-  public class Test_Generic_Method{
+  <pre lang=lisp>
+<code class="language-java">public class Test_Generic_Method{
     public static &lt;T&gt; void printArray(E[] elements){
       for(E element:elements){
         System.out.println(element;)
@@ -214,10 +215,10 @@
       printArray(intArray);
       printArray(charArray);
     }
-  }</pre>
+  }</code></pre>
 
-  <pre>
-  class Test&lt;T, U&gt;{
+  <pre lang=lisp>
+<code class="language-java">class Test&lt;T, U&gt;{
     T obj1;
     U obj2;
     Test(T obj1, U obj2){
@@ -234,7 +235,7 @@
       Test&lt;String, Integer&gt; obj = new Test&lt;String, Integer&gt;("Hello", 17);
       obj.print();
     }
-  }</pre>
+  }</code></pre>
 
 ## toString Overriding:  
 
@@ -310,9 +311,9 @@ class Complex
 
 ## Equals Overriding  
 
+**Problem:**
 <pre lang=lisp>
 <code class="language-java">
-```javascript I'm A tab
 class complex
 {
     private double re, in;
@@ -338,7 +339,8 @@ public class kichhigote2
 
 /*output:
 no no
-*/
-```</code></pre>
+*/</code></pre>
+
+**Solution:**
 
   
