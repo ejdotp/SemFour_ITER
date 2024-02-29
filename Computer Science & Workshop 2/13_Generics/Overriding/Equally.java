@@ -24,7 +24,7 @@ class Complex
         if (!(o instanceof Complex))
             return false;
         Complex c = (Complex) o;
-        return Double.compare(re, c.re) ==0 && Double.compare(im, c.im) == 0;
+        return Double.compare(re, c.re) == 0 && Double.compare(im, c.im) == 0;
     }
 }
 
