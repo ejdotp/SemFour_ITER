@@ -1,14 +1,16 @@
-# [12. ](https://github.com/ejdotp/SemFour_ITER/tree/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming)Object Oriented Programming  
-
 ### Index:  
-[1. Encapsulation](#encapsulation)  
-[2. Inheritance](#inheritance)  
-[3. Abstraction](#abstraction)  
-[4. Polymorphism](#polymorphism)  
-[5. Interface](#interface)  
-[6. Coupling & Cohesion](#coupling-and-cohesion)  
-[7. Generics](#generics)
-<hr>  
+
+* [12. Object Oriented Programming](#object-oriented-programming)   
+   + [1. Encapsulation](#encapsulation)  
+   + [2. Inheritance](#inheritance)  
+   + [3. Abstraction](#abstraction)  
+   + [4. Polymorphism](#polymorphism)  
+   + [5. Interface](#interface)  
+   + [6. Coupling & Cohesion](#coupling-and-cohesion)  
+* [13. Generics](#13-generics)  
+<hr> 
+
+# 12. Object Oriented Programming   
 
 ## Encapsulation:
 
@@ -152,7 +154,7 @@
            public void player_travel();
          }</pre>
 
-## Generics:
+# 13. Generics:
 
 * The java generics programming is introduced to deal with type-safe objects.
 * It makes the code stable by detecting the bugs at compile time.
@@ -179,7 +181,7 @@
      list.add(32); //compiletime Error
      </pre>
 
-### Generic class :- 
+## Generic class :- 
 * A class that can refer to any type is a generic class. 
 * You have to pass different parameters during the declaration of class.
 * Types of parameters:
@@ -198,7 +200,7 @@
     }
   }</pre>  
 
-### Generic Method :-  
+## Generic Method :-  
   <pre>
   public class Test_Generic_Method{
     public static &lt;T&gt; void printArray(E[] elements){
@@ -234,10 +236,11 @@
     }
   }</pre>
 
-## String Overriding:  
+## toString Overriding:  
 
 **The Problem:**  
-<pre>class complex
+<pre>
+<code class="language-java">class complex
 {
     private double re, in;
     public complex (double re, double in)
@@ -258,5 +261,50 @@ public class kichhigote
 
 /*output:
 complex@7ad041f3
-*/</pre>
+*/
+</code></pre>  
+
+**The Solution:**  
+
+<pre>public class ToString
+{
+    public static void main(String[] args)
+    {
+        Complex c1 = new Complex(10, 15);
+        System.out.println(c1);
+    }
+}
+
+class Complex
+{
+    private double re, im;
+    public Complex(double re, double im)
+    {
+        this.re = re;
+        this.im = im;
+    }
+
+    //Generics
+    public double getReal()
+    {
+        return this.re;
+    }
+    public double getImaginary()
+    {
+        return this.im;
+    }
+    public void setReal(double re)
+    {
+        this. re = re;
+    }
+    public void setImaginary(double im)
+    {
+        this.im = im;
+    }
+    //Overriding toSTring method of string class
+    public String toString(){
+        return this.re + " + " + this.im + "I";
+    }
+}</pre>
+
   
