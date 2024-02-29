@@ -1,4 +1,5 @@
-public class ToString
+package Overriding;
+public class Equally
 {
     public static void main(String[] args)
     {
