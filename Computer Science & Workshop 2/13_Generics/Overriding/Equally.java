@@ -1,10 +1,10 @@
-package Overriding;
 public class Equally
 {
     public static void main(String[] args)
     {
         Complex c1 = new Complex(10, 15);
-        System.out.println(c1);
+        Complex c2 = new Complex(10, 15);
+        System.out.println(c1.equals(c2));
     }
 }
 
@@ -17,25 +17,18 @@ class Complex
         this.im = im;
     }
 
-    //Generics
-    public double getReal()
+    public boolean equals(Object o)
     {
-        return this.re;
-    }
-    public double getImaginary()
-    {
-        return this.im;
-    }
-    public void setReal(double re)
-    {
-        this. re = re;
-    }
-    public void setImaginary(double im)
-    {
-        this.im = im;
-    }
-    //Overriding toSTring method of string class
-    public String toString(){
-        return this.re + " + " + this.im + "I";
+        if(o == this)
+            return true;
+        if (!(o instanceof Complex))
+            return false;
+        Complex c = (Complex) o;
+        return Double.compare(re, c.re) ==0 && Double.compare(im, c.im) == 0;
     }
 }
+
+/*
+Output:
+true
+ */
