@@ -8,6 +8,10 @@
    + [5. Interface](#interface)  
    + [6. Coupling & Cohesion](#coupling-and-cohesion)  
 * [13. Generics](#13-generics)  
+   + [1. Generic Class](#generic-class)  
+   + [2. Generic Method](#generic-method)  
+   + [3. Overriding toString](#tostring-overriding)  
+   + [4. Overriding equals](#equals-overriding)  
 <hr> 
 
 # 12. Object Oriented Programming   
