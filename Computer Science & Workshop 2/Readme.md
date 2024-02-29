@@ -2,8 +2,8 @@
 
 ## Index: 
 
-    *  [1. Encapsulation](#encapsulation)
-    *  [7. Generics](#generics)
+[1. Encapsulation](#encapsulation)
+[7. Generics](#generics)
 
 ## Encapsulation:
 
