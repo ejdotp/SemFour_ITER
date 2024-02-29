@@ -224,7 +224,7 @@
     }
   }</pre>
 
-## String Override:  
+## String Overriding:  
 
 <pre>class complex
 {
