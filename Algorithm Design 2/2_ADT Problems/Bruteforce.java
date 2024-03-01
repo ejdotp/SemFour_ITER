@@ -21,7 +21,7 @@ class Bruteforce {
 	public static void main(String[] args) {
 		Bruteforce obj = new Bruteforce();
 		// text
-		String river = "Bro really said oh ethire start position and end position duita jaga mention heichi. Let's adda random the here which we are to find.";
+		String river = "Bro really said oh ethire start position and end position duita jaga mention heichi. Let's add a random the here which we are to find.";
 		// word that want to be matched in the text
 		String drop = "and";
 		// calling the function
