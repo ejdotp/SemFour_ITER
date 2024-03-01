@@ -26,13 +26,12 @@ class Bruteforce {
 		String drop = "and";
 		// calling the function
 		int start = obj.bruteforce(drop, river);
-		int end = start + 1;
 		// condition to check whether the pattern is matched are not
 		if (start == -1) {
 			System.out.println("Pattern is not matched in the text");
 		} else {
-			System.out.println("Found at position:" + (start + 1));
-			System.out.println("End at the position:" + (end + drop.length()));
+			System.out.println("Found at position:" + (start));
+			System.out.println("End at the position:" + (start + drop.length() - 1));
 		}
 	}
 }
