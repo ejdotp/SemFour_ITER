@@ -1,3 +1,5 @@
+//add occurence to it
+
 class Bruteforce {
 	// called function
 	public int bruteforce(String drop, String river) {
