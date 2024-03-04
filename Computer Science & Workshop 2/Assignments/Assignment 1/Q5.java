@@ -60,7 +60,7 @@ class Student
     }
 }
 
-class Main1
+class Main
 {
     public static void main(String[] args)
     {
@@ -82,3 +82,20 @@ class Main1
         student2.displayStudentInfo();
     }
 }
+
+/*
+Output:
+
+College 1: ABC University - California
+College 2: XYZ Institute - New York
+----------------------
+Student ID: 101
+Student Name: Alice
+College Name: ABC University
+College Location: California
+----------------------
+Student ID: 102
+Student Name: Bob
+College Name: XYZ Institute
+College Location: New York
+---------------------- */
