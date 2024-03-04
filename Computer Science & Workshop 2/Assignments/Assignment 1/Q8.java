@@ -40,7 +40,7 @@ class Bicycle implements Vehicle
     }
 }
 
-class Main69
+class Main
 {
     public static void main(String[] args)
     {
