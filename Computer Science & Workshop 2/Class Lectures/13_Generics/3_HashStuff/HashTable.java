@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class HashTable
+class SmashTable
 {
     public static void main(String[] args)
     {
@@ -17,3 +17,10 @@ public class HashTable
         System.out.println(hm.getOrDefault(110, "Not Found"));  //will return not found if not present
     }
 }
+
+/*103 Rahul
+102 Ravi
+101 Vijay
+100 Amit
+Vijay
+Not Found */
