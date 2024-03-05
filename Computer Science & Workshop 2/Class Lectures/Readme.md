@@ -452,7 +452,8 @@ Now value is Jackand key is: 19
 Now value is Brianand key is: 7
 Now value is Georgeand key is: 14 */</code></pre>
 
-2. Using [map.putIfAbsent(5,"abc");] to add a new element to hashmap: **[kichhigote4.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/HashMap%20Overriding/kichhigote4.java)**
+2. Using [map.putIfAbsent(5,"abc");] to add a new element to hashmap. [map1.putAll(map)] will copy all elements from map to map1  
+ **[kichhigote4.java :](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/HashMap%20Overriding/kichhigote4.java)**
 
 <pre>
 <code class="language-java">import java.util.*;
@@ -471,18 +472,35 @@ class HashMap1
         map.putIfAbsent(6, "Apple"); //will work
         map.putIfAbsent(2, "Panasa"); //wont work
 
-        System.out.println("Iterating Hashmap...");
+        System.out.println("Iterating Hashmap0...");
         for(Map.Entry m : map.entrySet())
+            System.out.println(m.getKey() + " " + m.getValue());
+
+        HashMap<Integer, String> map1 = new HashMap<Integer, String>();
+        map1.put(7, "Kiwi");
+        map1.putAll(map); //Copying all elements of map to map1
+
+        System.out.println("\nIterating Hashmap1...");
+        for(Map.Entry m : map1.entrySet())
             System.out.println(m.getKey() + " " + m.getValue());
     }
 }
 
-/*Iterating Hashmap...
+/*Iterating Hashmap0...
 1 Mango
 2 Apple
 3 Banana
 4 Grapes
 5 Pijuli
-6 Apple*/
+6 Apple
+
+Iterating Hashmap1...
+1 Mango
+2 Apple
+3 Banana
+4 Grapes
+5 Pijuli
+6 Apple
+7 Kiwi*/
 //Bro reorders itself cuz bro's a HashMap</code></pre>
   

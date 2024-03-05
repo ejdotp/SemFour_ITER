@@ -14,17 +14,34 @@ class HashMap1
         map.putIfAbsent(6, "Apple"); //will work
         map.putIfAbsent(2, "Panasa"); //wont work
 
-        System.out.println("Iterating Hashmap...");
+        System.out.println("Iterating Hashmap0...");
         for(Map.Entry m : map.entrySet())
+            System.out.println(m.getKey() + " " + m.getValue());
+
+        HashMap<Integer, String> map1 = new HashMap<Integer, String>();
+        map1.put(7, "Kiwi");
+        map1.putAll(map); //Copying all elements of map to map1
+
+        System.out.println("\nIterating Hashmap1...");
+        for(Map.Entry m : map1.entrySet())
             System.out.println(m.getKey() + " " + m.getValue());
     }
 }
 
-/*Iterating Hashmap...
+/*Iterating Hashmap0...
 1 Mango
 2 Apple
 3 Banana
 4 Grapes
 5 Pijuli
-6 Apple*/
+6 Apple
+
+Iterating Hashmap1...
+1 Mango
+2 Apple
+3 Banana
+4 Grapes
+5 Pijuli
+6 Apple
+7 Kiwi*/
 //Bro reorders itself cuz bro's a HashMap
