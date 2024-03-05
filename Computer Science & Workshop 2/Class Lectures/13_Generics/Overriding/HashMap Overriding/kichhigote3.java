@@ -27,3 +27,14 @@ class HashMapExample
         }
     }
 }
+
+/*The value is:Jane and key is: 16
+The value is:Paul and key is: 33
+The value is:Jack and key is: 19
+The value is:Brian and key is: 7
+The value is:George and key is: 14
+Index 2 has value of null
+Now value is Pauland key is: 33
+Now value is Jackand key is: 19
+Now value is Brianand key is: 7
+Now value is Georgeand key is: 14 */
