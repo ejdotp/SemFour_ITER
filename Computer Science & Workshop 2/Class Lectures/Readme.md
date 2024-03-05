@@ -23,7 +23,7 @@
 * Two Rules :
   1. Declare class attribute/variaqbles as private.
   2. Use GET & SET method to access &  update the private attributes/variables.
-* Example: [TestEncapsulation.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/1_Encapsulation/TestEncapsulation.java)
+* Example: [TestEncapsulation.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/1_Encapsulation/TestEncapsulation.java)
 * | Advantages                                                                                        | Disadvantages                                      |
   | ------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
   | code becomes more flexible. Programmer can change one part of code without affecting other parts. | It can lead to complex code, if not used properly. |
@@ -35,7 +35,7 @@
 * It's a mechanism in which one object aquires all the properties  and behaviors (attributes and methods) of a parent object.
 * You can build a new class upon an existing class which will poses all the properties of parent class.
 * Syntax: class SubClassName extends SuperClassName{//methods}
-* Example: [Inheritance.java](https://github.com/ejdotp/SemFour_ITER/tree/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/2_Inheritance)
+* Example: [Inheritance.java](https://github.com/ejdotp/SemFour_ITER/tree/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/2_Inheritance)
 * 3 Types:
   1. Single Inheritance [class A] <-- [class B]
   2. Multilevel Inheritance [class A] <-- [class B] <-- [class C]
@@ -56,7 +56,7 @@
 * An abstract class must be declared with an abstract keyword:
   > abstract class A{ //code }
   >
-* Example: [Abstraction.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/3_Abstraction/Abstraction.java)
+* Example: [Abstraction.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/3_Abstraction/Abstraction.java)
 * | Advantages                                                          | Disadvantages                                                                              |
   | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
   | It protect the implementation of program from users.                | Over use of abstraction makes the code less optimal because of unneccessary layer of code. |
@@ -73,12 +73,12 @@
   1. Compile Time/Static Polymorphism
      + Function Overloading
      + Operator Overloading [Not supported by java]
-     + Example: [TestOverloading1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/4_Polymorphism/TestOverloading1.java)
+     + Example: [TestOverloading1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/4_Polymorphism/TestOverloading1.java)
   2. Run Time Polymorphism
      + Dynamic Method Dispatch
      + Override the function at runtime
      + Override is when the derived class has same definition of the functions of box class.
-     + Example: [TestOverriding1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/4_Polymorphism/TestOverriding1.java)
+     + Example: [TestOverriding1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/4_Polymorphism/TestOverriding1.java)
 * In Overloading -> functions are in same class
 * In Overriding -> functions are in different class
 * | Advantages                                                                             | Disadvantages                                                            |
@@ -103,7 +103,7 @@
           void move(); //declare abstract methods
         }</code></pre>
 + A class only extend to one class but can implement infinite interfaces.
-+ Example: [testInterface1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/5_Interface/testInterface1.java)
++ Example: [testInterface1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/5_Interface/testInterface1.java)
 + [class] -- extends --> [class]
 + [class] -- implements --> [interface]
 + [Interface] -- extends --> [interface]
@@ -125,12 +125,12 @@
     1. Loose Coupling
        + when class A doesn't have public variables
        + class A can't be accessed by any other class.
-       + Example: [testLooseCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/6_Coupling/testLooseCoupling1.java)
+       + Example: [testLooseCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/6_Coupling/testLooseCoupling1.java)
     2. Tight Coupling
        + when a class knows everything about another class.
        + If all the members are public, class B can access directly from class A using operators.
        + [class A] --Tight Coupling--> [class B]
-       + Example: [testTightCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/6_Coupling/testTightCoupling1.java)
+       + Example: [testTightCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/6_Coupling/testTightCoupling1.java)
 * **Cohesion[intraclass]:**
   + It refers to the extent which a class is defined to do a specific specialized task.
   + Two Types:
@@ -163,7 +163,7 @@
 * The java generics programming is introduced to deal with type-safe objects.
 * It makes the code stable by detecting the bugs at compile time.
 * Before generics you can store any type of objects in the collection i.e. non-generics.
-  > [testNonGenerics1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/7_Generics/testNonGenerics1.java)
+  > [testNonGenerics1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testNonGenerics1.java)
   >
 * Now generics force the java programmer to store a specific type of objects.
 * **Advantage of Generics:**
@@ -171,13 +171,13 @@
 
      * You can hold a single type of objects in generics. It doesn't allow to store other objects.
 
-     > [testGenerics1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/7_Generics/testGenerics1.java)
+     > [testGenerics1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testGenerics1.java)
      >
   2. No Type Casting Required :
 
      * Before generics, we needed to typecast.
-       + [Non Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/7_Generics/testNonGenerics2.java)
-       + [Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/12_Object%20Oriented%20Programming/7_Generics/testGenerics2.java)
+       + [Non Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testNonGenerics2.java)
+       + [Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testGenerics2.java)
   3. It detects the bug in compile time.
      <pre lang=lisp>
      <code class="language-java">List&lt;String&gt; list = newArrayList&lt;String&gt;();
@@ -383,4 +383,53 @@ true
  */
 </code></pre>
 
+## HashMap Overriding  
+
+### Map Interface:
+  + Map is a key value pair.
+  + id -> Details
+  + Types:  
+    1. Hashmap  
+    2. Hash Table  
+    3. Tree Map  
+    4. Linked HashMap  
+  + Basic principle of hashing: protects your data and your privacy.  
+  + [Data] --Hashing--> [Hashcode]  (no otherway around)   
+
+### HashMap in Java: 
+  + It is collection class that uses the system of pairs, where one is the key and other is the value.  
+  + The objects that are stored in this collection don't have to be ordered as it is employed to find any value using corresponding key.  
+
+### Example:
+<pre>
+<code class="language-java">import java.util.*;
+class HashMapExample
+{
+    public static void main(String[] args)
+    {
+        HashMap<Integer, String> hmap1 = new HashMap<Integer, String>();
+        hmap1.put(14, "George");
+        hmap1.put(33, "Paul");
+        hmap1.put(16, "Jane");
+        hmap1.put(7, "Brian");
+        hmap1.put(19, "Jack");
+        Set set1 = hmap1.entrySet();
+        Iterator iterator1 = set1.iterator();
+        while (iterator1.hasNext())
+        {
+            Map.Entry ment1 = (Map.Entry) iterator1.next();
+            System.out.println("The value is:" + ment1.getValue() + " and key is: " + ment1.getKey());
+        }
+        String va = hmap1.get(2);
+        System.out.println("Index 2 has value of " + va);
+        hmap1.remove(16);
+        Set set2 = hmap1.entrySet();
+        Iterator iterator2 = set2.iterator();
+        while (iterator2.hasNext())
+        {
+            Map.Entry ment2 = (Map.Entry) iterator2.next();
+            System.out.println("Now value is " + ment2.getValue() + "and key is: " + ment2.getKey());
+        }
+    }
+}</code></pre>
   
