@@ -24,6 +24,14 @@ class HashMap1
 
         System.out.println("\nIterating Hashmap1...");
         for(Map.Entry m : map1.entrySet())
+            System.out.println(m.getKey() + " " + m.getValue());  
+
+        map.putAll(map1);
+        map.remove(2);//Removing element by only key
+        map.remove(3, "Banana");//Removing element by key and value
+
+        System.out.println("\nIterating Hashmap0...");
+        for(Map.Entry m : map.entrySet())
             System.out.println(m.getKey() + " " + m.getValue());
     }
 }
@@ -40,6 +48,13 @@ Iterating Hashmap1...
 1 Mango
 2 Apple
 3 Banana
+4 Grapes
+5 Pijuli
+6 Apple
+7 Kiwi
+
+Iterating Hashmap0...
+1 Mango
 4 Grapes
 5 Pijuli
 6 Apple

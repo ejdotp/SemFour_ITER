@@ -452,7 +452,9 @@ Now value is Jackand key is: 19
 Now value is Brianand key is: 7
 Now value is Georgeand key is: 14 */</code></pre>
 
-2. Using [map.putIfAbsent(5,"abc");] to add a new element to hashmap. [map1.putAll(map)] will copy all elements from map to map1  
+2. Using [map.putIfAbsent(5,"abc");] to add a new element to hashmap.
+3. [map1.putAll(map);] will copy all elements from map to map1.  
+4. [map.remove(key);] or [map.remove(key, "ABC");] removes that key.  
  **[kichhigote4.java :](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/HashMap%20Overriding/kichhigote4.java)**
 
 <pre>
@@ -482,6 +484,14 @@ class HashMap1
 
         System.out.println("\nIterating Hashmap1...");
         for(Map.Entry m : map1.entrySet())
+            System.out.println(m.getKey() + " " + m.getValue());  
+
+        map.putAll(map1);
+        map.remove(2);//Removing element by only key
+        map.remove(3, "Banana");//Removing element by key and value
+
+        System.out.println("\nIterating Hashmap0...");
+        for(Map.Entry m : map.entrySet())
             System.out.println(m.getKey() + " " + m.getValue());
     }
 }
@@ -498,6 +508,13 @@ Iterating Hashmap1...
 1 Mango
 2 Apple
 3 Banana
+4 Grapes
+5 Pijuli
+6 Apple
+7 Kiwi
+
+Iterating Hashmap0...
+1 Mango
 4 Grapes
 5 Pijuli
 6 Apple
