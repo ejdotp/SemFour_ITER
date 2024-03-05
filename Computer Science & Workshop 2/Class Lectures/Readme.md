@@ -12,7 +12,7 @@
    + [2. Generic Method](#generic-method)  
    + [3. Overriding toString](#tostring-overriding)  
    + [4. Overriding equals](#equals-overriding)  
-   + [5. Overriding HashMap](#hashmap-overriding)
+   + [5. Map Interface](#map-interface)
 <hr> 
 
 # 12. Object Oriented Programming   
@@ -382,11 +382,9 @@ class Complex
 Output:
 true
  */
-</code></pre>
+</code></pre> 
 
-## HashMap Overriding  
-
-### Map Interface:
+## Map Interface:
   + Map is a key value pair.
   + id -> Details
   + Types:  
@@ -568,4 +566,6 @@ class SmashTable
 100 Amit
 Vijay
 Not Found */</code></pre>  
+
+**Difference between Hashmap & Hashtable:**
   
