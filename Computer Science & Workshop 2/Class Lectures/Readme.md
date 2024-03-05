@@ -12,6 +12,7 @@
    + [2. Generic Method](#generic-method)  
    + [3. Overriding toString](#tostring-overriding)  
    + [4. Overriding equals](#equals-overriding)  
+   + [5. Overriding HashMap](#hashmap-overriding)
 <hr> 
 
 # 12. Object Oriented Programming   
