@@ -243,7 +243,7 @@
 
 ## toString Overriding:  
 
-**The Problem:**  
+**The Problem: [kichhigote1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/toString%20Overriding/kichhigote1.java)**  
 <pre lang=lisp>
 <code class="language-java">class complex
 {
@@ -269,7 +269,7 @@ complex@7ad041f3
 */
 </code></pre>  
 
-**The Solution:**  
+**The Solution: [ToString.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/toString%20Overriding/ToString.java)**  
 
 <pre lang=lisp>
 <code class="language-java">public class ToString
@@ -315,7 +315,7 @@ class Complex
 
 ## Equals Overriding  
 
-**Problem:**
+**Problem: [kichhigote2.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/Equals%20Overriding/kichhigote2.java)**
 <pre lang=lisp>
 <code class="language-java">class complex
 {
@@ -344,7 +344,7 @@ public class kichhigote2
 no no
 */</code></pre>
 
-**Solution:**
+**Solution: [Equally.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/Equals%20Overriding/Equally.java)**
 
 <pre lang=lisp>
 <code class="language-java">public class Equally
@@ -401,6 +401,7 @@ true
   + The objects that are stored in this collection don't have to be ordered as it is employed to find any value using corresponding key.  
 
 ### Examples:
+1. **[kichhigote3.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/HashMap%20Overriding/kichhigote3.java)**
 <pre>
 <code class="language-java">import java.util.*;
 class HashMapExample
@@ -430,7 +431,7 @@ class HashMapExample
 
         Set set2 = hmap1.entrySet();
         Iterator iterator2 = set2.iterator();
-        
+
         while (iterator2.hasNext())
         {
             Map.Entry ment2 = (Map.Entry) iterator2.next();
@@ -450,6 +451,8 @@ Now value is Jackand key is: 19
 Now value is Brianand key is: 7
 Now value is Georgeand key is: 14 */</code></pre>
 
+2. Using [map.putIfAbsent(5,"abc");] to add a new element to hashmap: **[kichhigote4.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/HashMap%20Overriding/kichhigote4.java)**
+
 <pre>
 <code class="language-java">import java.util.*;
 
@@ -462,6 +465,11 @@ class HashMap1
         map.put(4, "Grapes");
         map.put(3, "Banana");
 
+        map.putIfAbsent(5, "Pijuli"); //Adds if not in map
+        map.putIfAbsent(2, "Apple"); //wont work
+        map.putIfAbsent(6, "Apple"); //will work
+        map.putIfAbsent(2, "Panasa"); //wont work
+
         System.out.println("Iterating Hashmap...");
         for(Map.Entry m : map.entrySet())
             System.out.println(m.getKey() + " " + m.getValue());
@@ -472,6 +480,8 @@ class HashMap1
 1 Mango
 2 Apple
 3 Banana
-4 Grapes */
+4 Grapes
+5 Pijuli
+6 Apple*/
 //Bro reorders itself cuz bro's a HashMap</code></pre>
   
