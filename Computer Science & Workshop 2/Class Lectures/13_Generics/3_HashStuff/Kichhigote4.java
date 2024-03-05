@@ -33,6 +33,12 @@ class HashMap1
         System.out.println("\nIterating Hashmap0...");
         for(Map.Entry m : map.entrySet())
             System.out.println(m.getKey() + " " + m.getValue());
+
+        map1.replaceAll((key, oldValue) -> "Promgrenade");  //Replacing all values with Promgrenade
+
+        System.out.println("\nIterating Hashmap1...");
+        for(Map.Entry m : map1.entrySet())
+            System.out.println(m.getKey() + " " + m.getValue()); 
     }
 }
 
@@ -58,5 +64,14 @@ Iterating Hashmap0...
 4 Grapes
 5 Pijuli
 6 Apple
-7 Kiwi*/
+7 Kiwi
+
+Iterating Hashmap1...
+1 Promgrenade
+2 Promgrenade
+3 Promgrenade
+4 Promgrenade
+5 Promgrenade
+6 Promgrenade
+7 Promgrenade*/
 //Bro reorders itself cuz bro's a HashMap

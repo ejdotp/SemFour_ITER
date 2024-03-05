@@ -244,7 +244,7 @@
 
 ## toString Overriding:  
 
-**The Problem: [kichhigote1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/toString%20Overriding/kichhigote1.java)**  
+**The Problem: [kichhigote1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/toString%20Overriding/kichhigote1.java)**  
 <pre lang=lisp>
 <code class="language-java">class complex
 {
@@ -270,7 +270,7 @@ complex@7ad041f3
 */
 </code></pre>  
 
-**The Solution: [ToString.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/toString%20Overriding/ToString.java)**  
+**The Solution: [ToString.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/toString%20Overriding/ToString.java)**  
 
 <pre lang=lisp>
 <code class="language-java">public class ToString
@@ -316,7 +316,7 @@ class Complex
 
 ## Equals Overriding  
 
-**Problem: [kichhigote2.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/Equals%20Overriding/kichhigote2.java)**
+**Problem: [kichhigote2.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Equals%20Overriding/kichhigote2.java)**
 <pre lang=lisp>
 <code class="language-java">class complex
 {
@@ -345,7 +345,7 @@ public class kichhigote2
 no no
 */</code></pre>
 
-**Solution: [Equally.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/Equals%20Overriding/Equally.java)**
+**Solution: [Equally.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Equals%20Overriding/Equally.java)**
 
 <pre lang=lisp>
 <code class="language-java">public class Equally
@@ -402,7 +402,7 @@ true
   + The objects that are stored in this collection don't have to be ordered as it is employed to find any value using corresponding key.  
 
 ### Examples:
-1. **[kichhigote3.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/HashMap%20Overriding/kichhigote3.java)**
+1. **[kichhigote3.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/HashMap%20Overriding/kichhigote3.java)**
 <pre>
 <code class="language-java">import java.util.*;
 class HashMapExample
@@ -455,7 +455,8 @@ Now value is Georgeand key is: 14 */</code></pre>
 2. Using [map.putIfAbsent(5,"abc");] to add a new element to hashmap.
 3. [map1.putAll(map);] will copy all elements from map to map1.  
 4. [map.remove(key);] or [map.remove(key, "ABC");] removes that key.  
- **[kichhigote4.java :](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/Overriding/HashMap%20Overriding/kichhigote4.java)**
+5. [map1.replaceAll((key, oldValue) -> "Promgrenade");] replaces all values of map1 with "Promgrenade".  
+ **[kichhigote4.java :](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/HashMap%20Overriding/kichhigote4.java)**
 
 <pre>
 <code class="language-java">import java.util.*;
@@ -493,6 +494,12 @@ class HashMap1
         System.out.println("\nIterating Hashmap0...");
         for(Map.Entry m : map.entrySet())
             System.out.println(m.getKey() + " " + m.getValue());
+
+        map1.replaceAll((key, oldValue) -> "Promgrenade"); //replaces all values of map1 with Promgrenade
+
+        System.out.println("\nIterating Hashmap1...");
+        for(Map.Entry m : map1.entrySet())
+            System.out.println(m.getKey() + " " + m.getValue()); 
     }
 }
 
@@ -518,6 +525,19 @@ Iterating Hashmap0...
 4 Grapes
 5 Pijuli
 6 Apple
-7 Kiwi*/
-//Bro reorders itself cuz bro's a HashMap</code></pre>
+7 Kiwi
+
+Iterating Hashmap1...
+1 Promgrenade
+2 Promgrenade
+3 Promgrenade
+4 Promgrenade
+5 Promgrenade
+6 Promgrenade
+7 Promgrenade*/
+//Bro reorders itself cuz bro's a HashMap</code></pre>  
+
+### Hash Table:
+  + Similar to HashMap.    
+  + It creates a table of keys and values resulting in the production of synchronized set of objects.  
   
