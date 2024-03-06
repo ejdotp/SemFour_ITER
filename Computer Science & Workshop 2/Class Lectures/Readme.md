@@ -12,7 +12,8 @@
    + [2. Generic Method](#generic-method)  
    + [3. Overriding toString](#tostring-overriding)  
    + [4. Overriding equals](#equals-overriding)  
-   + [5. Map Interface](#map-interface)
+   + [5. Map Interface](#map-interface)  
+   + [6. Set Interface](#set-interface)
 <hr> 
 
 # 12. Object Oriented Programming   
@@ -589,42 +590,12 @@ Not Found */</code></pre>
      + Doesn't maintain the insertion order.  
      + Inserted basis of their hashcode.  
      + Hashset is best for search operation.  
-     + Example: [HashSetter.java]()
-        <pre>
-        <code class="language-java">import java.util.*;
-        class SecondSmashSett
-        {
-            public static void main(String[] args) {
-                HashSet<String> set=new HashSet<String>();
-                set.add("Ravi");
-                set.add("Vijay");
-                set.add("Arun");
-                set.add("Sumit");
-                System.out.println("An initial list of elements: " + set);
-                //Removing Specific element from hashset:
-                set.remove("Ravi");
-                System.out.println("After invoking remove(object) method: " + set);
-                HashSet<String> set1 = new HashSet<String>();
-                set1.add("Ajay");
-                set1.add("Gaurav");
-                set.addAll(set1);
-                System.out.println("Updated List: " + set);
-                //Removing all the new elements from the HashSet
-                set.removeAll(set1);
-                System.out.println("After invoking removeAll(Object) method: " + set);
-                //removing elements on the basis of specific condition
-                set.removeIf(str->str.contains("Vijay"));
-                System.out.println("After invoking removeIf() method: " + set);
-                //removing all elements available:
-                set.clear();
-                System.out.println("After invoking clear() method: " + set);
-            }
-        }
-        /*An initial list of elements: [Vijay, Ravi, Arun, Sumit]
-        After invoking remove(object) method: [Vijay, Arun, Sumit]
-        Updated List: [Vijay, Arun, Gaurav, Sumit, Ajay]
-        After invoking removeAll(Object) method: [Vijay, Arun, Sumit]
-        After invoking removeIf() method: [Arun, Sumit]
-        After invoking clear() method: [] */</code></pre>
-  2. **LinkedHashSet:**
+     + Example: [HashSetter1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/HashSetter1.java)  
+  2. **LinkedHashSet:**  
+     + It's a hashtable & implementation of the set interface.  
+     + Inherits Hashset class and implements setInterface.
+     + Contains unique like hashset. 
+     + Allows all set operations & null elements. 
+     + Non-Synchronized
+     + Maintains Insertion Order.
   3. **TreeSet:**
