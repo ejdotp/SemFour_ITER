@@ -597,5 +597,6 @@ Not Found */</code></pre>
      + Contains unique like hashset. 
      + Allows all set operations & null elements. 
      + Non-Synchronized
-     + Maintains Insertion Order.
+     + Maintains Insertion Order.  
+     + Example: [MarriedSet.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/MarriedSet.java)
   3. **TreeSet:**
