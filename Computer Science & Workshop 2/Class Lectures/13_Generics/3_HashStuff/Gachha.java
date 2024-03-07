@@ -25,22 +25,29 @@ class Gachha
         while(itr1.hasNext()){
             System.out.println(itr1.next());
         }
-        System.out.println("Lowest Value" + tr1.pollFirst());
+        System.out.println("Lowest Value" + tr1.pollFirst());//pops element
         System.out.println("Highest Value" + tr1.pollLast());
         System.out.println(tr1.subSet(1, 4));
         System.out.println(tr1.headSet(3));
         System.out.println(tr1.tailSet(3));
-        System.out.println(tr1.reversed());
+        System.out.println(tr1.descendingSet());
     }
 }
 
 /*Ajay
 Ravi
 Vijay
-[Ajay, Ravi, Vijay]
-[1, 2, 3]
+sastri
+[Ajay, Ravi, Vijay, sastri]
+[1, 2, 3, 4, 5]
+5
+4
 3
 2
 1
 Lowest Value1
-Highest Value3*/
+Highest Value5
+[2, 3]
+[2]
+[3, 4]
+[4, 3, 2]*/
