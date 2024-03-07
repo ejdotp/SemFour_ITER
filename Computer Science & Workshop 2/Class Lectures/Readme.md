@@ -599,4 +599,10 @@ Not Found */</code></pre>
      + Non-Synchronized
      + Maintains Insertion Order.  
      + Example: [MarriedSet.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/MarriedSet.java)
-  3. **TreeSet:**
+  3. **TreeSet:**  
+     + Implements the set Interface.  
+     + uses tree for storage  
+     + Inherits abstract set, implements the navigable set interface.
+     + object stored in accending order.  
+     + Access and retrieval time is quite fast.  
+     + Doesn't allow null elements.  
