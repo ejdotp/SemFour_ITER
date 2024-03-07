@@ -614,6 +614,14 @@ Not Found */</code></pre>
 + it can have duplicate elements.  
 + it can have null elements.  
 + Types: 
-   1. **Array List:**
+   1. **Array List:**  
+      + It's a dynamic array, no size limit
+      + Add / Remove elements anytime
+      + It can have duplicate elements  
+      + Maintains the insertion order  
+      + Allows random access  
+      + You can't create an ArrayList of the primitive datatypes like int, float, etc. 
+      + Required to use wrapper classes:
+          ``ArrayList<Integer> a = new ArrayList<>();``
    2. **Vector:**
    3. **Linked List:**
