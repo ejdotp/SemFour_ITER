@@ -31,13 +31,13 @@ class Car implements Comparable<Car>
         if (other == null || getClass() != other.getClass())
             return false;
 
-        Car otherBook = (Car) other;
-        return Speed == otherBook.Speed && this.Color.equals(otherBook.Color) && this.Model.equals(otherBook.Model);
+        Car otherCar = (Car) other;
+        return Speed == otherCar.Speed && this.Color.equals(otherCar.Color) && this.Model.equals(otherCar.Model);
     }
 
-    public int compareTo(Car otherBook)
+    public int compareTo(Car otherCar)
     {
-        return Double.compare(this.Speed, otherBook.Speed);
+        return Double.compare(this.Speed, otherCar.Speed);
     }
 }
 
