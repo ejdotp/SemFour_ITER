@@ -14,6 +14,7 @@
    + [4. Overriding equals](#equals-overriding)  
    + [5. Map Interface](#map-interface)  
    + [6. Set Interface](#set-interface)
+   + [7. List Interface](#list-interface)  
 <hr> 
 
 # 12. Object Oriented Programming   
@@ -608,7 +609,7 @@ Not Found */</code></pre>
      + Doesn't allow null elements.  
      + Example: [Gachha.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/Gachha.java)  
 
-## Set Interface  
+## List Interface  
 
 + Index based method to insert / update / delete / search
 + it can have duplicate elements.  
