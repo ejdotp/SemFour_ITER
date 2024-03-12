@@ -100,12 +100,12 @@
 + By default all attributes of interface are public, static & final.
 + One implementation - you must override all its methods.  
 
-        ```ruby
-        interface A{  
-          static int a = 10; //declare constant fields.
-          void move(); //declare abstract methods
-        }
-        ```
+  ```ruby
+  interface A{  
+  static int a = 10; //declare constant fields.
+  void move(); //declare abstract methods
+  }
+  ```
 
 + A class only extend to one class but can implement infinite interfaces.
 + Example: [testInterface1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/5_Interface/testInterface1.java)
