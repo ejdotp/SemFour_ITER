@@ -624,5 +624,11 @@ Not Found */</code></pre>
       + You can't create an ArrayList of the primitive datatypes like int, float, etc. 
       + Required to use wrapper classes:
           ``ArrayList<Integer> a = new ArrayList<>();``
-   2. **Vector:**
+      + Example: [ArreyListy.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/ArreyListy.java)   
+   2. **Vector:**  
+      + Like a dynamic array which can grow and shrink in size. 
+      + Similar to arraylist with two differences:  
+        1. Vector is Synchronized.  
+        2. Java vector contains many legacy methods that are not the part of collection framework.  
+      + Example: [VikramVector.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/VikramVector.java)  
    3. **Linked List:**
