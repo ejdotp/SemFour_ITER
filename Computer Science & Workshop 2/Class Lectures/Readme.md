@@ -630,5 +630,14 @@ Not Found */</code></pre>
       + Similar to arraylist with two differences:  
         1. Vector is Synchronized.  
         2. Java vector contains many legacy methods that are not the part of collection framework.  
-      + Example: [VikramVector.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/VikramVector.java)  
-   3. **Linked List:**
+      + Example 1: [VikramVector.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/VikramVector.java)  
+      + Example 2: [VikashVector.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/VikashVector.java)  
+   3. **Linked List:**  
+      + Contains duplicate element.  
+      + Maintains insertion order.  
+      + Non-Synchronized.  
+      + Fast manipulation, no shifting required.  
+      + Can be used as List, Stack & Queue.  
+      + Inherits from abstract list class.
+      + Implements list & Dequeue Interface. 
+      + Example: [MarriedList.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/MarriedList.java)
