@@ -13,6 +13,22 @@ class VikashVector
 
         System.out.println("Values in Vector: " + in);
         System.out.println("Remove first: " + in.remove((Integer)200));
-
+        System.out.println("Values in Vector: " + in);
+        System.out.println("Remove 4th: " + in.remove(4));
+        System.out.println("Values in Vector: " + in);
+        in.removeElement(5);
+        System.out.println("Values in Vector: " + in);
+        System.out.println("Hashcode of this Vector: " + in.hashCode());
+        System.out.println("Element of 1st: " + in.get(1));
     }
 }
+/*
+Values in Vector: [200, 400, 500, 600, 700, 800]
+Remove first: true
+Values in Vector: [400, 500, 600, 700, 800]
+Remove 4th: 800
+Values in Vector: [400, 500, 600, 700]
+Values in Vector: [400, 500, 600, 700]
+Hashcode of this Vector: 13339721
+Element of 1st: 500
+ */

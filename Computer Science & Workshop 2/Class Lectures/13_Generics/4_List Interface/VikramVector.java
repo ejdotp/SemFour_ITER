@@ -22,3 +22,11 @@ class VikramVector {
         System.out.println("Last = " + v.lastElement());
     }
 }
+/*
+Elements are: [Lion, Tiger, Dog, Elephant, Rat, Cat, Deer]
+Size = 7
+Capacity = 10
+index of Tiger = 1
+First = Lion
+Last = Deer
+ */
