@@ -1,8 +1,13 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true,
-    "launch": {
-        "console": "externalTerminal",
-        "configurations": [],
-        "compounds": []
-    }
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "args": "",
+            "console": "internalConsole",
+            "mainClass": "${file}"
+        },
+    ]   
 }
