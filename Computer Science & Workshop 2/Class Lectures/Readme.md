@@ -15,6 +15,7 @@
    + [5. Map Interface](#map-interface)  
    + [6. Set Interface](#set-interface)
    + [7. List Interface](#list-interface)  
+   + [8. Queue Interface](#queue-interface-fifo)
 <hr> 
 
 # 12. Object Oriented Programming   
@@ -598,6 +599,44 @@ true
      + Inserted basis of their hashcode.  
      + Hashset is best for search operation.  
      + Example: [HashSetter1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/HashSetter1.java)  
+        ```ruby
+        import java.util.*;
+        class SecondSmashSett
+        {
+            public static void main(String[] args) {
+                HashSet<String> set=new HashSet<String>();
+                set.add("Ravi");
+                set.add("Vijay");
+                set.add("Arun");
+                set.add("Sumit");
+                System.out.println("An initial list of elements: " + set);
+                //Removing Specific element from hashset:
+                set.remove("Ravi");
+                System.out.println("After invoking remove(object) method: " + set);
+
+                HashSet<String> set1 = new HashSet<String>();
+                set1.add("Ajay");
+                set1.add("Gaurav");
+                set.addAll(set1);
+                System.out.println("Updated List: " + set);
+                //Removing all the new elements from the HashSet
+                set.removeAll(set1);
+                System.out.println("After invoking removeAll(Object) method: " + set);
+                //removing elements on the basis of specific condition
+                set.removeIf(str->str.contains("Vijay"));
+                System.out.println("After invoking removeIf() method: " + set);
+                //removing all elements available:
+                set.clear();
+                System.out.println("After invoking clear() method: " + set);
+            }
+        }
+        /*An initial list of elements: [Vijay, Ravi, Arun, Sumit]
+        After invoking remove(object) method: [Vijay, Arun, Sumit]
+        Updated List: [Vijay, Arun, Gaurav, Sumit, Ajay]
+        After invoking removeAll(Object) method: [Vijay, Arun, Sumit]
+        After invoking removeIf() method: [Arun, Sumit]
+        After invoking clear() method: [] */
+        ```
   2. **LinkedHashSet:**  
      + It's a hashtable & implementation of the set interface.  
      + Inherits Hashset class and implements setInterface.
@@ -606,6 +645,56 @@ true
      + Non-Synchronized
      + Maintains Insertion Order.  
      + Example: [MarriedSet.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/MarriedSet.java)
+        ```ruby
+        import java.util.*;
+        class MarriedSet {
+            public static void main(String[] args) {
+                LinkedHashSet<String> LS = new LinkedHashSet();
+                LS.add("One");
+                LS.add("Two");
+                LS.add("Three");
+                LS.add("Four");
+                LS.add("Five");
+
+                Iterator<String> i=LS.iterator();
+                while(i.hasNext()){
+                    System.out.println(i.next());
+                } System.out.println(LS);
+
+                //Removing Specific element from hashset:
+                LS.remove("Ravi");
+                System.out.println("After invoking remove(object) method: " + LS);
+
+                HashSet<String> set1 = new HashSet<String>();
+                set1.add("Ajay");
+                set1.add("Gaurav");
+                LS.addAll(set1);
+                System.out.println("Updated List: " + LS);
+                //Removing all the new elements from the HashSet
+                LS.removeAll(set1);
+                System.out.println("After invoking removeAll(Object) method: " + LS);
+                //removing elements on the basis of specific condition
+                LS.removeIf(str->str.contains("Vijay"));
+                System.out.println("After invoking removeIf() method: " + LS);
+                //removing all elements available:
+                LS.clear();
+                System.out.println("After invoking clear() method: " + LS);
+            }
+        }
+        /*
+        One
+        Two
+        Three
+        Four
+        Five
+        [One, Two, Three, Four, Five]
+        After invoking remove(object) method: [One, Two, Three, Four, Five]
+        Updated List: [One, Two, Three, Four, Five, Gaurav, Ajay]
+        After invoking removeAll(Object) method: [One, Two, Three, Four, Five]
+        After invoking removeIf() method: [One, Two, Three, Four, Five]
+        After invoking clear() method: []
+        */
+        ```
   3. **TreeSet:**  
      + Implements the set Interface.  
      + uses tree for storage  
@@ -613,7 +702,62 @@ true
      + object stored in accending order.  
      + Access and retrieval time is quite fast.  
      + Doesn't allow null elements.  
-     + Example: [Gachha.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/Gachha.java)  
+     + Example: [Gachha.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/Gachha.java)
+        ```ruby
+        import java.util.*;
+        class Gachha
+        {
+            public static void main(String[] args) {
+                TreeSet<String> tr = new TreeSet<String>();
+                tr.add("Ravi");
+                tr.add("Vijay");
+                tr.add("Ravi");
+                tr.add("Ajay");
+                tr.add("sastri");
+                //Traversing elements:
+                Iterator<String> itr = tr.iterator();
+                while(itr.hasNext()){
+                    System.out.println(itr.next());
+                } System.out.println(tr);
+
+                TreeSet<Integer> tr1 = new TreeSet<Integer>();
+                tr1.add(1);
+                tr1.add(2);
+                tr1.add(3);
+                tr1.add(4);
+                tr1.add(5);
+                System.out.println(tr1);
+                Iterator<Integer> itr1 = tr1.descendingIterator(); //print in descending
+                while(itr1.hasNext()){
+                    System.out.println(itr1.next());
+                }
+                System.out.println("Lowest Value" + tr1.pollFirst());//pops element
+                System.out.println("Highest Value" + tr1.pollLast());
+                System.out.println(tr1.subSet(1, 4));
+                System.out.println(tr1.headSet(3));
+                System.out.println(tr1.tailSet(3));
+                System.out.println(tr1.descendingSet());
+            }
+        }
+
+        /*Ajay
+        Ravi
+        Vijay
+        sastri
+        [Ajay, Ravi, Vijay, sastri]
+        [1, 2, 3, 4, 5]
+        5
+        4
+        3
+        2
+        1
+        Lowest Value1
+        Highest Value5
+        [2, 3]
+        [2]
+        [3, 4]
+        [4, 3, 2]*/
+        ```  
 
 ## List Interface  
 
@@ -807,4 +951,6 @@ true
         Linked List: [Ravi, Vijay, Ravi, Ajay, Hanumat]
         Linked List: [Ravi, Vijay, Ravi, Ajay]
         */
-        ```
+        ```  
+
+## Queue Interface [FIFO]
