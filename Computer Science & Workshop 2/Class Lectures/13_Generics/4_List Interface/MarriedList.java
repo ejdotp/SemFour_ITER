@@ -24,6 +24,13 @@ class MarriedList
         ll.addFirst("Adarsh");
         ll.addLast("Harsh");
         System.out.println("Linked List: " + ll);
+        ll.remove("Sonoo");
+        ll.remove(2);
+        ll.removeFirst();
+        ll.removeLast();
+        System.out.println("Linked List: " + ll);
+        ll.removeAll(ll2);
+        System.out.println("Linked List: " + ll);
     }
 }
 
@@ -36,4 +43,6 @@ Linked List: [Ravi, Vijay, Ravi, Ajay]
 Linked List: [Ravi, Gaurav, Vijay, Ravi, Ajay]
 Linked List: [Ravi, Gaurav, Vijay, Ravi, Ajay, Sonoo, Hanumat]
 Linked List: [Adarsh, Ravi, Gaurav, Vijay, Ravi, Ajay, Sonoo, Hanumat, Harsh]
+    Linked List: [Ravi, Vijay, Ravi, Ajay, Hanumat]
+    Linked List: [Ravi, Vijay, Ravi, Ajay]
  */

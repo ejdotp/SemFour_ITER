@@ -97,14 +97,15 @@
 + Interface can't be used to create objects.
 + "Implement" - used to achieve interface.
 + By default all attributes of interface are public, static & final.
-+ One implementation - you must override all its methods.
++ One implementation - you must override all its methods.  
 
-  <pre lang=lisp>
-  <code class="language-java">//Syntax:
+        ```ruby
         interface A{  
           static int a = 10; //declare constant fields.
           void move(); //declare abstract methods
-        }</code></pre>
+        }
+        ```
+
 + A class only extend to one class but can implement infinite interfaces.
 + Example: [testInterface1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/5_Interface/testInterface1.java)
 + [class] -- extends --> [class]
@@ -140,26 +141,27 @@
     1. High Cohesion [Bad Programming Style]
        * when a class is designed to do a specific specialized task.
        * Example:
-         <pre lang=lisp>
-         <code class="language-java">class player_data{
+         ```ruby
+         class player_data{
            class coonect_toplayer{connect_toplayer ctp = new connect_toplayer};
            class details_player{...};
            class player_rankiing{...};
            class game_details{...};
            class player_travel{...};
          }
-         </code></pre>
+         ```
     2. Low Cohesion [Good Programming Style]
        * when a class is designed to many tasks rather than a single task, it's calles a "low cohesive" class.
        * Example:
-         <pre lang=lisp>
-         <code class="language-java">class player_data{
+         ```ruby
+         class player_data{
            public void connect_toplayer();
            public void details_player();
            public void player_rankiing();
            public void game_details();
            public void player_travel();
-         }</code></pre>
+         }
+         ```
 
 # 13. Generics:
 
@@ -182,11 +184,11 @@
        + [Non Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testNonGenerics2.java)
        + [Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testGenerics2.java)
   3. It detects the bug in compile time.
-     <pre lang=lisp>
-     <code class="language-java">List&lt;String&gt; list = newArrayList&lt;String&gt;();
+     ```ruby
+     List<String> list = newArrayList<String>();
      list.add("hello");
      list.add(32); //compiletime Error
-     </code></pre>
+     '''
 
 ## Generic class :- 
 * A class that can refer to any type is a generic class. 
@@ -197,8 +199,8 @@
    3. K-Key  
    4. N-Number
    5. V-Values
-<pre lang=lisp>
-<code class="language-java">class MyGen&lt;T&gt;{
+```ruby
+class MyGen<T>{
     T obj;
     void add(T obj){
       this.obj=obj;
@@ -206,12 +208,13 @@
     T get(){
       return obj;
     }
-  }</code></pre>  
+  }
+``` 
 
 ## Generic Method :-  
-  <pre lang=lisp>
-<code class="language-java">public class Test_Generic_Method{
-    public static &lt;T&gt; void printArray(E[] elements){
+```ruby
+public class Test_Generic_Method{
+    public static <T> void printArray(E[] elements){
       for(E element:elements){
         System.out.println(element;)
       }
@@ -222,10 +225,11 @@
       printArray(intArray);
       printArray(charArray);
     }
-  }</code></pre>
+  }
+```
 
-  <pre lang=lisp>
-<code class="language-java">class Test&lt;T, U&gt;{
+```ruby
+class Test<T, U>{
     T obj1;
     U obj2;
     Test(T obj1, U obj2){
@@ -239,16 +243,17 @@
   }
   class Test_Generic{
     public static void main(String[] args){
-      Test&lt;String, Integer&gt; obj = new Test&lt;String, Integer&gt;("Hello", 17);
+      Test<String, Integer> obj = new Test<String, Integer>("Hello", 17);
       obj.print();
     }
-  }</code></pre>
+  }
+```
 
 ## toString Overriding:  
 
 **The Problem: [kichhigote1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/1_toString%20Overriding/kichhigote1.java)**  
-<pre lang=lisp>
-<code class="language-java">class complex
+```ruby
+class complex
 {
     private double re, in;
     public complex (double re, double in)
@@ -270,12 +275,12 @@ public class kichhigote
 /*output:
 complex@7ad041f3
 */
-</code></pre>  
+``` 
 
 **The Solution: [ToString.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/1_toString%20Overriding/ToString.java)**  
 
-<pre lang=lisp>
-<code class="language-java">public class ToString
+```ruby
+public class ToString
 {
     public static void main(String[] args)
     {
@@ -314,13 +319,14 @@ class Complex
     public String toString(){
         return this.re + " + " + this.im + "I";
     }
-}</code></pre>
+}
+```
 
 ## Equals Overriding  
 
 **Problem: [kichhigote2.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/2_Equals%20Overriding/kichhigote2.java)**
-<pre lang=lisp>
-<code class="language-java">class complex
+```ruby
+class complex
 {
     private double re, in;
     public complex (double re, double in)
@@ -345,12 +351,12 @@ public class kichhigote2
 
 /*output:
 no no
-*/</code></pre>
+*/
+```
 
 **Solution: [Equally.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/2_Equals%20Overriding/Equally.java)**
-
-<pre lang=lisp>
-<code class="language-java">public class Equally
+```ruby
+public class Equally
 {
     public static void main(String[] args)
     {
@@ -384,7 +390,7 @@ class Complex
 Output:
 true
  */
-</code></pre> 
+```
 
 ## Map Interface:
   + Map is a key value pair.
@@ -403,54 +409,55 @@ true
 
 ### Examples:
 1. **[kichhigote3.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/kichhigote3.java)**
-<pre>
-<code class="language-java">import java.util.*;
-class HashMapExample
-{
-    public static void main(String[] args)
+    ```ruby
+    import java.util.*;
+    class HashMapExample
     {
-        HashMap<Integer, String> hmap1 = new HashMap<Integer, String>();
-
-        hmap1.put(14, "George");
-        hmap1.put(33, "Paul");
-        hmap1.put(16, "Jane");
-        hmap1.put(7, "Brian");
-        hmap1.put(19, "Jack");
-
-        Set set1 = hmap1.entrySet();
-        Iterator iterator1 = set1.iterator();
-
-        while (iterator1.hasNext())
+        public static void main(String[] args)
         {
-            Map.Entry ment1 = (Map.Entry) iterator1.next();
-            System.out.println("The value is:" + ment1.getValue() + " and key is: " + ment1.getKey());
-        }
+            HashMap<Integer, String> hmap1 = new HashMap<Integer, String>();
 
-        String va = hmap1.get(2);
-        System.out.println("Index 2 has value of " + va);
-        hmap1.remove(16);
+            hmap1.put(14, "George");
+            hmap1.put(33, "Paul");
+            hmap1.put(16, "Jane");
+            hmap1.put(7, "Brian");
+            hmap1.put(19, "Jack");
 
-        Set set2 = hmap1.entrySet();
-        Iterator iterator2 = set2.iterator();
+            Set set1 = hmap1.entrySet();
+            Iterator iterator1 = set1.iterator();
 
-        while (iterator2.hasNext())
-        {
-            Map.Entry ment2 = (Map.Entry) iterator2.next();
-            System.out.println("Now value is " + ment2.getValue() + "and key is: " + ment2.getKey());
+            while (iterator1.hasNext())
+            {
+                Map.Entry ment1 = (Map.Entry) iterator1.next();
+                System.out.println("The value is:" + ment1.getValue() + " and key is: " + ment1.getKey());
+            }
+
+            String va = hmap1.get(2);
+            System.out.println("Index 2 has value of " + va);
+            hmap1.remove(16);
+
+            Set set2 = hmap1.entrySet();
+            Iterator iterator2 = set2.iterator();
+
+            while (iterator2.hasNext())
+            {
+                Map.Entry ment2 = (Map.Entry) iterator2.next();
+                System.out.println("Now value is " + ment2.getValue() + "and key is: " + ment2.getKey());
+            }
         }
     }
-}
 
-/*The value is:Jane and key is: 16
-The value is:Paul and key is: 33
-The value is:Jack and key is: 19
-The value is:Brian and key is: 7
-The value is:George and key is: 14
-Index 2 has value of null
-Now value is Pauland key is: 33
-Now value is Jackand key is: 19
-Now value is Brianand key is: 7
-Now value is Georgeand key is: 14 */</code></pre>
+    /*The value is:Jane and key is: 16
+    The value is:Paul and key is: 33
+    The value is:Jack and key is: 19
+    The value is:Brian and key is: 7
+    The value is:George and key is: 14
+    Index 2 has value of null
+    Now value is Pauland key is: 33
+    Now value is Jackand key is: 19
+    Now value is Brianand key is: 7
+    Now value is Georgeand key is: 14 */
+    ```
 
 2. Using [map.putIfAbsent(5,"abc");] to add a new element to hashmap.
 3. [map1.putAll(map);] will copy all elements from map to map1.  
@@ -458,116 +465,115 @@ Now value is Georgeand key is: 14 */</code></pre>
 5. [map1.replaceAll((key, oldValue) -> "Promgrenade");] replaces all values of map1 with "Promgrenade".  
  **[kichhigote4.java :](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/kichhigote4.java)**
 
-<pre>
-<code class="language-java">import java.util.*;
+    ```ruby
+    class HashMap1
+    {
+        public static void main(String[] args) {
+            HashMap<Integer, String> map = new HashMap<Integer, String>(); //Creating HashMap
+            map.put(1, "Mango"); //Put elemnts on map
+            map.put(2, "Apple"); 
+            map.put(4, "Grapes");
+            map.put(3, "Banana");
 
-class HashMap1
-{
-    public static void main(String[] args) {
-        HashMap<Integer, String> map = new HashMap<Integer, String>(); //Creating HashMap
-        map.put(1, "Mango"); //Put elemnts on map
-        map.put(2, "Apple"); 
-        map.put(4, "Grapes");
-        map.put(3, "Banana");
+            map.putIfAbsent(5, "Pijuli"); //Adds if not in map
+            map.putIfAbsent(2, "Apple"); //wont work
+            map.putIfAbsent(6, "Apple"); //will work
+            map.putIfAbsent(2, "Panasa"); //wont work
 
-        map.putIfAbsent(5, "Pijuli"); //Adds if not in map
-        map.putIfAbsent(2, "Apple"); //wont work
-        map.putIfAbsent(6, "Apple"); //will work
-        map.putIfAbsent(2, "Panasa"); //wont work
+            System.out.println("Iterating Hashmap0...");
+            for(Map.Entry m : map.entrySet())
+                System.out.println(m.getKey() + " " + m.getValue());
 
-        System.out.println("Iterating Hashmap0...");
-        for(Map.Entry m : map.entrySet())
-            System.out.println(m.getKey() + " " + m.getValue());
+            HashMap<Integer, String> map1 = new HashMap<Integer, String>();
+            map1.put(7, "Kiwi");
+            map1.putAll(map); //Copying all elements of map to map1
 
-        HashMap<Integer, String> map1 = new HashMap<Integer, String>();
-        map1.put(7, "Kiwi");
-        map1.putAll(map); //Copying all elements of map to map1
+            System.out.println("\nIterating Hashmap1...");
+            for(Map.Entry m : map1.entrySet())
+                System.out.println(m.getKey() + " " + m.getValue());  
 
-        System.out.println("\nIterating Hashmap1...");
-        for(Map.Entry m : map1.entrySet())
-            System.out.println(m.getKey() + " " + m.getValue());  
+            map.putAll(map1);
+            map.remove(2);//Removing element by only key
+            map.remove(3, "Banana");//Removing element by key and value
 
-        map.putAll(map1);
-        map.remove(2);//Removing element by only key
-        map.remove(3, "Banana");//Removing element by key and value
+            System.out.println("\nIterating Hashmap0...");
+            for(Map.Entry m : map.entrySet())
+                System.out.println(m.getKey() + " " + m.getValue());
 
-        System.out.println("\nIterating Hashmap0...");
-        for(Map.Entry m : map.entrySet())
-            System.out.println(m.getKey() + " " + m.getValue());
+            map1.replaceAll((key, oldValue) -> "Promgrenade"); //replaces all values of map1 with Promgrenade
 
-        map1.replaceAll((key, oldValue) -> "Promgrenade"); //replaces all values of map1 with Promgrenade
-
-        System.out.println("\nIterating Hashmap1...");
-        for(Map.Entry m : map1.entrySet())
-            System.out.println(m.getKey() + " " + m.getValue()); 
+            System.out.println("\nIterating Hashmap1...");
+            for(Map.Entry m : map1.entrySet())
+                System.out.println(m.getKey() + " " + m.getValue()); 
+        }
     }
-}
 
-/*Iterating Hashmap0...
-1 Mango
-2 Apple
-3 Banana
-4 Grapes
-5 Pijuli
-6 Apple
+    /*Iterating Hashmap0...
+    1 Mango
+    2 Apple
+    3 Banana
+    4 Grapes
+    5 Pijuli
+    6 Apple
 
-Iterating Hashmap1...
-1 Mango
-2 Apple
-3 Banana
-4 Grapes
-5 Pijuli
-6 Apple
-7 Kiwi
+    Iterating Hashmap1...
+    1 Mango
+    2 Apple
+    3 Banana
+    4 Grapes
+    5 Pijuli
+    6 Apple
+    7 Kiwi
 
-Iterating Hashmap0...
-1 Mango
-4 Grapes
-5 Pijuli
-6 Apple
-7 Kiwi
+    Iterating Hashmap0...
+    1 Mango
+    4 Grapes
+    5 Pijuli
+    6 Apple
+    7 Kiwi
 
-Iterating Hashmap1...
-1 Promgrenade
-2 Promgrenade
-3 Promgrenade
-4 Promgrenade
-5 Promgrenade
-6 Promgrenade
-7 Promgrenade*/
-//Bro reorders itself cuz bro's a HashMap</code></pre>  
+    Iterating Hashmap1...
+    1 Promgrenade
+    2 Promgrenade
+    3 Promgrenade
+    4 Promgrenade
+    5 Promgrenade
+    6 Promgrenade
+    7 Promgrenade*/
+    //Bro reorders itself cuz bro's a HashMap
+    ```  
 
 ### Hash Table:
   + Similar to HashMap.    
   + It creates a table of keys and values resulting in the production of synchronized set of objects.  
   + It doesn't reorders itself like hashmap.  
-  + Example: [HashTable.java]() :
-  <pre><code class="java">import java.util.*;
-
-class SmashTable
-{
-    public static void main(String[] args)
+  + Example: [HashTable.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/3_HashStuff/HashTable.java) :
+    ```ruby
+    class SmashTable
     {
-        Hashtable<Integer, String> hm = new Hashtable<>();
-        hm.put(100, "Amit");
-        hm.put(102, "Ravi");
-        hm.put(103, "Rahul");
-        hm.put(101, "Vijay");
+        public static void main(String[] args)
+        {
+            Hashtable<Integer, String> hm = new Hashtable<>();
+            hm.put(100, "Amit");
+            hm.put(102, "Ravi");
+            hm.put(103, "Rahul");
+            hm.put(101, "Vijay");
 
-        for(Map.Entry m : hm.entrySet())
-            System.out.println(m.getKey() + " " + m.getValue());  
+            for(Map.Entry m : hm.entrySet())
+                System.out.println(m.getKey() + " " + m.getValue());  
 
-        System.out.println(hm.getOrDefault(101, "Not Found"));  // Vijay
-        System.out.println(hm.getOrDefault(110, "Not Found"));  //will return not found if not present
+            System.out.println(hm.getOrDefault(101, "Not Found"));  // Vijay
+            System.out.println(hm.getOrDefault(110, "Not Found"));  //will return not found if not present
+        }
     }
-}
 
-/*103 Rahul
-102 Ravi
-101 Vijay
-100 Amit
-Vijay
-Not Found */</code></pre>  
+    /*103 Rahul
+    102 Ravi
+    101 Vijay
+    100 Amit
+    Vijay
+    Not Found */
+    ```  
 
 **Difference between Hashmap & Hashtable:**
 
@@ -624,14 +630,124 @@ Not Found */</code></pre>
       + You can't create an ArrayList of the primitive datatypes like int, float, etc. 
       + Required to use wrapper classes:
           ``ArrayList<Integer> a = new ArrayList<>();``
-      + Example: [ArreyListy.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/ArreyListy.java)   
+      + Example: [ArreyListy.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/ArreyListy.java)  
+        ```ruby
+        import java.util.*;
+        class ArreyListy
+        {
+            public static void main(String[] args)
+            {
+                //Creating list:
+                ArrayList<String> list = new ArrayList<String>();
+                list.add("mango");
+                list.add("Apple");
+                list.add("Banana");
+                list.add("Grapes");
+                //printing the array list
+                Iterator itr = list.iterator();
+                while (itr.hasNext()){
+                    System.out.println(itr.next());
+                }
+                System.out.println("\nReturning element: " + list.get(1));
+                list.set(1, "Dates");
+                System.out.println("\nPrinting using for-if loop:- ");
+                for(String i : list){
+                    System.out.println(i);
+                }
+            }
+        }
+        /*
+        mango
+        Apple
+        Banana
+        Grapes
+
+        Returning element: Apple
+
+        Printing using for-if loop:- 
+        mango
+        Dates
+        Banana
+        Grapes
+        */
+        ``` 
    2. **Vector:**  
       + Like a dynamic array which can grow and shrink in size. 
       + Similar to arraylist with two differences:  
         1. Vector is Synchronized.  
         2. Java vector contains many legacy methods that are not the part of collection framework.  
-      + Example 1: [VikramVector.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/VikramVector.java)  
+      + Example 1: [VikramVector.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/VikramVector.java)
+        ```ruby
+        import java.util.*;
+        class VikramVector {
+            public static void main(String[] args) {
+                Vector<String> v = new Vector<String>();
+                v.add("Lion");
+                v.add("Tiger");
+                v.add("Dog");
+                v.add("Elephant");
+                v.addElement("Rat");
+                v.addElement("Cat");
+                v.addElement("Deer");
+                System.out.println("Elements are: " + v);
+                System.out.println("Size = " + v.size());
+                System.out.println("Capacity = " + v.capacity());
+
+                if(v.contains("Tiger"))
+                    System.out.println("index of Tiger = " + v.indexOf("Tiger"));
+                else
+                    System.out.println("No Tiger :(");
+
+                System.out.println("First = " + v.firstElement());
+                System.out.println("Last = " + v.lastElement());
+            }
+        }
+        /*
+        Elements are: [Lion, Tiger, Dog, Elephant, Rat, Cat, Deer]
+        Size = 7
+        Capacity = 10
+        index of Tiger = 1
+        First = Lion
+        Last = Deer
+        */
+        ```  
       + Example 2: [VikashVector.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/VikashVector.java)  
+        ```ruby
+        import java.util.Vector;
+        class VikashVector
+        {
+            public static void main(String[] args)
+            {
+                Vector<Integer> in = new Vector<Integer>();
+                in.add(200);
+                in.add(400);
+                in.add(500);
+                in.add(600);
+                in.add(700);
+                in.add(800);
+
+                System.out.println("Values in Vector: " + in);
+                System.out.println("Remove first: " + in.remove((Integer)200));
+                System.out.println("Values in Vector: " + in);
+                System.out.println("Remove 4th: " + in.remove(4));
+                System.out.println("Values in Vector: " + in);
+                in.removeElement(5);
+                System.out.println("Values in Vector: " + in);
+                System.out.println("Hashcode of this Vector: " + in.hashCode());
+                System.out.println("Element of 1st: " + in.get(1));
+            }
+        }
+        /*
+        Values in Vector: [200, 400, 500, 600, 700, 800]
+        Remove first: true
+        Values in Vector: [400, 500, 600, 700, 800]
+        Remove 4th: 800
+        Values in Vector: [400, 500, 600, 700]
+        Values in Vector: [400, 500, 600, 700]
+        Hashcode of this Vector: 13339721
+        Element of 1st: 500
+        */
+        ```
    3. **Linked List:**  
       + Contains duplicate element.  
       + Maintains insertion order.  
@@ -669,6 +785,13 @@ Not Found */</code></pre>
                 ll.addFirst("Adarsh");
                 ll.addLast("Harsh");
                 System.out.println("Linked List: " + ll);
+                ll.remove("Sonoo");
+                ll.remove(2);
+                ll.removeFirst();
+                ll.removeLast();
+                System.out.println("Linked List: " + ll);
+                ll.removeAll(ll2);
+                System.out.println("Linked List: " + ll);
             }
         }
 
@@ -681,5 +804,7 @@ Not Found */</code></pre>
         Linked List: [Ravi, Gaurav, Vijay, Ravi, Ajay]
         Linked List: [Ravi, Gaurav, Vijay, Ravi, Ajay, Sonoo, Hanumat]
         Linked List: [Adarsh, Ravi, Gaurav, Vijay, Ravi, Ajay, Sonoo, Hanumat, Harsh]
+        Linked List: [Ravi, Vijay, Ravi, Ajay, Hanumat]
+        Linked List: [Ravi, Vijay, Ravi, Ajay]
         */
         ```
