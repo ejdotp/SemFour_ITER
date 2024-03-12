@@ -640,4 +640,12 @@ Not Found */</code></pre>
       + Can be used as List, Stack & Queue.  
       + Inherits from abstract list class.
       + Implements list & Dequeue Interface. 
-      + Example: [MarriedList.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/MarriedList.java)
+      + Example: [MarriedList.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/4_List%20Interface/MarriedList.java)  
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
