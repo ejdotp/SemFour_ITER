@@ -28,6 +28,46 @@
   1. Declare class attribute/variaqbles as private.
   2. Use GET & SET method to access &  update the private attributes/variables.
 * Example: [TestEncapsulation.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/1_Encapsulation/TestEncapsulation.java)
+```ruby
+class Person
+{
+	private int Age;
+	private String Name;
+	
+	// We will employ get and set methods to use the class objects
+	public String getName()
+	{
+		return Name;
+	}
+	
+	public int getAge()
+	{
+		return Age;
+	}
+	
+	public void setAge(int Age)
+	{
+		this.Age = Age;
+	}
+	
+	public void setName(String Name)
+	{
+		this.Name = Name;
+	}
+}
+
+public class TestEncapsulation
+{
+	public static void main(String args[])
+	{
+		Person obj = new Person();
+		obj.setName("Mark");
+		obj.setAge(30);
+		System.out.println("Name is: " + obj.getName());
+		System.out.println("Age is: " + obj.getAge());
+	}
+}
+```
 * | Advantages                                                                                        | Disadvantages                                      |
   | ------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
   | code becomes more flexible. Programmer can change one part of code without affecting other parts. | It can lead to complex code, if not used properly. |
@@ -61,6 +101,29 @@
   > abstract class A{ //code }
   >
 * Example: [Abstraction.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/3_Abstraction/Abstraction.java)
+   ```ruby
+   abstract class Bike
+   {
+       abstract void run();
+   }
+   
+   class Yamaha extends Bike
+   {
+       void run()
+       {
+           System.out.println("running safely");
+       }
+   }
+   
+   public class Abstraction
+   {
+   	public static void main(String args[])
+       {
+           Bike b = new Yamaha();
+           b.run();
+       }
+   }
+   ```
 * | Advantages                                                          | Disadvantages                                                                              |
   | ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
   | It protect the implementation of program from users.                | Over use of abstraction makes the code less optimal because of unneccessary layer of code. |
@@ -78,11 +141,59 @@
      + Function Overloading
      + Operator Overloading [Not supported by java]
      + Example: [TestOverloading1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/4_Polymorphism/TestOverloading1.java)
+      ```ruby
+      class Multiplier {
+          static int mul(int a, int b) {
+              return a * b;
+          }
+      
+          static int mul(int a, int b, int c) {
+              return a * b * c;
+          }
+      
+          static double mul(double a, double b) {
+              return a * b;
+          }
+      }
+      
+      class TestOverloading1 {
+          public static void main(String[] args) {
+              System.out.println(Multiplier.mul(11, 11));
+              System.out.println(Multiplier.mul(11, 11, 11));
+              System.out.println(Multiplier.mul(11.1, 11.1));
+          }
+      }
+      ```
   2. Run Time Polymorphism
      + Dynamic Method Dispatch
      + Override the function at runtime
      + Override is when the derived class has same definition of the functions of box class.
      + Example: [TestOverriding1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/4_Polymorphism/TestOverriding1.java)
+      ```ruby
+      class Bike
+      {
+          void run()
+          {
+              System.out.println("Running at 400 kmph");
+          }
+      }
+      
+      class Honda extends Bike
+      {
+          void run()
+          {
+              System.out.println("More like 120kmph LOL");
+          }
+      }
+      public class TestOverriding1
+      {
+          public static void main(String[] args)
+          {
+              Bike b = new Honda();
+              b.run();
+          }
+      }
+      ```
 * In Overloading -> functions are in same class
 * In Overriding -> functions are in different class
 * | Advantages                                                                             | Disadvantages                                                            |
@@ -109,6 +220,32 @@
 
 + A class only extend to one class but can implement infinite interfaces.
 + Example: [testInterface1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/5_Interface/testInterface1.java)
+   ```ruby
+   interface MyInterface1 {
+       public void method1();
+   }
+   
+   interface MyInterface2{
+       public void method2();
+   }
+   
+   class DemoClass implements MyInterface1, MyInterface2{
+       public void method1(){
+           System.out.println("Method 1");
+       }
+       public void method2(){
+           System.out.println("Method 2");
+       }
+   }
+   
+   public class testInterface1 {
+       public static void main(String[] args) {
+           DemoClass dc = new DemoClass();
+           dc.method1(); // Call
+           dc.method2(); // Call
+       }
+   }
+   ```
 + [class] -- extends --> [class]
 + [class] -- implements --> [interface]
 + [Interface] -- extends --> [interface]
@@ -131,11 +268,80 @@
        + when class A doesn't have public variables
        + class A can't be accessed by any other class.
        + Example: [testLooseCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/6_Coupling/testLooseCoupling1.java)
+         ```ruby
+         class A
+         {
+             private String name; //public data member of A class
+         
+             public String getName()
+             {
+                 if(name!=null) //checking a valid access of intance variable, "name"
+                     return name;
+                 else
+                     return "not initialized";
+             }
+         
+             public void setName(String s)
+             {
+                 if(s==null) //checking a valid setting of instance variable, "name"
+                     System.out.println("cant initialize to a null dude");
+                 else
+                     name = s;
+             }
+         }
+         
+         class testLooseCoupling1
+         {
+             public static void main(String[] args) {
+                 A a = new A();
+                 a.setName(null);
+                 System.out.println("Name is " + a.getName());
+             }
+         }
+         /*output:
+         cant initialize to a null dude
+         Name is not initialized
+          */
+         ```
     2. Tight Coupling
        + when a class knows everything about another class.
        + If all the members are public, class B can access directly from class A using operators.
        + [class A] --Tight Coupling--> [class B]
        + Example: [testTightCoupling1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/6_Coupling/testTightCoupling1.java)
+         ```ruby
+         class A
+         {
+             public String name; //public data member of A class
+         
+             public String getName()
+             {
+                 if(name!=null) //checking a valid access of intance variable, "name"
+                     return name;
+                 else
+                     return "not initialized";
+             }
+         
+             public void setName(String s)
+             {
+                 if(s==null) //checking a valid setting of instance variable, "name"
+                     System.out.println("cant initialize to a null dude");
+                 else
+                     name = s;
+             }
+         }
+         
+         class testTightCoupling1
+         {
+             public static void main(String[] args) {
+                 A a = new A();
+                 a.name = null;
+                 System.out.println("Name is " + a.name);
+             }
+         }
+         /*
+         Name is null
+          */
+         ```
 * **Cohesion[intraclass]:**
   + It refers to the extent which a class is defined to do a specific specialized task.
   + Two Types:
@@ -170,7 +376,21 @@
 * It makes the code stable by detecting the bugs at compile time.
 * Before generics you can store any type of objects in the collection i.e. non-generics.
   > [testNonGenerics1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testNonGenerics1.java)
-  >
+```ruby
+import java.util.ArrayList;
+import java.util.List;
+public class testNonGenerics1 {
+    public static void main(String[] args) {
+        List list = new ArrayList();
+        list.add(10); //int
+        list.add("20"); //string
+        for(int i=0; i<list.size(); i++){
+            System.out.println(list.get(i));  // loop printing
+        }
+        System.out.println(list.toString()); //direct printing
+    }
+}
+```
 * Now generics force the java programmer to store a specific type of objects.
 * **Advantage of Generics:**
   1. Type-Safety :
@@ -178,12 +398,57 @@
      * You can hold a single type of objects in generics. It doesn't allow to store other objects.
 
      > [testGenerics1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testGenerics1.java)
-     >
+```ruby
+import java.util.ArrayList;
+import java.util.List;
+
+public class testGenerics1 {
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(10); //int
+        // list.add("20"); "The method add(Integer) in the type List<Integer> is not applicable for the arguments (String)"
+        for(int i=0; i<list.size(); i++){
+            System.out.println(list.get(i));  // loop printing
+        }
+        System.out.println(list.toString()); //direct printing
+    }
+}
+```
   2. No Type Casting Required :
 
      * Before generics, we needed to typecast.
        + [Non Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testNonGenerics2.java)
+         ```ruby
+         //Non generic typecasting
+         
+         import java.util.ArrayList;
+         import java.util.List;
+         
+         public class testNonGeneric2 {
+             public static void main(String[] args) {
+                 List list = new ArrayList();
+                 list.add("hello");
+                 String s = (String)list.get(0); //(string) typecasting needed
+                 System.out.println(s);
+             }
+         }
+         ```
        + [Generic](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/12_Object%20Oriented%20Programming/7_Generics/testGenerics2.java)
+         ```ruby
+         //generic typecasting
+         
+         import java.util.ArrayList;
+         import java.util.List;
+         
+         public class testGenerics2 {
+             public static void main(String[] args) {
+                 List<String> list = new ArrayList<String>();
+                 list.add("hello");
+                 String s = list.get(0); //no typecasting needed
+                 System.out.println(s);
+             }
+         }
+         ```
   3. It detects the bug in compile time.
      ```ruby
      List<String> list = newArrayList<String>();
