@@ -15,7 +15,8 @@
    + [5. Map Interface](#map-interface)  
    + [6. Set Interface](#set-interface)
    + [7. List Interface](#list-interface)  
-   + [8. Queue Interface](#queue-interface-fifo)
+   + [8. Queue Interface](#queue-interface-fifo)  
+   + [9. Stream API](#stream-api)
 <hr> 
 
 # 12. Object Oriented Programming   
@@ -1220,44 +1221,96 @@ true
 
 ## Queue Interface [FIFO]
 
-**Priority Queue**
-  + Inherits method from Abstract Queue
-```ruby
-import java.util.PriorityQueue;
+**Priority Queue:**
+  + Inherits method from Abstract Queue  
+  + Example: [PiiChan.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/5_Queue%20Interface/PiiChan.java)
+    ```ruby
+    import java.util.*;
 
-class PiChan {
- public static void main(String[] args) {
-    PriorityQueue<Integer>pq=new PriorityQueue<>();
-    pq.add(100);
-    pq.add(10);
-    pq.add(1000);
-    pq.add(10000);
-    pq.add(100000);
-    pq.add(1000000);
-    for(int i=0;i<3;i++){
-        pq.add(i);
-        pq.add(1);
+    class PiiChan
+    {
+        public static void main(String[] args)
+        {
+            PriorityQueue<String> pq = new PriorityQueue<>();
+
+            pq.add("Hello");
+            pq.add("How");
+            pq.add("Have");
+            pq.add("You");
+            pq.add("Been");
+
+            System.out.println("Initial PQ: " + pq);
+
+            pq.remove("Have");
+            System.out.println("After removing \"Have\": " + pq);
+
+            System.out.println("Invoking poll method: " + pq.poll());
+
+            System.out.println("Does the queue contain \"Hello\" ?" + pq.contains("Hello"));
+            System.out.println("Size: " + pq.size());
+            System.out.println("Final: " + pq);
+            pq.clear();
+            System.out.println("is it empty? " + pq.isEmpty());
+        }
     }
-    System.out.println(pq);
-    System.out.println(pq.peek());//only retrieves
-    System.out.println(pq.poll());//retrieves & remove
-    PriorityQueue<String>pq1=new PriorityQueue<>();
-    pq1.add("C");
-    pq1.add("A");
-    pq1.add("B");
-    pq1.add("A");
-    pq1.add("F");
-    System.out.println(pq1);
-    System.out.println(pq1.peek());//only retrieves
-    System.out.println(pq1.poll());//retrieves & remove
- }  
-}
-/*
-[0, 1, 1, 1, 1, 10, 1000, 10000, 100, 100000, 2, 1000000]
-0
-0
-[A, A, B, C, F]
-A
-A
- */
- ```
+    /*
+    Initial PQ: [Been, Have, Hello, You, How]
+    After removing "Have": [Been, How, Hello, You]
+    Invoking poll method: Been
+    Does the queue contain "Hello" ?true
+    Size: 3
+    Final: [Hello, How, You]
+    is it empty? true
+    */
+    ```  
+## Stream API  
+
++ Introduced in Java 8.  
++ Used to process collection of objects.  
++ A stream in Java is a sequence of objects that supports various methods which can be pipelined to produce various results.
++ It's uses are:   
+    1. It is a way to express and process collections of objects.  
+    1. Enables to perform operations like filtering, mapping, reducing & sorting.  
++ Example: [Stream_API1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/6_Stream%20API/Stream_API1.java)  
+    ```ruby
+    import java.util.*;
+
+    class Product
+    {
+        int id;
+        String name;
+        float price;
+        public Product(int id, String name, float price)
+        {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+        }
+    }
+
+    class Stream_API1
+    {
+        public static void main(String[] args)
+        {
+            List<Product>  productList = new ArrayList<Product>();
+            //Adding Products:
+            productList.add(new Product(1, "HP Laptop", 25000f));
+            productList.add(new Product(2, "Dell Laptop", 30000f));
+            productList.add(new Product(3, "Lenovo Laptop", 28000f));
+            productList.add(new Product(3, "Sony Laptop", 28000f));
+            productList.add(new Product(3, "Apple Laptop", 90000f));
+
+            List<Float>  productPriceList = new ArrayList<Float>();
+            for(Product p : productList)
+                //filtering data of list
+                if(p.price<30000)
+                    productPriceList.add(p.price);
+
+            System.out.println(productPriceList);
+            
+        }
+    }
+    /*
+    [25000.0, 28000.0, 28000.0]
+    */
+    ```
