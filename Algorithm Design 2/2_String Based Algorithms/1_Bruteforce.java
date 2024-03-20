@@ -1,4 +1,4 @@
-//add occurence to it
+//Brute force algorithm for string search & count the occurence
 
 class Bruteforce {
 	// called function

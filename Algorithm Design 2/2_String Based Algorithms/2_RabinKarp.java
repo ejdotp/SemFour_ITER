@@ -1,3 +1,5 @@
+//Rabin-Karp string matching algorithm
+
 import java.util.*;
 
 class RabinKarp
