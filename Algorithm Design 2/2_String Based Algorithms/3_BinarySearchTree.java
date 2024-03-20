@@ -19,47 +19,49 @@ class BinarySearchTree
     Node root = null;
 
     // Inserts a word or increments the count if it exists
-    public void insert(String key) {
+    public void insert(String key)
+    {
         root = satareinsert(root, key);
     }
 
-    private Node satareinsert(Node node, String key) {
-        if (node == null) {
+    private Node satareinsert(Node node, String key)
+    {
+        if (node == null)
             return new Node(key);
-        }
 
         int comparison = key.compareTo(node.key);
 
-        if (comparison < 0) {
+        if (comparison < 0)
             node.left = satareinsert(node.left, key);
-        } else if (comparison > 0) {
+        else if (comparison > 0)
             node.right = satareinsert(node.right, key);
-        } else {
+        else
             // Word already exists, increment count
             node.count++;
-        }
 
         return node;
     }
 
     // Returns the count of occurrences of a word
-    public int getCount(String key) {
+    public int getCount(String key)
+    {
         Node node = search(root, key);
         return (node != null) ? node.count : 0;
     }
 
-    private Node search(Node node, String key) {
-        if (node == null || node.key.equals(key)) {
+    private Node search(Node node, String key)
+    {
+        if (node == null || node.key.equals(key))
             return node;
-        }
 
-        if (key.compareTo(node.key) < 0) {
+        if (key.compareTo(node.key) < 0)
             return search(node.left, key);
-        } else {
+        else
             return search(node.right, key);
-        }
     }
-    public static void main(String[] args) {
+
+    public static void main(String[] args)
+    {
         BinarySearchTree bst = new BinarySearchTree();
         String text = "This is a sample text to demonstrate a binary search tree. A tree is good for the environment.";
     
@@ -67,9 +69,8 @@ class BinarySearchTree
         String[] words = text.split("\\s+");
     
         // Insert each word into the tree
-        for (String word : words) {
+        for (String word : words)
             bst.insert(word.toLowerCase()); // Convert to lowercase for case-insensitivity 
-        }
     
         System.out.println("Count of 'a': " + bst.getCount("a"));
         System.out.println("Count of 'tree': " + bst.getCount("tree"));
