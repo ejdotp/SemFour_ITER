@@ -2,18 +2,16 @@
 
 class Anyagram
 {
-    private static int CHARACTER_RANGE= 256;
-
     static boolean areAnagram(String str1, String str2) {
         if (str1.length() != str2.length()) {
             return false;
         }
-        int count[] = new int[CHARACTER_RANGE];
+        int count[] = new int[256]; //character range
         for (int i = 0; i < str1.length(); i++) {
             count[str1.charAt(i)]++;
             count[str2.charAt(i)]--;
         }
-        for (int i = 0; i < CHARACTER_RANGE; i++) {
+        for (int i = 0; i < 256; i++) {
             if (count[i] != 0) {
                 return false;
             }
@@ -23,13 +21,16 @@ class Anyagram
 
     public static void main(String[] args)
     {
-        String str1 = "geeksforgeeks";
-        String str2 = "forgeeksgeeks";
- 
-        // Function call
+        String str1 = "jaiphula";
+        String str2 = "phulajai";
+
         if (areAnagram(str1, str2))
-            System.out.print("The two strings are " + "anagram of each other");
+            System.out.print("Are anagrams.");
         else
-            System.out.print("The two strings are " + "not anagram of each other");
+            System.out.print("Nope.");
     }
 }
+
+/*Output:
+Are anagrams.
+ */
