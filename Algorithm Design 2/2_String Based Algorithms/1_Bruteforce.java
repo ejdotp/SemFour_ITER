@@ -8,7 +8,8 @@ class Bruteforce
 		int n = river.length();
 		int count = 0;
 
-		for (int i = 0; i <n-m; i++) {
+		for (int i = 0; i <n-m; i++)
+		{
 			int j = 0;
 			while ((j < m) && (river.charAt(i + j) == drop.charAt(j)))
 				j++;
