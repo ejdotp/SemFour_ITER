@@ -16,11 +16,7 @@ class Node
 
 class BinarySearchTree
 {
-    Node root;
-
-    public BinarySearchTree() {
-        root = null;
-    }
+    Node root = null;
 
     // Inserts a word or increments the count if it exists
     public void insert(String key) {
