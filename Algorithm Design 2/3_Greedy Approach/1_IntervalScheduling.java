@@ -66,3 +66,14 @@ class IntervalScheduling
         IntervalScheduling.findOptimalJobSchedule(jobs);
     }
 }
+
+/*output:
+
+Input Jobs:     [[a: (0, 6)], [b: (1, 4)], [c: (3, 5)], [d: (3, 8)], [e: (4, 7)], [f: (5, 9)], [g: (6, 10)], [h: (8, 11)]]
+
+Selected 3 Jobs: 
+[b: (1, 4)]
+[e: (4, 7)]
+[h: (8, 11)]
+
+ */
