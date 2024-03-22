@@ -457,7 +457,7 @@ public class testGenerics1 {
      list.add(32); //compiletime Error
      '''
 
-## Generic class :- 
+## Generic class 
 * A class that can refer to any type is a generic class. 
 * You have to pass different parameters during the declaration of class.
 * Types of parameters:
@@ -478,7 +478,7 @@ class MyGen<T>{
   }
 ``` 
 
-## Generic Method :-  
+## Generic Method  
 ```ruby
 public class Test_Generic_Method{
     public static <T> void printArray(E[] elements){
@@ -516,7 +516,7 @@ class Test<T, U>{
   }
 ```
 
-## toString Overriding:  
+## toString Overriding  
 
 **The Problem: [kichhigote1.java](https://github.com/ejdotp/SemFour_ITER/blob/main/Computer%20Science%20%26%20Workshop%202/Class%20Lectures/13_Generics/1_toString%20Overriding/kichhigote1.java)**  
 ```ruby
