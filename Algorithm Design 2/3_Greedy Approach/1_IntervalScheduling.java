@@ -30,7 +30,7 @@ class IntervalScheduling
 {
     public static void findOptimalJobSchedule(Job[] jobs)
     {
-        System.out.println("Input Jobs: \t" + Arrays.toString(jobs));
+        System.out.println("Input Jobs: " + Arrays.toString(jobs));
         Arrays.sort(jobs);  //Sort jobs by finis time
 
         LinkedList<Job> jobsSelected = new LinkedList<Job>();
@@ -69,7 +69,7 @@ class IntervalScheduling
 
 /*output:
 
-Input Jobs:     [[a: (0, 6)], [b: (1, 4)], [c: (3, 5)], [d: (3, 8)], [e: (4, 7)], [f: (5, 9)], [g: (6, 10)], [h: (8, 11)]]
+Input Jobs: [[a: (0, 6)], [b: (1, 4)], [c: (3, 5)], [d: (3, 8)], [e: (4, 7)], [f: (5, 9)], [g: (6, 10)], [h: (8, 11)]]
 
 Selected 3 Jobs: 
 [b: (1, 4)]
