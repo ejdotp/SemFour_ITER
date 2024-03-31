@@ -1,0 +1,1 @@
+//Develop a program that performs complex mathematical(may have log,trigonometricand algebraic functions) computations. Handle unchecked NullPointerExceptiongracefully using try-catchblock and provide a meaningful error message.

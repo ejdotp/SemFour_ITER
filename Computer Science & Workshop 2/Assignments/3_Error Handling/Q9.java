@@ -1,0 +1,1 @@
+//Create a program that divides two numbers input by the user. Handle the possibility of division by zero using try-catch block to catch ArithmeticException.

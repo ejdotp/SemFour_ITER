@@ -1,0 +1,1 @@
+//Implement acustom NullPointerExceptionclass namedCustomNullPointerExceptionthat   mimics   the   behavior   of   the   standardNullPointerException, but instead of using default error messages or null references, it takes a String message as its constructor argument. Your task is to create this custom exception class and demonstrate its usage in a Java program.
