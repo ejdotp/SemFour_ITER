@@ -1,5 +1,6 @@
 /* Implement a method that reads an integer from the user but handles
 InputMismatchException using try-catch block. */
+
 public class Q25 {
     public static void main(String[] args) {
         java.util.Scanner sc = new java.util.Scanner(System.in);
@@ -13,6 +14,3 @@ public class Q25 {
         sc.close();
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

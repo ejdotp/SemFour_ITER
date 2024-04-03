@@ -1,4 +1,5 @@
 /* Write a Java program to handle NumberFormatException. */
+
 public class Q6 {
     public static void main(String[] args) {
         try {
@@ -10,6 +11,3 @@ public class Q6 {
         }
     }
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

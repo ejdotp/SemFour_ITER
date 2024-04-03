@@ -1,6 +1,7 @@
 /* Develop a program that performs complex mathematical (may have log, trigonometric
 and algebraic functions) computations. Handle unchecked NullPointerException
 gracefully using try-catch block and provide a meaningful error message. */
+
 public class Q5 {
     public static void main(String[] args) {
         try {
@@ -15,6 +16,3 @@ public class Q5 {
         }
     }
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

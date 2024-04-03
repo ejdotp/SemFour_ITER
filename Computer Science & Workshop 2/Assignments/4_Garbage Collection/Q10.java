@@ -2,6 +2,7 @@
 Generational garbage collection divides objects into different generations based on their
 age and aims to optimize memory management by applying different collection
 strategies to each generation. */
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,6 +61,3 @@ public class Q10 {
         }
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

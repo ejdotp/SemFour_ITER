@@ -1,6 +1,6 @@
 /* How do you define generational garbage collection? Also discuss how generational
 garbage collection works along with proper heap map. */
-public class Q9 {
+
     /*
       Generational garbage collection (GC) is a memory management technique that
       separates objects into generations based on when they were allocated, and
@@ -33,7 +33,3 @@ public class Q9 {
     |           Eden Space              |
     ------------------------------------
     */
-}
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

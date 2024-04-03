@@ -3,14 +3,19 @@ attempts to read the contents of the file. If the file path is null or points to
 file, throw a custom FileNotFoundException. If the file exists but cannot be read due
 to permission issues, throw a custom FileReadPermissionException. Your task is to
 create these custom exception classes and handle them appropriately in your program. */
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-public class Q4 {
-    public static void main(String[] args) {
-        try {
+
+public class Q4
+{
+    public static void main(String[] args)
+    {
+        try
+        {
             if (args.length == 0) {
                 throw new CustomFileNotFoundException("File path is null");
             }
@@ -36,17 +41,16 @@ public class Q4 {
             System.out.println("Error reading file");
         }
     }
+
     static class CustomFileNotFoundException extends FileNotFoundException {
         public CustomFileNotFoundException(String message) {
             super(message);
         }
     }
+    
     static class CustomFileReadPermissionException extends IOException {
         public CustomFileReadPermissionException(String message) {
             super(message);
         }
     }
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

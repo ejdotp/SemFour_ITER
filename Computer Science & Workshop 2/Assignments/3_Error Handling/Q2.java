@@ -4,13 +4,16 @@ string. If such numeric characters are not present in the given string, display 
 message. If the input string is null or empty, throw a NullPointerException with an
 appropriate error message. Ensure that the program handles any potential exceptions
 gracefully.*/
-public class Q2 {
-    public static void main(String[] args) {
+
+public class Q2
+{
+    public static void main(String[] args)
+    {
         try {
             String str = "a1b2c3d4e5";
-            if (str == null || str.isEmpty()) {
+            if (str == null || str.isEmpty())
                 throw new NullPointerException("String is null or empty");
-            }
+            
             for (int i = 0; i < str.length(); i++) {
                 if (Character.isDigit(str.charAt(i))) {
                     if (i > 1 && Character.isLetter(str.charAt(i - 1)) && Character.isLetter(str.charAt(i - 2))) {
@@ -25,6 +28,3 @@ public class Q2 {
         }        
     }
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

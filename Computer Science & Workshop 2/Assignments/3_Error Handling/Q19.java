@@ -4,6 +4,7 @@ accessing elements at various indices. Introduce scenarios, where accessing elem
 beyond the bounds of the array leads to ArrayIndexOutOfBoundsException. Your
 task is to handle these exceptions gracefully and ensure the program continues
 execution without crashing. */
+
 public class Q19 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
@@ -14,6 +15,3 @@ public class Q19 {
         }
     }    
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

@@ -1,5 +1,6 @@
 /* How do we make objects eligible for garbage collection? Discuss all possible ways
 along with their implementation. */
+
 public class Q3 {
     public static void main(String[] args) {
         // Setting References to Null
@@ -18,6 +19,3 @@ public class Q3 {
         System.gc();
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

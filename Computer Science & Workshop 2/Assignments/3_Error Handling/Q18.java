@@ -2,6 +2,7 @@
 arrays. Introduce scenarios where the recursion reaches beyond the bounds of the array,
 resulting in ArrayIndexOutOfBoundsException. Your task is to handle these
 exceptions within the recursive algorithm and ensure proper termination of recursion. */
+
 public class Q18 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
@@ -17,6 +18,3 @@ public class Q18 {
         printArray(arr, index + 1);
     }
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

@@ -1,6 +1,7 @@
 /* Implement a Java program that calculates the value of the expression (sin(x) + cos(x))
 / tan(x) for a given value of x. Handle scenarios where x is close to multiples of π/2 to
 avoid division by zero errors. */
+
 public class Q10 {
     public static void main(String[] args) {
         try {
@@ -12,6 +13,4 @@ public class Q10 {
         }
     }    
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44
+

@@ -21,6 +21,3 @@ public class Q3 {
         }
     }
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

@@ -4,6 +4,7 @@ data members of the defined class. Use the Runtime class to calculate the total
 memory allocated and the memory occupied by the objects. Use any one technique as
 you know to make objects unreachable, hence eligible for garbage collection. At the
 end, call Runtime class again to recheck the utilized/total memory. */
+
 public class Q7 {
     private int integer;
     private double decimal;
@@ -38,6 +39,3 @@ public class Q7 {
         System.out.println("Memory Occupied by Objects: " + (runtime.totalMemory() - runtime.freeMemory()));
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

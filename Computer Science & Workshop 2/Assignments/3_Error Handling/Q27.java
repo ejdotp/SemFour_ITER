@@ -1,4 +1,5 @@
 /* Write a program to handle ClassCastException. */
+
 public class Q27 {
     public static void main(String[] args) {
         try {
@@ -9,6 +10,3 @@ public class Q27 {
         }
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

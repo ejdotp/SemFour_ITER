@@ -1,5 +1,6 @@
 /* Write a program that initializes a lot of objects in a loop and observe how much time it
 takes to crash the program. */
+
 public class Q1 {
     public static void main(String[] args) {
         try {
@@ -11,6 +12,3 @@ public class Q1 {
         }
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

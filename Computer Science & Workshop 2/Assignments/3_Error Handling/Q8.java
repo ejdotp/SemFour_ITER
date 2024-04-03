@@ -1,6 +1,7 @@
 /* Create a method that takes a string input and converts it to an integer. Handle
 NumberFormatException using try-catch block and prompt the user to enter a valid
 number upon exception. */
+
 public class Q8 {
     public static void main(String[] args) {
         try {
@@ -16,6 +17,3 @@ public class Q8 {
         return Integer.parseInt(str);
     }    
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

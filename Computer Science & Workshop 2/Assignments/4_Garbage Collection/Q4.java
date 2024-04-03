@@ -1,5 +1,6 @@
 /* What distinguishes anonymous objects from regular objects? Demonstrate how
 anonymous objects can be used to successfully call and run methods */
+
 public class Q4 {
     public static void main(String[] args) {
         // Anonymous Objects
@@ -11,6 +12,3 @@ public class Q4 {
         System.out.println("They are used to call methods that are not going to be used again.");
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

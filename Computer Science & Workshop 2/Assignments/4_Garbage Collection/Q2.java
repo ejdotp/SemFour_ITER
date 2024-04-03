@@ -1,4 +1,5 @@
 /* Create a diagram that shows how objects become eligible for garbage collection. */
+
 public class Q2 {    
     public static void main(String[] args) {
         System.out.println("Objects become eligible for garbage collection when they are no longer reachable.");
@@ -7,6 +8,3 @@ public class Q2 {
         System.out.println("The garbage collector runs in the background and deletes objects that are no longer reachable.");
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

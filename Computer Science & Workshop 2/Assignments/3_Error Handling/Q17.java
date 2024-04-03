@@ -3,7 +3,9 @@ trees, where elements are stored in arrays. Introduce scenarios, where accessing
 elements beyond the bounds of the array backing the data structure results in
 ArrayIndexOutOfBoundsException. Your task is to implement bounds checking and
 handle these exceptions effectively while maintaining the integrity of the data structure. */
+
 import java.util.LinkedList;
+
 public class Q17 {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
@@ -18,6 +20,3 @@ public class Q17 {
         }
     }
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

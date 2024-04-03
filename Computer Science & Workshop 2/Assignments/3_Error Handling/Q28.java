@@ -1,4 +1,5 @@
 /* Implement a Java program to handle StackOverflowError. */
+
 public class Q28 {
     public static void main(String[] args) {
         try {
@@ -13,6 +14,3 @@ public class Q28 {
         recursiveMethod(i + 1);
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

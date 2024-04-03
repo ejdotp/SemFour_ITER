@@ -1,4 +1,5 @@
 /* Create a Java program to handle ArrayIndexOutOfBoundsException. */
+
 public class Q16 {
     public static void main(String[] args) {
         try {
@@ -9,6 +10,3 @@ public class Q16 {
         }
     }
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44

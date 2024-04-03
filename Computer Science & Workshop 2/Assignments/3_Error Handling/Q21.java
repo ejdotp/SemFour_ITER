@@ -3,6 +3,7 @@ and transpose. Introduce scenarios, where accessing elements beyond the bounds o
 matrix results in ArrayIndexOutOfBoundsException. Your task is to handle these
 exceptions effectively and provide meaningful error messages indicating the nature of
 the exception. */
+
 public class Q21 {
     public static void main(String[] args) {
         int[][] a = { { 1, 2, 3 }, { 4, 5, 6 } };
@@ -63,6 +64,3 @@ public class Q21 {
         }
     }
 }
-// By :- Subhajyoti Prusty
-// 2241016491
-// CSE-44

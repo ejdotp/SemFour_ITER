@@ -1,5 +1,6 @@
 /* Create a program that divides two numbers input by the user. Handle the possibility of
 division by zero using try-catch block to catch ArithmeticException. */
+
 public class Q9 {
     public static void main(String[] args) {
         try {
@@ -12,6 +13,3 @@ public class Q9 {
         }
     }
 }
-//By :- Subhajyoti Prusty
-//2241016491
-//CSE-44
