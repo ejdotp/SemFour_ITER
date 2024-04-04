@@ -1,114 +1,108 @@
-//Write java code to implement Huffman Coding using Greedy approach.
+import java.util.*;
 
-import java.util.Comparator;  
-import java.util.HashMap;  
-import java.util.Map;  
-import java.util.PriorityQueue;  
+class huffmancoding { 
 
-class HuffmanNode
-{  
-    int data;  
-    char c;  
-    HuffmanNode left;  
-    HuffmanNode right;  
+	public static void printCode(HuffmanNode root, String s) 
+	{  
+		if (root.left == null && root.right == null
+			&& Character.isLetter(root.c)) { 
+
+			// c is the character in the node 
+			System.out.println(root.c + ":" + s); 
+
+			return; 
+		} 
+
+		printCode(root.left, s + "0"); 
+		printCode(root.right, s + "1"); 
+	} 
+ 
+	public static void main(String[] args) 
+	{ 
+// number of characters. 
+		int n = 6; 
+		char[] charArray = { 'a', 'b', 'c', 'd', 'e', 'f' }; 
+		int[] charfreq = { 5, 9, 14, 13, 16, 3 }; 
+
+		// creating a priority queue q. 
+		// makes a min-priority queue(min-heap). 
+		PriorityQueue<HuffmanNode> q 
+			= new PriorityQueue<HuffmanNode>( 
+				n, new MyComparator()); 
+
+		for (int i = 0; i < n; i++) { 
+
+			// creating a Huffman node object 
+			//add it to the priority queue. 
+			HuffmanNode hn = new HuffmanNode(); 
+
+			hn.c = charArray[i]; 
+			hn.data = charfreq[i]; 
+
+			hn.left = null; 
+			hn.right = null; 
+
+			// add the huffman node to the queue. 
+			q.add(hn); 
+		} 
+
+		// create a root node 
+		HuffmanNode root = null; 
+
+		while (q.size() > 1) { 
+
+			// first min extract. 
+			HuffmanNode x = q.peek(); 
+			q.poll(); 
+
+			// second min extract. 
+			HuffmanNode y = q.peek(); 
+			q.poll(); 
+
+			// new node f which is equal 
+			HuffmanNode f = new HuffmanNode(); 
+
+			f.data = x.data + y.data; 
+			f.c = '-'; 
+
+			// first extracted node as left child. 
+			f.left = x; 
+
+			// second extracted node as the right child. 
+			f.right = y; 
+
+			// marking the f node as the root node. 
+			root = f; 
+
+			// add this node to the priority-queue. 
+			q.add(f); 
+		} 
+
+		// print the codes by traversing the tree 
+		printCode(root, ""); 
+	} 
+} 
+
+class HuffmanNode { 
+
+	int data; 
+	char c; 
+
+	HuffmanNode left; 
+	HuffmanNode right; 
+} 
+
+class MyComparator implements Comparator<HuffmanNode> { 
+	public int compare(HuffmanNode x, HuffmanNode y) 
+	{ 
+
+		return x.data - y.data; 
+	} 
 }
 
-class MyComparator implements Comparator<HuffmanNode>
-{  
-    public int compare(HuffmanNode x, HuffmanNode y)
-    {  
-        return x.data - y.data;  
-    }  
-}
-
-class HuffmanCoding
-{
-    public static void main(String[] args)
-    {
-        int n = 6;
-        char[] charArray = { 'a', 'b', 'c', 'd', 'e', 'f' };
-        int[] charFreq = { 5, 9, 12, 13, 16, 45 };
-
-        PriorityQueue<HuffmanNode> q = new PriorityQueue<>(n, new MyComparator());
-        for (int i = 0; i < n; i++)
-        {
-            HuffmanNode hn = new HuffmanNode();
-            hn.c = charArray[i];
-            hn.data = charFreq[i];
-            hn.left = null;
-            hn.right = null;
-            q.add(hn);
-        }
-
-        HuffmanNode root = null;
-        while (q.size() > 1)
-        {
-            HuffmanNode x = q.poll();
-            HuffmanNode y = q.poll();
-            HuffmanNode f = new HuffmanNode();
-            f.data = x.data + y.data;
-            f.c = '-';
-            f.left = x;
-            f.right = y;
-            root = f;
-            q.add(f);
-        }
-
-        Map<Character, String> huffmanCode = new HashMap<>();
-        encode(root, "", huffmanCode);
-        System.out.println("Huffman Codes are: " + huffmanCode);
-
-        System.out.println("The original string is: ");
-        String str = "abcdef";
-        System.out.println(str);
-        System.out.println("The encoded string is: ");
-        String encodedString = "";
-        for (int i = 0; i < str.length(); i++)
-            encodedString += huffmanCode.get(str.charAt(i));
-        
-        System.out.println(encodedString);
-        System.out.println("The decoded string is: ");
-        int index = -1;
-        while (index < encodedString.length() - 2)
-            index = decode(root, index, encodedString);
-        
-    }
-
-    public static void encode(HuffmanNode root, String s, Map<Character, String> huffmanCode)
-    {
-        if (root.left == null && root.right == null)
-        {
-            huffmanCode.put(root.c, s);
-            return;
-        }
-        encode(root.left, s + "0", huffmanCode);
-        encode(root.right, s + "1", huffmanCode);
-    }
-
-    public static int decode(HuffmanNode root, int index, String s)
-    {
-        if (root.left == null && root.right == null)
-        {
-            System.out.print(root.c);
-            return index;
-        }
-        index++;
-
-        if (s.charAt(index) == '0')
-            index = decode(root.left, index, s);
-        else
-            index = decode(root.right, index, s);
-        
-        return index;
-    }
-}
-
-/*
-Huffman Codes are: {a=1100, b=1101, c=100, d=101, e=111, f=0}
-The original string is: 
-abcdef
-The encoded string is:
-110011011001011110
-The decoded string is:
-abcde
- */
+/*d:00
+c:01
+e:10
+f:1100
+a:1101
+b:111 */
