@@ -1314,3 +1314,66 @@ true
     [25000.0, 28000.0, 28000.0]
     */
     ```
+# Error Handling  
+
+  ## Logical Error:  
+    - Most difficult type of error.
+    - It doesn't show the error statements but the code works properly.  
+    - Example: 
+      ```ruby
+      int c;
+      for(c=0; c<=10; c++);{
+        System.out.print("Counter is: " + c);
+      }
+      ```
+    - Handling a logical error:
+      1. Debugging  
+      2. Proof Reading
+  ## Syntax Error:  
+    - Wrong Language or Wrong Syntax.  
+    - Example: Capitalization, Splitting Strings  
+  ## Semantic Error:  
+    - Depends on use of the code.  
+    - Example: Improper missing declaration, Wrong use of Operator.
+      ```ruby
+      for(i = 0; i< 10; i++){
+        System.out.println(i);
+      }
+      ```  
+
+# Garbage Collection
+
+  ```ruby
+  class Employee{
+    Private int ID;
+  }
+  ```  
+# Strings, I/O Operations, and File Management
+
+## String Concatenation  
+
+  - Concatenation using + Operator.  
+  - Concatenation using Concat() method.  
+
+# Data Structure and Integration in Program
+
+## Non-Linear Data Structure
+
+  - **Binary Tree:**
+    ```mermaid
+    graph TD;
+        A-->B;
+        A-->C;
+        B-->D;
+        B-->E;
+        C-->F;
+        C-->G;
+        D-->H;
+        D-->I;
+        E-->J;
+        E-->K;
+        F-->L;
+        F-->M;
+        G-->N;
+        G-->O;
+    ```
