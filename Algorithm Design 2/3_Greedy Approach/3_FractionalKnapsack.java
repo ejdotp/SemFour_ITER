@@ -6,8 +6,8 @@ class FractionalKnapsack
 {
     public static void main(String[] args)
     {
-        int val[] = { 60, 100, 120 };
-        int weight[] = { 10, 20, 30 };
+        int val[] = { 60, 40, 90, 120 };
+        int weight[] = { 10, 40, 20, 30 };
         int W = 50;
         double ratio[][] = new double[val.length][2];
 
@@ -43,5 +43,5 @@ class FractionalKnapsack
 }
 
 /*
-final value = 240
+final value = 230
  */
