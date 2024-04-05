@@ -12,10 +12,10 @@ class QuickSort
         QuickSort ob = new QuickSort();
         ob.quickSort(arr, 0, n - 1);
 
-        System.out.println("Sorted array");
+        System.out.print("Sorted array: ");
         ob.printArray(arr, n);
     }
-    
+
     int partition(int arr[], int low, int high)
     {
         int pivot = arr[low];
@@ -48,9 +48,13 @@ class QuickSort
     void printArray(int arr[], int size)
     {
         int i;
-        for (i = 0; i < size; i++)
-            System.out.print(arr[i] + " ");
+        System.out.print("{ ");
+        for (i = 0; i < size-1; i++)
+            System.out.print(arr[i] + ", ");
+        System.out.print(arr[size-1] + " }");
         System.out.println();
     }
 
 }
+
+/*Sorted array: { 1, 2, 5, 6, 7, 7, 9, 10, 15 } */

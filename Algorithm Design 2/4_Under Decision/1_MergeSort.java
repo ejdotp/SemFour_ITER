@@ -62,9 +62,11 @@ class MergeSort
 
     static void printArray(int arr[])
     {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
-            System.out.print(arr[i] + " ");
+        int size = arr.length;
+        System.out.print("{ ");
+        for (int i = 0; i < size-1; i++)
+            System.out.print(arr[i] + ", ");
+        System.out.print(arr[size-1] + " }");
         System.out.println();
     }
 
@@ -72,19 +74,16 @@ class MergeSort
     {
         int arr[] = { 12, 11, 13, 5, 6, 7 };
 
-        System.out.println("Given Array");
+        System.out.print("Given Array: ");
         printArray(arr);
 
         MergeSort ob = new MergeSort();
         ob.sort(arr, 0, arr.length - 1);
 
-        System.out.println("\nSorted array");
+        System.out.print("Sorted array: ");
         printArray(arr);
     }
 }
 
-// Given Array
-// 12 11 13 5 6 7 
-
-// Sorted array
-// 5 6 7 11 12 13 
+/*Given Array: { 12, 11, 13, 5, 6, 7 }
+Sorted array: { 5, 6, 7, 11, 12, 13 }*/
