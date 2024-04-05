@@ -54,10 +54,10 @@ class GFG {
 			int[][] M6 = multiply(sub(b, d), add(g, h));
 			int[][] M7 = multiply(sub(a, c), add(e, f));
 
-			int[][] C11 = add(sub(add(M1, M4), M5), M7);
+			int[][] C11 = add(sub(add(M5, M4), M2), M6);
 			int[][] C12 = add(M1, M2);
 			int[][] C21 = add(M3, M4);
-			int[][] C22 = add(sub(add(M1, M3), M2), M6);
+			int[][] C22 = sub(sub(add(M1, M5), M3), M7);
 
 			join(C11, R, 0, 0);
 			join(C12, R, 0, n / 2);
