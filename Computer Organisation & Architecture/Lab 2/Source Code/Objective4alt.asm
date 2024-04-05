@@ -12,6 +12,6 @@ loop1:add ax,bx
       inc dx
 loop2:dec cx
       jnz loop1
-      mov [2004h],ax
-      mov [2006h],dx
+      mov [2010h],ax
+      mov [2012h],dx
 hlt      
