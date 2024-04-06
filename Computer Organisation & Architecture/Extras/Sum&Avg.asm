@@ -1,6 +1,6 @@
 ; E. Jagadeeswar Patro
 ; 2241016309
-
+; Alternate for Lab 2 Objective 1
 ; Write a program to calculate sum & average of N 16-bit numbers
 
 mov ax, 0000h
