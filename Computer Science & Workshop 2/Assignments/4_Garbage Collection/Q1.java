@@ -4,7 +4,7 @@ takes to crash the program. */
 public class Q1 {
     public static void main(String[] args) {
         try {
-            for (int i = 0; i < 1000000000; i++) {
+            for (int i = 0; i < 2147483647; i++) {
                 new Object();
             }
         } catch (OutOfMemoryError e) {
