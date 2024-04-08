@@ -47,15 +47,15 @@ class BinaryTree
 
 		// data is greater than root's data
 		if (root.data < data)
-			return search(root.right, data);
+			return searcher(root.right, data);
 
 		// data is smaller than root's data
-		return search(root.left, data);
+		return searcher(root.left, data);
 	}
 
     static void search(int x)
     {
-        if (search(root, x) == null)
+        if (searcher(root, x) == null)
 			System.out.println(x + " not found");
 		else
 			System.out.println(x + " found");
