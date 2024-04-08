@@ -39,7 +39,7 @@ class BinaryTree
         printInorder(node.right);
     }
 
-    static Node search(Node root, int data)
+    static Node searcher(Node root, int data)
     {
 		// Base Cases: root is null or data is present at root
 		if (root == null || root.data == data)
@@ -53,7 +53,7 @@ class BinaryTree
 		return search(root.left, data);
 	}
 
-    static void searcher(int x)
+    static void search(int x)
     {
         if (search(root, x) == null)
 			System.out.println(x + " not found");
@@ -69,8 +69,8 @@ class BinaryTree
         System.out.print("Inorder traversal of constructed BST: { ");
         printInorder(root);
         System.out.print("}\n");
-        searcher(6);
-        searcher(60);
+        search(6);
+        search(60);
     }
 }
 
