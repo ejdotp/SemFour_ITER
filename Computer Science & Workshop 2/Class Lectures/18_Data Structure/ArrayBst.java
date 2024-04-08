@@ -39,6 +39,28 @@ class BinaryTree
         printInorder(node.right);
     }
 
+    static Node search(Node root, int data)
+    {
+		// Base Cases: root is null or data is present at root
+		if (root == null || root.data == data)
+			return root;
+
+		// data is greater than root's data
+		if (root.data < data)
+			return search(root.right, data);
+
+		// data is smaller than root's data
+		return search(root.left, data);
+	}
+
+    static void searcher(int x)
+    {
+        if (search(root, x) == null)
+			System.out.println(x + " not found");
+		else
+			System.out.println(x + " found");
+    }
+
     public static void main(String[] args)
     {
         int arr[] = new int[] { 1, 2, 3, 4, 5, 6, 7 };
@@ -47,7 +69,13 @@ class BinaryTree
         System.out.print("Inorder traversal of constructed BST: { ");
         printInorder(root);
         System.out.print("}\n");
+        searcher(6);
+        searcher(60);
     }
 }
 
-/*Inorder traversal of constructed BST: { 1 2 3 4 5 6 7 }*/
+/*
+Inorder traversal of constructed BST: { 1 2 3 4 5 6 7 }
+6 found
+60 not found
+*/
