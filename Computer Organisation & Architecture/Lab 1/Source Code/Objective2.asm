@@ -6,7 +6,7 @@ mov ds, ax
                 ; part 1
 mov si, 2000h   ; input data at 2000 memory location
 mov al, [si]    ; give that data to al
-rol al, 04h     ; 4 times right shift
+ror al, 04h     ; 4 times right shift
 inc si          ; si=2001
 mov [si], al    ; al = data 1  
                 ; part 2
