@@ -1556,7 +1556,10 @@ var4 = 8            called as Logical Error */
   * It throws with the exception keyword.
   * Example: //int m=10; int n = 0; int k=m/n
 
+<hr>
+<hr>
 # !!!Notes Not Ready Beyond This Point!!!
+<hr>
 
 # Garbage Collection
   
