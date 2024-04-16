@@ -1559,8 +1559,9 @@ var4 = 8            called as Logical Error */
 <hr>  </hr>
 <hr>  </hr>
 
-# !!!Notes Not Ready Beyond This Point!!!
+# <centre>!!!Notes Not Ready Beyond This Point!!!</centre>
 
+<hr>  </hr>
 <hr>  </hr>
 
 # Garbage Collection
