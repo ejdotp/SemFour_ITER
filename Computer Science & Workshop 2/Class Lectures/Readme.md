@@ -17,6 +17,11 @@
   + [7. List Interface](#list-interface)
   + [8. Queue Interface](#queue-interface-fifo)
   + [9. Stream API](#stream-api)
+* [14. Error Handling](#error-handling)
+  + [1. Logical Error](#1-logical-error)
+  + [2. Syntactical Error](#2-syntactical-error)
+  + [3. Semantic Error](#3-semantic-error)
+  + [4. Exception Handling](#exception-handling)  
 
 <hr>
 
@@ -1550,6 +1555,8 @@ var4 = 8            called as Logical Error */
   * They are caught in runtime.
   * It throws with the exception keyword.
   * Example: //int m=10; int n = 0; int k=m/n
+
+# !!!Notes Not Ready Beyond This Point!!!
 
 # Garbage Collection
   
