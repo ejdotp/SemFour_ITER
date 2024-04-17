@@ -1577,7 +1577,7 @@ var4 = 8            called as Logical Error */
   A --> D[3. Permanent Generation];
   ```
 * When a new object is first created, it's locked in "Young Generation"
-* ![1713337497494](image/Readme/1713337497494.png)
+* ![1713337497494](https://ibb.co/mvRCmf2)
 
 ```ruby
   class Employee{
