@@ -24,7 +24,7 @@
   + [4. Exception Handling](#exception-handling)
 * [15. Garbage Collection](#garbage-collection)
 * [16. String, IO &amp; File Handling](#strings-io-operations-and-file-management)
-* [17. Data Structure](#strings-io-operations-and-file-management)  
+* [17. Data Structure](#strings-io-operations-and-file-management)
 
 <hr>
 
@@ -1567,20 +1567,17 @@ var4 = 8            called as Logical Error */
 <hr>  </hr>
 <hr>  </hr>
 
-# Garbage Collection  
-* Proper Method of Memory Management.  
-*   ```mermaid
-    graph LR
-    A[Memory Heap of Java] --> B[1. Young Generation];
-    A --> C[2. Old/Tenured Generation];
-    A --> D[3. Permanent Generation];
-    ```
-* When a new object is first created, it's locked in "Young Generation"  
-*   ```mermaid
-    graph LS
-    F[Young Generation] --> G[1. Eden Space];
-    F --> H[2. Survivor Space];
-    ```
+# Garbage Collection
+
+* Proper Method of Memory Management.
+* ```mermaid
+  graph LR
+  A[Memory Heap of Java] --> B[1. Young Generation];
+  A --> C[2. Old/Tenured Generation];
+  A --> D[3. Permanent Generation];
+  ```
+* When a new object is first created, it's locked in "Young Generation"
+* ![1713337497494](image/Readme/1713337497494.png)
 
 ```ruby
   class Employee{
