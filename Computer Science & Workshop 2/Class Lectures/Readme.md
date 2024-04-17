@@ -1576,13 +1576,11 @@ var4 = 8            called as Logical Error */
     A --> D[3. Permanent Generation];
     ```
 * When a new object is first created, it's locked in "Young Generation"  
-* ```mermaid
-  graph LS
-  A[Young Generation] --> B[1. Eden Space];
-  A --> C[2. Survivor Space];
-  C --> D[S1];
-  C --> E[S2];
-  ```
+*   ```mermaid
+    graph LS
+    F[Young Generation] --> G[1. Eden Space];
+    F --> H[2. Survivor Space];
+    ```
 
 ```ruby
   class Employee{
