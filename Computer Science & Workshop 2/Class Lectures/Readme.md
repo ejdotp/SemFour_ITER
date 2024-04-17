@@ -1577,9 +1577,18 @@ var4 = 8            called as Logical Error */
   A --> D[3. Permanent Generation];
   ```
 * When a new object is first created, it's locked in "Young Generation"
-* ![1713337497494](image/Readme/1713337497494.png)  
-* **Making Objects Eligible for Garbage Collection :**  
+* ![1713337497494](image/Readme/1713337497494.png)
+* **Making Objects Eligible for Garbage Collection :**
 
+  - Unreachable Objects - The objects with lost reference.
+
+  ```ruby
+  Integer i = new Integer(10);
+  Integer object;
+  i = null;
+  ```
+
+  ![1713349610473](image/Readme/1713349610473.png)
 
 ```ruby
   class Employee{
