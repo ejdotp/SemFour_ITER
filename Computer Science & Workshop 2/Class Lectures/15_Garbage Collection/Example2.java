@@ -1,65 +1,67 @@
-class Employees
+class Employees2
 {
     private int ID;
     private int age;
     private String name;
-    private static int nextId=1;
+    private static int nextId = 1;
 
-    public Employees(String name,int age) {
-        this.name=name;
-        this.age=age;
-        this.ID=nextId++;
+    public Employees2(String name,int age) {
+        this.name = name;
+        this.age = age;
+        this.ID = nextId++;
     }
    
     public void show(){
-        System.out.println(ID+" "+name+" "+age);
+        System.out.println("ID = " + ID + ", Name = " + name + ", Age = " + age);
     }
    
     public void showNextId() {
-        System.out.println(nextId);
+        System.out.println("Next Employee ID will be = " + nextId);
     }
    
     protected void finalize() {
-        --nextId;
-    }
+        --nextId; //In this case gc will call finalize()
+    }             //for 2 times for 2objects
 }
 
-public class garbagecollection1
+class GarbageModified
 {
     public static void main(String[] args)
     {
-        Employees E=new Employees("aayush",20);
+        Employees2 E = new Employees2("ABC",56);
         E.show();
         E.showNextId();
-        Employees F=new Employees("Ej",120);
+        Employees2 F = new Employees2("DEF",45);
         F.show();
         F.showNextId();
-        Employees G=new Employees("Simplu",220);
+        Employees2 G = new Employees2("GHI",25);
         G.show();
         G.showNextId();
+
         {
-            Employees X=new Employees("Rahul",19);
+            Employees2 X = new Employees2("JKL",23);
             X.show();
             X.showNextId();
-            Employees Y=new Employees("Udipta",76);
+            Employees2 Y = new Employees2("MNO",21);
             Y.show();
             Y.showNextId();
-            X=Y=null;
+            X = Y = null;
             System.gc();
             System.runFinalization();
         }
+        
         E.showNextId(); 
     }
 }
 
-/*1 aayush 20
-2
-2 Ej 120
-3
-3 Simplu 220
-4
-4 Rahul 19
-5
-5 Udipta 76
-6
-4 */
+/*ID = 1, Name = ABC, Age = 56
+Next Employee ID will be = 2
+ID = 2, Name = DEF, Age = 45
+Next Employee ID will be = 3
+ID = 3, Name = GHI, Age = 25
+Next Employee ID will be = 4
+ID = 4, Name = JKL, Age = 23
+Next Employee ID will be = 5
+ID = 5, Name = MNO, Age = 21
+Next Employee ID will be = 6
+Next Employee ID will be = 4*/
