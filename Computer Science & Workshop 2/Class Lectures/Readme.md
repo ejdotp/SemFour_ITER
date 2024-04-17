@@ -1,30 +1,33 @@
 ### Index:
 
-* [12. Object Oriented Programming](#object-oriented-programming)
-  + [1. Encapsulation](#encapsulation)
-  + [2. Inheritance](#inheritance)
-  + [3. Abstraction](#abstraction)
-  + [4. Polymorphism](#polymorphism)
-  + [5. Interface](#interface)
-  + [6. Coupling &amp; Cohesion](#coupling-and-cohesion)
-* [13. Generics](#13-generics)
-  + [1. Generic Class](#generic-class)
-  + [2. Generic Method](#generic-method)
-  + [3. Overriding toString](#tostring-overriding)
-  + [4. Overriding equals](#equals-overriding)
-  + [5. Map Interface](#map-interface)
-  + [6. Set Interface](#set-interface)
-  + [7. List Interface](#list-interface)
-  + [8. Queue Interface](#queue-interface-fifo)
-  + [9. Stream API](#stream-api)
-* [14. Error Handling](#error-handling)
-  + [1. Logical Error](#1-logical-error)
-  + [2. Syntactical Error](#2-syntactical-error)
-  + [3. Semantic Error](#3-semantic-error)
-  + [4. Exception Handling](#exception-handling)
-* [15. Garbage Collection](#garbage-collection)
-* [16. String, IO &amp; File Handling](#strings-io-operations-and-file-management)
-* [17. Data Structure](#strings-io-operations-and-file-management)
+* [12. Object Oriented Programming](#12-object-oriented-programming)  
+  + [1. Encapsulation](#encapsulation)  
+  + [2. Inheritance](#inheritance)  
+  + [3. Abstraction](#abstraction)  
+  + [4. Polymorphism](#polymorphism)  
+  + [5. Interface](#interface)  
+  + [6. Coupling &amp; Cohesion](#coupling-and-cohesion)  
+* [13. Generics](#13-generics)  
+  + [1. Generic Class](#generic-class)  
+  + [2. Generic Method](#generic-method)  
+  + [3. Overriding toString](#tostring-overriding)  
+  + [4. Overriding equals](#equals-overriding)  
+  + [5. Map Interface](#map-interface)  
+  + [6. Set Interface](#set-interface)  
+  + [7. List Interface](#list-interface)  
+  + [8. Queue Interface](#queue-interface-fifo)  
+  + [9. Stream API](#stream-api)  
+* [14. Error Handling](#14-error-handling)  
+  + [1. Logical Error](#1-logical-error)  
+  + [2. Syntactical Error](#2-syntactical-error)  
+  + [3. Semantic Error](#3-semantic-error)  
+  + [4. Exception Handling](#exception-handling)  
+* [15. Garbage Collection](#15-garbage-collection)  
+* [16. String, IO &amp; File Handling](#16-strings-io-operations-and-file-management)  
+  + [1. IO Operations](#io-operations)  
+  + [2. String Stuff](#string-stuff)  
+  + [3. File Handling](#file-handling)  
+* [17. Data Structure](#17-strings-io-operations-and-file-management)  
 
 <hr>
 
@@ -1352,7 +1355,7 @@ true
     */
 ```
 
-# Error Handling
+# 14. Error Handling
 
 ### 1. Logical Error:
 
@@ -1559,7 +1562,7 @@ var4 = 8            called as Logical Error */
   * It throws with the exception keyword.
   * Example: //int m=10; int n = 0; int k=m/n
 
-# Garbage Collection
+# 15. Garbage Collection
 
 * Proper Method of Memory Management.
 * ```mermaid
@@ -1572,162 +1575,165 @@ var4 = 8            called as Logical Error */
 * ![1713337497494](image/Readme/1713337497494.png)
 * **Making Objects Eligible for Garbage Collection :**
 
-    1. Nullyfying/Unreachable Objects 
-        + The objects with lost reference.
-        +   ```ruby
-            Integer i = new Integer(10);
-            Integer object;
-            i = null;
-            ```
-        + ![1713350154374](image/Readme/1713350154374.png)  
-    2. Re-assigning of reference.  
-        + ```ruby
-          class class1{
-              public static void main(String[] args){
-                  class1 obj1 = new class1();
-                  class1 obj2 = new class1();
-                  obj2 = obj1; 
-              }
-          }
-          ```  
-    3. An object created inside a method.  
+  1. Nullyfying/Unreachable Objects
+     + The objects with lost reference.
+     + ```ruby
+       Integer i = new Integer(10);
+       Integer object;
+       i = null;
+       ```
+     + ![1713350154374](image/Readme/1713350154374.png)
+  2. Re-assigning of reference.
+     + ```ruby
+       class class1{
+           public static void main(String[] args){
+               class1 obj1 = new class1();
+               class1 obj2 = new class1();
+               obj2 = obj1; 
+           }
+       }
+       ```
+  3. An object created inside a method.
 * Finalization:
-    - Just before destroying an object, the Garbage collector calls finalize() method on the object to perform clean up.  
-    - Once finalize() method completes, the object gets destroyed.  
-    - Syntax: ``protected void finalize() throws throwable``
+
+  - Just before destroying an object, the Garbage collector calls finalize() method on the object to perform clean up.
+  - Once finalize() method completes, the object gets destroyed.
+  - Syntax: ``protected void finalize() throws throwable``
 * **Example 1:**
-    ```ruby
-    class Employee
-    {
-        private int ID;
-        private int age;
-        private String name;
-        private static int nextId = 1;
 
-        public Employee(String name, int age) {
-            this.name = name;
-            this.age = age;
-            this.ID = nextId++;
-        }
+  ```ruby
+  class Employee
+  {
+      private int ID;
+      private int age;
+      private String name;
+      private static int nextId = 1;
 
-        public void show() {
-            System.out.println("ID = " + ID + ", Name = " + name + ", Age = " + age);
-        }
+      public Employee(String name, int age) {
+          this.name = name;
+          this.age = age;
+          this.ID = nextId++;
+      }
 
-        public void showNextId() {
-            System.out.println("Next Employee Id will be = " + nextId);
-        }
-    }
+      public void show() {
+          System.out.println("ID = " + ID + ", Name = " + name + ", Age = " + age);
+      }
 
-    class garbage
-    {
-        public static void main(String[] args)
-        {
-            Employee E = new Employee("ABC", 56);
-            E.show();
-            E.showNextId();
-            Employee F = new Employee("DEF", 45);
-            F.show();
-            F.showNextId();
-            Employee G = new Employee("GHI", 25);
-            G.show();
-            G.showNextId();
+      public void showNextId() {
+          System.out.println("Next Employee Id will be = " + nextId);
+      }
+  }
 
-            {   //It is a subblock to keep all those interns.
-                Employee X = new Employee("JKL", 23);
-                X.show();
-                X.showNextId();
-                Employee Y = new Employee("MNO", 21);
-                Y.show();
-                Y.showNextId();
-            }
+  class garbage
+  {
+      public static void main(String[] args)
+      {
+          Employee E = new Employee("ABC", 56);
+          E.show();
+          E.showNextId();
+          Employee F = new Employee("DEF", 45);
+          F.show();
+          F.showNextId();
+          Employee G = new Employee("GHI", 25);
+          G.show();
+          G.showNextId();
 
-            E.showNextId();
-        }
-    }
+          {   //It is a subblock to keep all those interns.
+              Employee X = new Employee("JKL", 23);
+              X.show();
+              X.showNextId();
+              Employee Y = new Employee("MNO", 21);
+              Y.show();
+              Y.showNextId();
+          }
 
-    /*ID = 1, Name = ABC, Age = 56
-    Next Employee Id will be = 2
-    ID = 2, Name = DEF, Age = 45
-    Next Employee Id will be = 3
-    ID = 3, Name = GHI, Age = 25
-    Next Employee Id will be = 4
-    ID = 4, Name = JKL, Age = 23
-    Next Employee Id will be = 5
-    ID = 5, Name = MNO, Age = 21
-    Next Employee Id will be = 6
-    Next Employee Id will be = 6*/
-    ```
-* **Example 2: Modified code for Garbage Collection**  
-    ```ruby
-    class Employees2
-    {
-        private int ID;
-        private int age;
-        private String name;
-        private static int nextId = 1;
+          E.showNextId();
+      }
+  }
 
-        public Employees2(String name,int age) {
-            this.name = name;
-            this.age = age;
-            this.ID = nextId++;
-        }
-    
-        public void show(){
-            System.out.println("ID = " + ID + ", Name = " + name + ", Age = " + age);
-        }
-    
-        public void showNextId() {
-            System.out.println("Next Employee ID will be = " + nextId);
-        }
-    
-        protected void finalize() {
-            --nextId; //In this case gc will call finalize()
-        }             //for 2 times for 2objects
-    }
+  /*ID = 1, Name = ABC, Age = 56
+  Next Employee Id will be = 2
+  ID = 2, Name = DEF, Age = 45
+  Next Employee Id will be = 3
+  ID = 3, Name = GHI, Age = 25
+  Next Employee Id will be = 4
+  ID = 4, Name = JKL, Age = 23
+  Next Employee Id will be = 5
+  ID = 5, Name = MNO, Age = 21
+  Next Employee Id will be = 6
+  Next Employee Id will be = 6*/
+  ```
+* **Example 2: Modified code for Garbage Collection**
 
-    class GarbageModified
-    {
-        public static void main(String[] args)
-        {
-            Employees2 E = new Employees2("ABC",56);
-            E.show();
-            E.showNextId();
-            Employees2 F = new Employees2("DEF",45);
-            F.show();
-            F.showNextId();
-            Employees2 G = new Employees2("GHI",25);
-            G.show();
-            G.showNextId();
+  ```ruby
+  class Employees2
+  {
+      private int ID;
+      private int age;
+      private String name;
+      private static int nextId = 1;
 
-            {
-                Employees2 X = new Employees2("JKL",23);
-                X.show();
-                X.showNextId();
-                Employees2 Y = new Employees2("MNO",21);
-                Y.show();
-                Y.showNextId();
-                X = Y = null;
-                System.gc();
-                System.runFinalization();
-            }
-            
-            E.showNextId(); 
-        }
-    }
+      public Employees2(String name,int age) {
+          this.name = name;
+          this.age = age;
+          this.ID = nextId++;
+      }
 
-    /*  ID = 1, Name = ABC, Age = 56
-        Next Employee ID will be = 2
-        ID = 2, Name = DEF, Age = 45
-        Next Employee ID will be = 3
-        ID = 3, Name = GHI, Age = 25
-        Next Employee ID will be = 4
-        ID = 4, Name = JKL, Age = 23
-        Next Employee ID will be = 5
-        ID = 5, Name = MNO, Age = 21
-        Next Employee ID will be = 6
-        Next Employee ID will be = 4*/
-    ```
+      public void show(){
+          System.out.println("ID = " + ID + ", Name = " + name + ", Age = " + age);
+      }
+
+      public void showNextId() {
+          System.out.println("Next Employee ID will be = " + nextId);
+      }
+
+      protected void finalize() {
+          --nextId; //In this case gc will call finalize()
+      }             //for 2 times for 2objects
+  }
+
+  class GarbageModified
+  {
+      public static void main(String[] args)
+      {
+          Employees2 E = new Employees2("ABC",56);
+          E.show();
+          E.showNextId();
+          Employees2 F = new Employees2("DEF",45);
+          F.show();
+          F.showNextId();
+          Employees2 G = new Employees2("GHI",25);
+          G.show();
+          G.showNextId();
+
+          {
+              Employees2 X = new Employees2("JKL",23);
+              X.show();
+              X.showNextId();
+              Employees2 Y = new Employees2("MNO",21);
+              Y.show();
+              Y.showNextId();
+              X = Y = null;
+              System.gc();
+              System.runFinalization();
+          }
+
+          E.showNextId(); 
+      }
+  }
+
+  /*  ID = 1, Name = ABC, Age = 56
+      Next Employee ID will be = 2
+      ID = 2, Name = DEF, Age = 45
+      Next Employee ID will be = 3
+      ID = 3, Name = GHI, Age = 25
+      Next Employee ID will be = 4
+      ID = 4, Name = JKL, Age = 23
+      Next Employee ID will be = 5
+      ID = 5, Name = MNO, Age = 21
+      Next Employee ID will be = 6
+      Next Employee ID will be = 4*/
+  ```
 
 <hr>  </hr>
 <hr>  </hr>
@@ -1737,27 +1743,31 @@ var4 = 8            called as Logical Error */
 <hr>  </hr>
 <hr>  </hr>
 
-# Strings, I/O Operations, and File Management  
+# 16. Strings, I/O Operations, and File Management
 
-```ruby
-public class IOoperation
-{
-    public static void main(String[] args)
-    {
-        String s1="abc";
-        String s2="abc";
-        System.out.println(s1==s2);
-        String s3=new String("xyz");
-        String s4=new String("xyz");
-        System.out.println(s3==s4);
-    }
-}
-/*true
-false */
-```
+## I/O Operations :
 
+* No notes, read this: https://www.geeksforgeeks.org/java-io-tutorial/
+* Example:
+    -  In S3 & S4 it creates 2 new string object which have different memory location therefore it gives false as output even if the string value is same.  
+        ```ruby
+        public class IOoperation
+        {
+            public static void main(String[] args)
+            {
+                String s1 = "abc";
+                String s2 = "abc";
+                System.out.println(s1 = =s2);
+                String s3 = new String("xyz");
+                String s4 = new String("xyz");
+                System.out.println(s3 == s4);
+            }
+        }
+        /*true
+        false */
+        ```
 
-## String Concatenation
+## String Stuff
 
 - Concatenation using + Operator.
 - Concatenation using Concat() method.
