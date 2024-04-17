@@ -1567,8 +1567,22 @@ var4 = 8            called as Logical Error */
 <hr>  </hr>
 <hr>  </hr>
 
-# Garbage Collection
-  
+# Garbage Collection  
+* Proper Method of Memory Management.  
+*   ```mermaid
+    graph LR
+    A[Memory Heap of Java] --> B[1. Young Generation];
+    A --> C[2. Old/Tenured Generation];
+    A --> D[3. Permanent Generation];
+    ```
+* When a new object is first created, it's locked in "Young Generation"  
+* ```mermaid
+  graph LS
+  A[Young Generation] --> B[1. Eden Space];
+  A --> C[2. Survivor Space];
+  C --> D[S1];
+  C --> E[S2];
+  ```
 
 ```ruby
   class Employee{
