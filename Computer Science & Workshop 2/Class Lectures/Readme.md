@@ -1,33 +1,33 @@
 ### Index:
 
-* [12. Object Oriented Programming](#12-object-oriented-programming)  
-  + [1. Encapsulation](#encapsulation)  
-  + [2. Inheritance](#inheritance)  
-  + [3. Abstraction](#abstraction)  
-  + [4. Polymorphism](#polymorphism)  
-  + [5. Interface](#interface)  
-  + [6. Coupling &amp; Cohesion](#coupling-and-cohesion)  
-* [13. Generics](#13-generics)  
-  + [1. Generic Class](#generic-class)  
-  + [2. Generic Method](#generic-method)  
-  + [3. Overriding toString](#tostring-overriding)  
-  + [4. Overriding equals](#equals-overriding)  
-  + [5. Map Interface](#map-interface)  
-  + [6. Set Interface](#set-interface)  
-  + [7. List Interface](#list-interface)  
-  + [8. Queue Interface](#queue-interface-fifo)  
-  + [9. Stream API](#stream-api)  
-* [14. Error Handling](#14-error-handling)  
-  + [1. Logical Error](#1-logical-error)  
-  + [2. Syntactical Error](#2-syntactical-error)  
-  + [3. Semantic Error](#3-semantic-error)  
-  + [4. Exception Handling](#exception-handling)  
-* [15. Garbage Collection](#15-garbage-collection)  
-* [16. String, IO &amp; File Handling](#16-strings-io-operations-and-file-management)  
-  + [1. IO Operations](#io-operations)  
-  + [2. String Stuff](#string-stuff)  
-  + [3. File Handling](#file-handling)  
-* [17. Data Structure](#17-strings-io-operations-and-file-management)  
+* [12. Object Oriented Programming](#12-object-oriented-programming)
+  + [1. Encapsulation](#encapsulation)
+  + [2. Inheritance](#inheritance)
+  + [3. Abstraction](#abstraction)
+  + [4. Polymorphism](#polymorphism)
+  + [5. Interface](#interface)
+  + [6. Coupling &amp; Cohesion](#coupling-and-cohesion)
+* [13. Generics](#13-generics)
+  + [1. Generic Class](#generic-class)
+  + [2. Generic Method](#generic-method)
+  + [3. Overriding toString](#tostring-overriding)
+  + [4. Overriding equals](#equals-overriding)
+  + [5. Map Interface](#map-interface)
+  + [6. Set Interface](#set-interface)
+  + [7. List Interface](#list-interface)
+  + [8. Queue Interface](#queue-interface-fifo)
+  + [9. Stream API](#stream-api)
+* [14. Error Handling](#14-error-handling)
+  + [1. Logical Error](#1-logical-error)
+  + [2. Syntactical Error](#2-syntactical-error)
+  + [3. Semantic Error](#3-semantic-error)
+  + [4. Exception Handling](#exception-handling)
+* [15. Garbage Collection](#15-garbage-collection)
+* [16. String, IO &amp; File Handling](#16-strings-io-operations-and-file-management)
+  + [1. IO Operations](#io-operations)
+  + [2. String Stuff](#string-stuff)
+  + [3. File Handling](#file-handling)
+* [17. Data Structure](#17-strings-io-operations-and-file-management)
 
 <hr>
 
@@ -1749,29 +1749,134 @@ var4 = 8            called as Logical Error */
 
 * No notes, read this: https://www.geeksforgeeks.org/java-io-tutorial/
 * Example:
-    -  In S3 & S4 it creates 2 new string object which have different memory location therefore it gives false as output even if the string value is same.  
-        ```ruby
-        public class IOoperation
+  - In S3 & S4 it creates 2 new string object which have different memory location therefore it gives false as output even if the string value is same.
+    ```ruby
+    public class IOoperation
+    {
+        public static void main(String[] args)
         {
-            public static void main(String[] args)
-            {
-                String s1 = "abc";
-                String s2 = "abc";
-                System.out.println(s1 = =s2);
-                String s3 = new String("xyz");
-                String s4 = new String("xyz");
-                System.out.println(s3 == s4);
-            }
+            String s1 = "abc";
+            String s2 = "abc";
+            System.out.println(s1 = =s2);
+            String s3 = new String("xyz");
+            String s4 = new String("xyz");
+            System.out.println(s3 == s4);
         }
-        /*true
-        false */
-        ```
+    }
+    /*true
+    false */
+    ```
 
 ## String Stuff
 
-* **String Concatenation:**  
-    1. Concatenation using + operator
-    2. Concatenation using concat() method  
+* **String Concatenation:**
+
+    1. Concatenation using addition(+) operator
+        ```ruby
+        class KunuKunu
+        {
+            public static void main(String []args)
+            {
+                //Concatenation of two strings :
+                String s1 = "Hello ";
+                String s2 = "Section 44";
+                s2 += s1;
+                System.out.println(s2);
+
+                //Concatenation of variable objects :
+                String s1 = "Hello";
+                String s2 = " World ";
+                int s3 = 404;
+                String s4 = s1+s2+s3;
+                System.out.println(s4);
+            }
+        }
+        //Output : Hello Section 44
+        //         Hello World 404
+        ```
+    2. Concatenation using concat() method
+        ```ruby
+        class KunuKunu
+        {
+            public static void main(String []args)
+            {
+                String s1 = "Hello ";
+                s1 = s1.concat("Section 44");
+                System.out.println(s1);
+                String s2 = "Section 44";
+                String s1 = s1.concat(s2);
+                System.out.println(s1);
+                String s3 = s1.concat(s2);
+                System.out.println(s3);
+            }
+        }
+        //Output: Hello Section 44
+        //         Hello Section 44Section 44
+        //         Hello Section 44Section 44Section 44
+        ```
+
+    - Difference between Addition(+) & Concat:
+        1. **Number of argument concat() and '+' operator take.** 
+            + Concat() takes only one argument to concat.  
+            + '+' operator can add more than two at a time.  
+            + ```
+              S1 = "Hello ", S2 = "Section ", S3 = "44"  
+              S1 + S2 + S3 will give output as Hello Section 44    
+              S1.concat(S2).concat(S3) gives the same result but needs two calls  
+              ``` 
+        2. **Object Type Problem**  
+            + Concat() only take String arguments, else error.  
+            + '+' can add strings as well as variable objects.  
+            + ``string + string + int only possible with '+' method``  
+        3. **Exceptions**
+            + concat() raises java.lang.NullPointerException  if any of its argument is null.    
+            + '+' does not raise NullPointerException if any of its argument is null.  
+            + ```
+              String s1 = "Hello ";
+              String s2 = null;
+              s1 = s1.concat(s2); //Will raise null pointer exception
+              String s3 = s1 + s2; //wont  
+              ```  
+        4. **Different Soul they have**  
+            + '+' always creates a new string object.  
+            + concat() method take the String parameter and creates another string object if the string parameter has length greater than 0. 
+            + ```ruby
+              class CreatesDiffObject
+              {
+                  public static void main(String[] args)
+                  {
+                      String s1 = "Hello";
+                      String s2 = "";
+
+                      //case 1
+                      String s3 = s1.concat(s2);
+
+                      System.out.print("During concat: ");
+                      if(s1 == s3)
+                        System.out.print("same");
+                      else
+                        System.out.print("different");
+
+                      //case 2
+                      String s4 = s1 + s2; 
+
+                      System.out.print("\nWith addition operator: ");
+                      if(s1 == s4)
+                        System.out.print("same");
+                      else
+                          System.out.print("different");
+                  }    
+              }
+
+              /*During concat: same
+              With addition operator: different */
+              ```
+        5. **Performance :**  
+            - The concat method perform better as it doesn't create new object when that is not required.  
+
+* **Splitting of strings**  
+              
+
 
 # Data Structure and Integration in Program
 
