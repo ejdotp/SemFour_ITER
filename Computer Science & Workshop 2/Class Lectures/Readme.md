@@ -1769,8 +1769,9 @@ var4 = 8            called as Logical Error */
 
 ## String Stuff
 
-- Concatenation using + Operator.
-- Concatenation using Concat() method.
+* **String Concatenation:**  
+    1. Concatenation using + operator
+    2. Concatenation using concat() method  
 
 # Data Structure and Integration in Program
 
