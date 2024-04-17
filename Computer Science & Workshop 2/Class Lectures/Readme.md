@@ -21,7 +21,10 @@
   + [1. Logical Error](#1-logical-error)
   + [2. Syntactical Error](#2-syntactical-error)
   + [3. Semantic Error](#3-semantic-error)
-  + [4. Exception Handling](#exception-handling)  
+  + [4. Exception Handling](#exception-handling)
+* [15. Garbage Collection](#garbage-collection)
+* [16. String, IO &amp; File Handling](#strings-io-operations-and-file-management)
+* [17. Data Structure](#strings-io-operations-and-file-management)  
 
 <hr>
 
