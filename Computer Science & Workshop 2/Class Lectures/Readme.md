@@ -1580,15 +1580,30 @@ var4 = 8            called as Logical Error */
 * ![1713337497494](image/Readme/1713337497494.png)
 * **Making Objects Eligible for Garbage Collection :**
 
-  - Unreachable Objects - The objects with lost reference.
+    1. Nullyfying/Unreachable Objects 
+        + The objects with lost reference.
+        +   ```ruby
+            Integer i = new Integer(10);
+            Integer object;
+            i = null;
+            ```
+        + ![1713350154374](image/Readme/1713350154374.png)  
+    2. Re-assigning of reference.  
+        + ```ruby
+          class class1{
+              public static void main(String[] args){
+                  class1 obj1 = new class1();
+                  class1 obj2 = new class1();
+                  obj2 = obj1; 
+              }
+          }
+          ```  
+    3. An object created inside a method.  
+* Finalization:
+    - Just before destroying an object, the Garbage collector calls finalize() method on the object to perform clean up.  
+    - Once finalize() method completes, the object gets destroyed.  
+    - Syntax: ``protected void finalize() throws throwable``
 
-  ```ruby
-  Integer i = new Integer(10);
-  Integer object;
-  i = null;
-  ```
-
-  ![1713349610473](image/Readme/1713349610473.png)
 
 ```ruby
   class Employee{
