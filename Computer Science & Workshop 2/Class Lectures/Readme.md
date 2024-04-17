@@ -1735,14 +1735,6 @@ var4 = 8            called as Logical Error */
       Next Employee ID will be = 4*/
   ```
 
-<hr>  </hr>
-<hr>  </hr>
-
-<h1 align="center">!!!Notes Not Ready Beyond This Point!!!</h1>
-
-<hr>  </hr>
-<hr>  </hr>
-
 # 16. Strings, I/O Operations, and File Management
 
 ## I/O Operations :
@@ -1873,6 +1865,14 @@ var4 = 8            called as Logical Error */
               ```
         5. **Performance :**  
             - The concat method perform better as it doesn't create new object when that is not required.  
+
+<hr>  </hr>
+<hr>  </hr>
+
+<h1 align="center">!!!Notes Not Ready Beyond This Point!!!</h1>
+
+<hr>  </hr>
+<hr>  </hr>
 
 * **Splitting of strings**  
               
