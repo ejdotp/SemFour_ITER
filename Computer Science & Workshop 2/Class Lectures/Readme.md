@@ -1866,6 +1866,101 @@ var4 = 8            called as Logical Error */
         5. **Performance :**  
             - The concat method perform better as it doesn't create new object when that is not required.  
 
+* **Splitting of strings**  
+    1. **public String split(String regex)**  
+        - **regex -** A delimitting regular expression.  
+        - Example 1:
+          ```ruby
+          class Divorce
+          {
+              public static void main(String[] args)
+              {
+                String my_str = "ITER : A SOA University";
+                String[] piece_str = my_str.split(":");
+                for(String a : piece_str)
+                    System.out.println(a);
+              }
+          }
+          /*ITER
+          A SOA University*/
+          ```
+        - Example 2:
+          ```ruby
+          class Anullment
+          {
+              public static void main(String[] args)
+              {
+                String sr = "word1$[word2#word3]word4";
+                String[] piece = sr.split("[$#]+");//Symbols wont get detected without []
+                for(String b : piece)
+                    System.out.println(b);
+              }
+          }
+          //word1
+          [word2
+          word3]word4
+          ```
+    2. **public string[] split(String regex, int limit);**  
+        - **limit > 0 :**  The pattern will be applied atmost (limit-1) times, till it reaches the end of the string. The resulting array's length will not be greater than the original length of the array. 
+          ```ruby
+          class Divorce
+          {
+              public static void main(String[] args)
+              {
+                String word = "hello#world#how#are#you";
+                String[] cut = word.split("#", 2);
+                for(String a : cut)
+                    System.out.println(a);
+              }
+          }
+          /*hello
+          how#are#you*/
+          ```
+        - **limit = 0 :**  The pattern will be applied as many times possible. The resultant array can be of any size and trailing empty strings will be discarded.  
+          ```ruby
+          class Anullment
+          {
+              public static void main(String[] args)
+              {
+                String word = "hello#world#how#are#you###";
+                String[] cut = word.split("#", 0);
+                for(String b : cut)
+                    System.out.println(b);
+                System.out.println(cut.length);
+              }
+          }
+          /*hello
+            world
+            how
+            are
+            you
+            5*/ 
+          ```
+        - **limit < 0 :**  The pattern will be applied as many times as possible. The resulting array can be of any size. Trailing empty strings are not discarded.  
+          ```ruby
+          class Anullment
+          {
+              public static void main(String[] args)
+              {
+                String word = "hello#world#how#are#you###";
+                String[] cut = word.split("#", -2);//any negative number
+                for(String b : cut)
+                    System.out.println(b);
+                System.out.println(cut.length);
+              }
+          }
+          /*hello
+            world
+            how
+            are
+            you
+
+
+
+            8*/ 
+          ```
+    
+
 <hr>  </hr>
 <hr>  </hr>
 
@@ -1873,9 +1968,6 @@ var4 = 8            called as Logical Error */
 
 <hr>  </hr>
 <hr>  </hr>
-
-* **Splitting of strings**  
-              
 
 
 # Data Structure and Integration in Program

@@ -1,16 +1,20 @@
-import javax.print.attribute.Size2DSyntax;
+class Anullment
+          {
+              public static void main(String[] args)
+              {
+                String word = "hello#world#how#are#you###";
+                String[] cut = word.split("#", -2);
+                for(String b : cut)
+                    System.out.println(b);
+                System.out.println(cut.length);
+              }
+          }
+          /*hello
+world
+how
+are
+you
 
-public class Tester {
-    public static void main(String[] args) {
-        String s1 = "vwefwe ";
-        String s2 = "bsetrhsrt ";
-        String s3 = "vaergeraa ";
-        String s4 = s1.concat(s2).concat(s3);
-        System.out.println(s4);
-        s4 = s1 + s2 + s3;
-        System.out.println(s4);
-    }
-}
 
-/*vwefwe bsetrhsrt vaergeraa 
-vwefwe bsetrhsrt vaergeraa  */
+
+8 */
