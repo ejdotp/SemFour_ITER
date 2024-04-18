@@ -1760,7 +1760,6 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
     false */
     ```
 <br></br>
-<br></br>
 ## String Stuff
 
 * **String Concatenation:**
@@ -1808,7 +1807,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
      //         Hello Section 44Section 44
      //         Hello Section 44Section 44Section 44
      ```
-
+<br></br>
   - Difference between Addition(+) & Concat:
     1. **Number of argument concat() and '+' operator take.**
        + Concat() takes only one argument to concat.
@@ -1963,7 +1962,9 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
 
          8*/ 
        ```
-  - Reference: https://www.geeksforgeeks.org/split-string-java-examples/
+  - Reference: https://www.geeksforgeeks.org/split-string-java-examples/  
+<br></br>
+<br></br>
 * **String Buffer & String Builder :**
 
   | String Buffer                                                                                                         | String Builder                                                                                                          |
@@ -1974,7 +1975,9 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
   | iv. Thread Safe.                                                                                                      | iv. Thread unsafe.                                                                                                      |
   | StringBuffer g = new StringBuffer("hello");<br />g = g.append("you");<br />System.out.prntln(g);<br />//o/p: helloyou | StringBuilder h = new StringBuilder("hello");<br />h = h.append("you");<br />System.out.prntln(h);<br />//o/p: helloyou |
 
-    - References: https://www.geeksforgeeks.org/stringbuffer-class-in-java/ ; https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/ 
+    - References: https://www.geeksforgeeks.org/stringbuffer-class-in-java/ ; https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/  
+
+<br></br>
 ## File Handling  
 
 * **Creating file in java :**  
@@ -2001,6 +2004,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
     /* File created; myfile.txt          //if new file is created
     File already exists                  //if file is already there*/
     ```
+<br></br>
 * **Visuallising data of the .txt file :**
     ```ruby
     import java.io.File;
@@ -2027,6 +2031,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
     }
     /*lorem porem stuff     //data inside file */
     ```  
+<br></br>
 * **Writer (Writes over the previous data) :**  
     ```ruby
     import java.io.FileWriter;
@@ -2051,6 +2056,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
     Inside File: Hello, I have written something for you
     */
     ```  
+<br></br>
 * References: https://www.w3schools.com/java/java_files.asp ; https://www.geeksforgeeks.org/file-handling-in-java/ 
 
 
