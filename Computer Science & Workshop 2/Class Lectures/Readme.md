@@ -1734,6 +1734,7 @@ var4 = 8            called as Logical Error */
       Next Employee ID will be = 6
       Next Employee ID will be = 4*/
   ```
+References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www.geeksforgeeks.org/java-lang-runtime-class-in-java/  
 
 # 16. Strings, I/O Operations, and File Management
 
@@ -1959,6 +1960,7 @@ var4 = 8            called as Logical Error */
 
          8*/ 
        ```
+  - Reference: https://www.geeksforgeeks.org/split-string-java-examples/
 * **String Buffer & String Builder :**
 
   | String Buffer                                                                                                         | String Builder                                                                                                          |
@@ -1969,6 +1971,7 @@ var4 = 8            called as Logical Error */
   | iv. Thread Safe.                                                                                                      | iv. Thread unsafe.                                                                                                      |
   | StringBuffer g = new StringBuffer("hello");<br />g = g.append("you");<br />System.out.prntln(g);<br />//o/p: helloyou | StringBuilder h = new StringBuilder("hello");<br />h = h.append("you");<br />System.out.prntln(h);<br />//o/p: helloyou |
 
+    - Reference: https://www.geeksforgeeks.org/stringbuffer-class-in-java/ ; https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/ 
 ## File Handling  
 
 * **Creating file in java :**  
@@ -2044,7 +2047,8 @@ var4 = 8            called as Logical Error */
     Output: Successfully written
     Inside File: Hello, I have written something for you
     */
-    ```
+    ```  
+* References: https://www.w3schools.com/java/java_files.asp ; https://www.geeksforgeeks.org/file-handling-in-java/ 
 
 
 <hr>  </hr>
