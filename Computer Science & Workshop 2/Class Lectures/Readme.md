@@ -1759,7 +1759,8 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
     /*true
     false */
     ```
-
+<br></br>
+<br></br>
 ## String Stuff
 
 * **String Concatenation:**
@@ -1866,6 +1867,8 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
          ```
     5. **Performance :**
        - The concat method perform better as it doesn't create new object when that is not required.
+<br></br>
+<br></br>
 * **Splitting of strings**
 
   1. **public String split(String regex)**
@@ -1971,7 +1974,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
   | iv. Thread Safe.                                                                                                      | iv. Thread unsafe.                                                                                                      |
   | StringBuffer g = new StringBuffer("hello");<br />g = g.append("you");<br />System.out.prntln(g);<br />//o/p: helloyou | StringBuilder h = new StringBuilder("hello");<br />h = h.append("you");<br />System.out.prntln(h);<br />//o/p: helloyou |
 
-    - Reference: https://www.geeksforgeeks.org/stringbuffer-class-in-java/ ; https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/ 
+    - References: https://www.geeksforgeeks.org/stringbuffer-class-in-java/ ; https://www.geeksforgeeks.org/stringbuilder-class-in-java-with-examples/ 
 ## File Handling  
 
 * **Creating file in java :**  
@@ -2024,7 +2027,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
     }
     /*lorem porem stuff     //data inside file */
     ```  
-* **Writer (It deletes previous data and write) :**  
+* **Writer (Writes over the previous data) :**  
     ```ruby
     import java.io.FileWriter;
     import java.io.IOException;
