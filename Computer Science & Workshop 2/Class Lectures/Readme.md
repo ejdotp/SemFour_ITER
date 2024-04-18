@@ -1762,7 +1762,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
 <br></br>
 ## String Stuff
 
-* **String Concatenation:**
+### String Concatenation:
 
   1. Concatenation using addition(+) operator
      ```ruby
@@ -1868,7 +1868,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
        - The concat method perform better as it doesn't create new object when that is not required.
 <br></br>
 <br></br>
-* **Splitting of strings**
+### Splitting of strings: 
 
   1. **public String split(String regex)**
      - **regex -** A delimitting regular expression.
@@ -1965,7 +1965,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
   - Reference: https://www.geeksforgeeks.org/split-string-java-examples/  
 <br></br>
 <br></br>
-* **String Buffer & String Builder :**
+### String Buffer & String Builder :
 
   | String Buffer                                                                                                         | String Builder                                                                                                          |
   | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -1980,7 +1980,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
 <br></br>
 ## File Handling  
 
-* **Creating file in java :**  
+### Creating file in java :
     ```ruby
     import java.io.*;
 
@@ -2005,7 +2005,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
     File already exists                  //if file is already there*/
     ```
 <br></br>
-* **Visuallising data of the .txt file :**
+### Visuallising data of the .txt file :
     ```ruby
     import java.io.File;
     import java.io.FileNotFoundException;
@@ -2032,7 +2032,7 @@ References: https://www.geeksforgeeks.org/garbage-collection-java/ ; https://www
     /*lorem porem stuff     //data inside file */
     ```  
 <br></br>
-* **Writer (Writes over the previous data) :**  
+### Writer (Writes over the previous data) :
     ```ruby
     import java.io.FileWriter;
     import java.io.IOException;
