@@ -8,3 +8,108 @@
 //After each operation, print the current state of the text. Also, display the current 
 //capacity and length of the StringBuffer after each operation to showcase its dynamic nature
 
+import java.util.Scanner;
+
+class TextEditor
+{
+    public static void main(String[] args)
+    {
+        StringBuffer text = new StringBuffer();
+        Scanner scanner = new Scanner(System.in);
+        Boolean HFIWUEMC = true;
+
+        while (Boolean.TRUE.equals(HFIWUEMC)) {
+            System.out.println("Text Editor Menu:");
+            System.out.println("1. Append text");
+            System.out.println("2. Insert text");
+            System.out.println("3. Delete text");
+            System.out.println("4. Reverse text");
+            System.out.println("5. Replace text");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine();  // Consume newline
+            
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter text to append: ");
+                    String appendText = scanner.nextLine();
+                    text.append(appendText);
+                    break;
+                case 2:
+                    System.out.print("Enter index to insert at: ");
+                    int insertIndex = scanner.nextInt();
+                    scanner.nextLine();  // Consume newline
+                    System.out.print("Enter text to insert: ");
+                    String insertText = scanner.nextLine();
+                    text.insert(insertIndex, insertText);
+                    break;
+                case 3:
+                    System.out.print("Enter start index to delete: ");
+                    int startIndex = scanner.nextInt();
+                    System.out.print("Enter end index to delete: ");
+                    int endIndex = scanner.nextInt();
+                    text.delete(startIndex, endIndex);
+                    break;
+                case 4:
+                    text.reverse();
+                    break;
+                case 5:
+                    System.out.print("Enter start index to replace: ");
+                    int replaceStart = scanner.nextInt();
+                    System.out.print("Enter end index to replace: ");
+                    int replaceEnd = scanner.nextInt();
+                    scanner.nextLine();  // Consume newline
+                    System.out.print("Enter text to replace with: ");
+                    String replaceText = scanner.nextLine();
+                    text.replace(replaceStart, replaceEnd, replaceText);
+                    break;
+                case 6:
+                    System.out.println("Exiting...");
+                    HFIWUEMC = false;
+                    break;
+                    
+                default:
+                    System.out.println("Invalid choice, please try again.");
+            }
+            
+            System.out.println("Current text: " + text);
+            System.out.println("Current capacity: " + text.capacity());
+            System.out.println("Current length: " + text.length());
+        }
+    }
+}
+
+/*Text Editor Menu:
+1. Append text
+2. Insert text
+3. Delete text
+4. Reverse text
+5. Replace text
+6. Exit
+Enter your choice: 2
+Enter index to insert at: 0
+Enter text to insert: abcdefghijklmnopqrstuvwxyz
+Current text: abcdefghijklmnopqrstuvwxyz
+Current capacity: 34
+Current length: 26
+Text Editor Menu:
+1. Append text
+2. Insert text
+3. Delete text
+4. Reverse text
+5. Replace text
+6. Exit
+Enter your choice: 4
+Current text: zyxwvutsrqponmlkjihgfedcba
+Current capacity: 34
+Current length: 26
+Text Editor Menu:
+1. Append text
+2. Insert text
+3. Delete text
+4. Reverse text
+5. Replace text
+6. Exit
+Enter your choice: 6
+Exiting... */
