@@ -6,13 +6,13 @@ class CaseConversionAndComparison
 {
     public static void main(String[] args)
     {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
         // Prompt the user to input two strings
         System.out.print("Enter the first string: ");
-        String S1 = scanner.nextLine();
+        String S1 = sc.nextLine();
         System.out.print("Enter the second string: ");
-        String S2 = scanner.nextLine();
+        String S2 = sc.nextLine();
         
         // Convert both strings to lowercase and uppercase
         String S1Lower = S1.toLowerCase();
@@ -39,7 +39,7 @@ class CaseConversionAndComparison
         System.out.println("\nCase-insensitive equality:");
         System.out.println("Strings are equal (ignoring case): " + equalIgnoreCase);
         
-        scanner.close();
+        sc.close();
     }
 }
 

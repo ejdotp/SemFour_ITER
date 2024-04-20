@@ -15,7 +15,7 @@ class TextEditor
     public static void main(String[] args)
     {
         StringBuffer text = new StringBuffer();
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Boolean HFIWUEMC = true;
 
         while (Boolean.TRUE.equals(HFIWUEMC)) {
@@ -27,28 +27,28 @@ class TextEditor
             System.out.println("5. Replace text");
             System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            int choice = sc.nextInt();
+            sc.nextLine();  // Consume newline
             
             switch (choice) {
                 case 1:
                     System.out.print("Enter text to append: ");
-                    String appendText = scanner.nextLine();
+                    String appendText = sc.nextLine();
                     text.append(appendText);
                     break;
                 case 2:
                     System.out.print("Enter index to insert at: ");
-                    int insertIndex = scanner.nextInt();
-                    scanner.nextLine();  // Consume newline
+                    int insertIndex = sc.nextInt();
+                    sc.nextLine();  // Consume newline
                     System.out.print("Enter text to insert: ");
-                    String insertText = scanner.nextLine();
+                    String insertText = sc.nextLine();
                     text.insert(insertIndex, insertText);
                     break;
                 case 3:
                     System.out.print("Enter start index to delete: ");
-                    int startIndex = scanner.nextInt();
+                    int startIndex = sc.nextInt();
                     System.out.print("Enter end index to delete: ");
-                    int endIndex = scanner.nextInt();
+                    int endIndex = sc.nextInt();
                     text.delete(startIndex, endIndex);
                     break;
                 case 4:
@@ -56,12 +56,12 @@ class TextEditor
                     break;
                 case 5:
                     System.out.print("Enter start index to replace: ");
-                    int replaceStart = scanner.nextInt();
+                    int replaceStart = sc.nextInt();
                     System.out.print("Enter end index to replace: ");
-                    int replaceEnd = scanner.nextInt();
-                    scanner.nextLine();  // Consume newline
+                    int replaceEnd = sc.nextInt();
+                    sc.nextLine();  // Consume newline
                     System.out.print("Enter text to replace with: ");
-                    String replaceText = scanner.nextLine();
+                    String replaceText = sc.nextLine();
                     text.replace(replaceStart, replaceEnd, replaceText);
                     break;
                 case 6:

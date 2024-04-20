@@ -9,11 +9,11 @@ import java.util.Scanner;
 
 class FileMetadata {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         // Prompt the user for the file name
         System.out.print("Enter the file name: ");
-        String fileName = scanner.nextLine();
+        String fileName = sc.nextLine();
 
         // Create a File object for the specified file
         File file = new File(fileName);
@@ -36,7 +36,7 @@ class FileMetadata {
         System.out.println("Is Directory: " + file.isDirectory());
         System.out.println("Is File: " + file.isFile());
 
-        scanner.close();
+        sc.close();
     }
 
     // Method to format date

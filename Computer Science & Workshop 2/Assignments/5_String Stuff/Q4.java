@@ -13,9 +13,9 @@ import java.util.Scanner;
 
 class TextManipulator {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter a string: ");
-        String inputString = scanner.nextLine();
+        String inputString = sc.nextLine();
         StringBuilder text = new StringBuilder(inputString);
         Boolean ForReals = true;
         
@@ -28,35 +28,35 @@ class TextManipulator {
             System.out.println("4. Concatenate another string at the end");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            int choice = sc.nextInt();
+            sc.nextLine();  // Consume newline
             
             switch (choice) {
                 case 1:
                     System.out.print("Enter substring to add: ");
-                    String substring = " "+scanner.nextLine();
+                    String substring = " "+sc.nextLine();
                     System.out.print("Enter position to add at: ");
-                    int position = scanner.nextInt();
+                    int position = sc.nextInt();
                     text.insert(position, substring);
                     break;
                 case 2:
                     System.out.print("Enter start index of range to remove: ");
-                    int startIndex = scanner.nextInt();
+                    int startIndex = sc.nextInt();
                     System.out.print("Enter end index of range to remove: ");
-                    int endIndex = scanner.nextInt();
+                    int endIndex = sc.nextInt();
                     text.delete(startIndex, endIndex);
                     break;
                 case 3:
                     System.out.print("Enter index to modify: ");
-                    int modifyIndex = scanner.nextInt();
-                    scanner.nextLine();  // Consume newline
+                    int modifyIndex = sc.nextInt();
+                    sc.nextLine();  // Consume newline
                     System.out.print("Enter new character: ");
-                    char newChar = scanner.nextLine().charAt(0);
+                    char newChar = sc.nextLine().charAt(0);
                     text.setCharAt(modifyIndex, newChar);
                     break;
                 case 4:
                     System.out.print("Enter string to concatenate: ");
-                    String concatString = " "+scanner.nextLine();
+                    String concatString = " "+sc.nextLine();
                     text.append(concatString);
                     break;
                 case 5:
