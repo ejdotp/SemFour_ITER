@@ -8,15 +8,17 @@ import java.util.LinkedList;
 
 public class Q17 {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
+        LinkedList<int[]> list = new LinkedList<>(); 
+        list.add(new int[]{11, 12, 55});
         try {
-            System.out.println(list.get(5));
+            int[] arr1 = list.get(0);
+            System.out.print("Array 1: ");
+            for (int num : arr1)
+                System.out.print(num + " ");
+            System.out.println();
+            int[] arr2 = list.get(2);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("ArrayIndexOutOfBoundsException caught");
+            System.out.println(e.toString());
         }
     }
 }
