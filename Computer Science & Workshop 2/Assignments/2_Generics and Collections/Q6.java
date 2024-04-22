@@ -1,5 +1,6 @@
 //Write a program to create an Animal class with member variables name, color, types (pet/wild). Override the hashCode method to print the unique id for the object. Create the objects of the Animal class and print its hashcode.
 
+import java.util.Objects;
 class Animal
 {
     private String name;
@@ -17,21 +18,24 @@ class Animal
         return "Animal [name=" + name + ", color=" + color + ", type=" + type + "]";
     }
 
+    // public int hashCode()
+    // {
+    //     final int prime = 31;
+    //     int result = 1;
+    //     result = prime * result + ((color == null) ? 0 : color.hashCode());
+    //     result = prime * result + ((name == null) ? 0 : name.hashCode());
+    //     result = prime * result + ((type == null) ? 0 : type.hashCode());
+    //     return result;
+    // }
+
+    @Override
     public int hashCode()
     {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((color == null) ? 0 : color.hashCode());
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
-        result = prime * result + ((type == null) ? 0 : type.hashCode());
-        return result;
-
-        //or
-        // return color.hashCode() + name.hashCode() + type.hashCode();
+        return Objects.hash(name, color, type);
     }
 }
 
-class Q6
+class vkvrriua
 {
     public static void main(String[] args)
     {
@@ -43,5 +47,11 @@ class Q6
     }
 }
 
-/*Hashcode of animal1: 1820676265
+/*
+Hashcode of animal1: 2074259049
+Hashcode of animal2: 599906036
+
+OR
+
+Hashcode of animal1: 1820676265
 Hashcode of animal2: -1239147832 */
