@@ -59,7 +59,7 @@ class Enrollment implements EnrollmentSystem                   // Enrollment log
     public Enrollment()
     {
         this.enrolledStudents = new ArrayList<student>();
-        this.enrolledCourses = new ArrayList<>();
+        this.enrolledCourses = new ArrayList<Course>();
     }
 
     public void enrollStudent(student student, Course course)

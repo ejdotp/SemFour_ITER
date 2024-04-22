@@ -1,4 +1,5 @@
-//8.String Concatenation and Character Retrieval: Take two strings from the user. Concatenate them using the string method and the + operator, then display both results. Ask the user for an index number, then display the character at that index.  
+/*8.String Concatenation and Character Retrieval: Take two strings from the user. Concatenate them using the string method and the + operator, 
+then display both results. Ask the user for an index number, then display the character at that index.  */
 
 import java.util.Scanner;
 

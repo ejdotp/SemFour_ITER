@@ -35,7 +35,7 @@ class TestString {
  * 
  * Comparison:
  * str1 and str2 are not reference to same object.
- * The content of str1 and str2 are not equal.
+ * The content of str1 and str2 are equal.
  * 
  * Also:
  * 

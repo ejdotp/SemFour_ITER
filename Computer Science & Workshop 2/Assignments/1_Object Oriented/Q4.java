@@ -17,6 +17,7 @@ class Laptop
         this.price = price;
     }
 
+    @Override
     public String toString()
     {
         return "Laptop Model: " + model + ", Price: ₹" + price;

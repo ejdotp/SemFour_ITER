@@ -35,21 +35,6 @@ class Student
         this.college = college; 
     }
 
-    public int getStudentId()
-    { 
-        return studentId; 
-    }
-
-    public String getStudentName()
-    { 
-        return studentName; 
-    }
-
-    public College getCollege()
-    { 
-        return college;
-    }
-
     public void displayStudentInfo()
     {
         System.out.println("Student ID: " + studentId);
@@ -60,7 +45,7 @@ class Student
     }
 }
 
-class Main
+class Mains
 {
     public static void main(String[] args)
     {
