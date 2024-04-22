@@ -5,26 +5,33 @@ message. If the input string is null or empty, throw a NullPointerException with
 appropriate error message. Ensure that the program handles any potential exceptions
 gracefully.*/
 
-public class Q2
-{
-    public static void main(String[] args)
-    {
+public class Q2 {
+    public static void main(String[] args) {
+        String str = "A1bc2def3ghi4";
         try {
-            String str = "a1b2c3d4e5";
-            if (str == null || str.isEmpty())
-                throw new NullPointerException("String is null or empty");
-            
-            for (int i = 0; i < str.length(); i++) {
-                if (Character.isDigit(str.charAt(i))) {
-                    if (i > 1 && Character.isLetter(str.charAt(i - 1)) && Character.isLetter(str.charAt(i - 2))) {
-                        if (Character.isLetter(str.charAt(i - 1)) && Character.isLetter(str.charAt(i - 2))) {
-                            System.out.println(str.charAt(i));
-                        }
+            boolean foundNumeric = false;
+            for (int i = 2; i < str.length(); i++) {
+                char current = str.charAt(i);
+                char prev = str.charAt(i - 1);
+                char prevprev = str.charAt(i - 2);
+
+                if (Character.isDigit(current) && Character.isAlphabetic(prev) && Character.isAlphabetic(prevprev)) {
+                    if (isVowel(prevprev) && !isVowel(prev)) {
+                        System.out.println("Numeric character: " + current);
+                        foundNumeric = true;
                     }
                 }
             }
-        } catch (NullPointerException e) {
-            System.out.println(e.getMessage());
-        }        
+            if (!foundNumeric) 
+                System.out.println("No numeric characters meeting the condition found.");
+        } 
+        catch (NullPointerException e) {
+            e.printStackTrace(); }
+    }
+
+    public static boolean isVowel(char ch) 
+    {
+        ch = Character.toLowerCase(ch);
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
     }
 }

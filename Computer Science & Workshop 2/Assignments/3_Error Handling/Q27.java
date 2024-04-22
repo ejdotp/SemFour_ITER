@@ -1,12 +1,15 @@
 /* Write a program to handle ClassCastException. */
 
 public class Q27 {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         try {
-            Object obj = new Integer(100);
-            System.out.println((String) obj);
-        } catch (ClassCastException e) {
-            System.out.println("ClassCastException: " + e.getMessage());
+            Object o = new Object();
+            String s = (String)o;
+            System.out.println(s);
+        }
+        catch (ClassCastException e) {
+            System.out.println(e);
         }
     }
 }

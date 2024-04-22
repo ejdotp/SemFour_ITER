@@ -1,19 +1,21 @@
-/* Create a method that takes a string input and converts it to an integer. Handle
-NumberFormatException using try-catch block and prompt the user to enter a valid
-number upon exception. */
+//Arithmetic exception for square root of negative number
 
+import java.util.*;
 public class Q8 {
     public static void main(String[] args) {
-        try {
-            String str = "abc";
-            int num = convertToInt(str);
-            System.out.println(num);
-        } catch (NumberFormatException e) {
-            System.out.println("NumberFormatException caught");
+        Scanner obj = new Scanner(System.in);
+        System.out.print("Enter an integer to find its square root: ");
+        int number = obj.nextInt();
+        try {                      
+                if (number < 0) {
+                    throw new ArithmeticException("cannot a negative number");
+                }
+                double squareRoot = Math.sqrt(number);
+            System.out.println("Square root of " + number + " is: " + squareRoot);
+        } 
+        catch (ArithmeticException e) {
+            System.out.println("Error: " + e.toString());
         }
     }
-
-    public static int convertToInt(String str) {
-        return Integer.parseInt(str);
-    }    
+    
 }

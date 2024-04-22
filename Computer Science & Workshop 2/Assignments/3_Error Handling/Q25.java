@@ -1,16 +1,19 @@
 /* Implement a method that reads an integer from the user but handles
 InputMismatchException using try-catch block. */
 
+import java.util.Scanner;
+import java.util.InputMismatchException; 
+
 public class Q25 {
     public static void main(String[] args) {
-        java.util.Scanner sc = new java.util.Scanner(System.in);
-        System.out.print("Enter an integer: ");
+        Scanner obj = new Scanner(System.in);
+
         try {
-            int n = sc.nextInt();
-            System.out.println("You entered: " + n);
-        } catch (java.util.InputMismatchException e) {
-            System.out.println("InputMismatchException: " + e.getMessage());
+            System.out.println("Enter an integer: ");
+            int integer = obj.nextInt();
+            System.out.println("You entered: " + integer);
+        } catch (InputMismatchException e) {
+            System.out.println("Something went wrong, let's try that again.");
         }
-        sc.close();
     }
 }

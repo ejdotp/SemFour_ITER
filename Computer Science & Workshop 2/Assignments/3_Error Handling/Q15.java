@@ -5,18 +5,17 @@ the inner try-catch block. */
 public class Q15 {
     public static void main(String[] args) {
         try {
-            String str = "abc";
-            int num = Integer.parseInt(str);
-            System.out.println(num);
-        } catch (NumberFormatException e) {
-            System.out.println("NumberFormatException caught");
+            String input = "abc";
+            int number = Integer.parseInt(input); 
+
             try {
-                double x = Math.PI / 2;
-                double result = (Math.sin(x) * Math.cos(x)) / (Math.sin(x) + Math.cos(x));
-                System.out.println(result);
-            } catch (ArithmeticException e1) {
-                System.out.println("ArithmeticException caught");
+                System.out.println("Result: " + (100 / number));
+            } catch (ArithmeticException e) {
+                System.out.println("Error: "+e.toString());
             }
+        }
+         catch (NumberFormatException e) {
+            System.out.println("Error: "+e.toString());
         }
     }
 }

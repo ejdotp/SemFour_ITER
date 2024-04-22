@@ -2,13 +2,20 @@
 exception in your program to handle a specific error condition and demonstrate its usage
 using try-catch block. */
 
-public class Q22 {
+class Question22 {
     public static void main(String[] args) {
         try {
-            throw new CustomCheckedException("Custom Checked Exception");
+            divide(5, 0);
         } catch (CustomCheckedException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
+    }
+
+    public static void divide(int x, int y) throws CustomCheckedException {
+        if (y == 0) {
+            throw new CustomCheckedException("Division by zero is not allowed");
+        }
+        System.out.println(x / y);
     }
 }
 
