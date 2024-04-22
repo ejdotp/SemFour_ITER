@@ -13,16 +13,8 @@ class Student implements Comparable<Student>
         this.totalMark = totalMark;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public int getRn() {
         return rn;
-    }
-
-    public int getTotalMark() {
-        return totalMark;
     }
 
     public String toString() {

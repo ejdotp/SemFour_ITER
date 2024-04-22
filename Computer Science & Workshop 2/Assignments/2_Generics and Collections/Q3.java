@@ -23,18 +23,6 @@ class Car implements Comparable<Car>
         return "Car [Color=" + Color + ", Model=" + Model + ", Speed=" + Speed + "]";
     }
 
-    public boolean equals(Car other)
-    {
-        if (this.Speed == other.Speed && this.Color.equals(other.Color) && this.Model.equals(other.Model))
-            return true;
-
-        if (other == null || getClass() != other.getClass())
-            return false;
-
-        Car otherCar = (Car) other;
-        return Speed == otherCar.Speed && this.Color.equals(otherCar.Color) && this.Model.equals(otherCar.Model);
-    }
-
     public int compareTo(Car otherCar)
     {
         return Double.compare(this.Speed, otherCar.Speed);

@@ -25,10 +25,13 @@ class Animal
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + ((type == null) ? 0 : type.hashCode());
         return result;
+
+        //or
+        // return color.hashCode() + name.hashCode() + type.hashCode();
     }
 }
 
-public class Q6
+class Q6
 {
     public static void main(String[] args)
     {
