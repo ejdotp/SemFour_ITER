@@ -5,12 +5,12 @@ import java.util.Collections;
 
 class Car implements Comparable<Car>
 {
-    private int modalNo;
+    private int modelNo;
     private String name;
     private int stock;
 
-    public Car(int modalNo, String name, int stock) {
-        this.modalNo = modalNo;
+    public Car(int modelNo, String name, int stock) {
+        this.modelNo = modelNo;
         this.name = name;
         this.stock = stock;
     }
@@ -22,7 +22,7 @@ class Car implements Comparable<Car>
 
     @Override
     public String toString() {
-        return modalNo + " " + name + " " + stock;
+        return modelNo + " " + name + " " + stock;
     }
 }
 

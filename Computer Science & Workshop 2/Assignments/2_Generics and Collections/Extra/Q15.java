@@ -2,20 +2,24 @@
 
 import java.util.HashSet;
 
-public class Q15 {
-    public static void main(String[] args) {
-
-        int[] arr = { 1, 2, 3, 4, 4, 5, 6, 6, 7 };
-
+public class Q15{
+    public static void main(String[]args){
+        int[] array = {4,2,3,4,6,2,7,8,2,4};
+        printRepeatingIntegers(array);
+    }
+    
+    public static void printRepeatingIntegers(int[] array){
         HashSet<Integer> set = new HashSet<>();
+        HashSet<Integer> repeatingSet = new HashSet<>();
+        
+        for( int num : array)
+            if(!set.add(num))
+                repeatingSet.add(num);
 
-        for (int i = 0; i < arr.length; i++) {
-
-            if (set.contains(arr[i])) {
-                System.out.println("Repeating integer: " + arr[i]);
-            }
-
-            set.add(arr[i]);
-        }
+        System.out.println("Repeating integers in the array:");
+        for(int num : repeatingSet)
+            System.out.println(num);
     }
 }
+
+/*OutputRepeatingintegersinthearray:24*/
