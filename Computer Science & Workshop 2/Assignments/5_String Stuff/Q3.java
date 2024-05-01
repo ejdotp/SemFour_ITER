@@ -18,7 +18,7 @@ class TextEditor
         Scanner sc = new Scanner(System.in);
         Boolean HFIWUEMC = true;
 
-        while (Boolean.TRUE.equals(HFIWUEMC)) {
+        while (HFIWUEMC) {
             System.out.println("Text Editor Menu:");
             System.out.println("1. Append text");
             System.out.println("2. Insert text");

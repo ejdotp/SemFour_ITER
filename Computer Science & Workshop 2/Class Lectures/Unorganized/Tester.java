@@ -1,55 +1,27 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 
-class User implements Comparable<User> {
-  private String name;
-  private int age;
-
-  public User(String name, int age) {
-    this.name = name;
-    this.age = age;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public int getAge() {
-    return age;
-  }
-
-  public void setAge(int age) {
-    this.age = age;
-  }
-
-  @Override
-  public int compareTo(User user) {
-    return this.age - user.age;
-  }
-
-  @Override
-  public String toString() {
-    return "Name : " + name + " , Age : " + age;
-  }
-}
-
-class ArrayListUser {
+public class Tester{
   public static void main(String[] args) {
-    ArrayList<User> users = new ArrayList<>();
-    users.add(new User("Ananya", 21));
-    users.add(new User("Aishwayra", 20));
-    users.add(new User("Priyanka", 19));
-    users.add(new User( "Suman", 22));
-    for (user: users)
-      System.out.println(user);
-    Collections.sort(users);
-    System.out.println("After Sorting");
-    for (User user : users)
-      System.out.println(user);
+    int whichHour = LocalTime.now().getHour();
+    System.out.println(whichHour);
+
+    boolean compareTime = LocalTime.now().isBefore(LocalTime.parse("05:30"));
+    System.out.println(compareTime); // false if it's before
+
+    boolean compareTime1 = LocalTime.now().isAfter(LocalTime.parse("05:30"));
+    System.out.println(compareTime1); // true if it's after
+
+    LocalTime maxTime = LocalTime.MAX;
+    System.out.println(maxTime);
+
+    LocalTime minTime = LocalTime.MIN;
+    System.out.println(minTime);
   }
 }
+
+/*10
+false
+true
+23:59:59.999999999
+00:00*/
