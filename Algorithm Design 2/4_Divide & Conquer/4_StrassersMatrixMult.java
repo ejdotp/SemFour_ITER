@@ -1,56 +1,40 @@
 // Java Program to Implement Strassen Algorithm
 
-class GFG {
-
-	// Method 1
-	// Function to multiply matrices
-	public int[][] multiply(int[][] A, int[][] B)
+class StrassMan 
+{
+	public int[][] multiply(int[][] A, int[][] B)         // Function to multiply matrices
 	{
-		// Order of matrix
-		int n = A.length;
+		int n = A.length;                                 // Order of matrix
 
-		// Creating a 2D square matrix with size n
-		// n is input from the user
-		int[][] R = new int[n][n];
+		int[][] R = new int[n][n];                        // Creating a 2D square matrix with size n, n is input from the user
 
-		// Base case
-		// If there is only single element
-		if (n == 1)
-
-			// Returning the simple multiplication of
-			// two elements in matrices
-			R[0][0] = A[0][0] * B[0][0];
-
-		// Matrix
+		if (n == 1)                                       // Base case, If there is only single element
+			R[0][0] = A[0][0] * B[0][0];                  // Returning the simple multiplication of two elements in matrices
 		else {
-			// Step 1: Dividing Matrix into parts
-			// by storing sub-parts to variables
 			int[][] a = new int[n / 2][n / 2];
 			int[][] b = new int[n / 2][n / 2];
-			int[][] c = new int[n / 2][n / 2];
+			int[][] c = new int[n / 2][n / 2];            // Dividing Matrix into parts by storing sub-parts to variables
 			int[][] d = new int[n / 2][n / 2];
 			int[][] e = new int[n / 2][n / 2];
 			int[][] f = new int[n / 2][n / 2];
 			int[][] g = new int[n / 2][n / 2];
 			int[][] h = new int[n / 2][n / 2];
 
-			//Dividing matrix A into 4 halves
 			split(A, a, 0, 0);
-			split(A, b, 0, n / 2);
+			split(A, b, 0, n / 2);                     //Dividing matrix A into 4 halves
 			split(A, c, n / 2, 0);
 			split(A, d, n / 2, n / 2);
 
-			//Dividing matrix B into 4 halves
 			split(B, e, 0, 0);
-			split(B, f, 0, n / 2);
+			split(B, f, 0, n / 2);                     //Dividing matrix B into 4 halves
 			split(B, g, n / 2, 0);
 			split(B, h, n / 2, n / 2);
 
 			int[][] M1 = multiply(a, sub(f, h));
 			int[][] M2 = multiply(add(a, d), h);
 			int[][] M3 = multiply(add(c, d), e);
-			int[][] M4 = multiply(d, sub(g, e));
-			int[][] M5 = multiply(add(a, b), add(e, h));
+			int[][] M4 = multiply(d, sub(g, c));
+			int[][] M5 = multiply(add(a, d), add(e, h));
 			int[][] M6 = multiply(sub(b, d), add(g, h));
 			int[][] M7 = multiply(sub(a, c), add(e, f));
 
@@ -67,148 +51,70 @@ class GFG {
 		return R;
 	}
 
-	// Method 2
-	// Function to subtract two matrices
-	public int[][] sub(int[][] A, int[][] B)
+	public int[][] sub(int[][] A, int[][] B)   // Function to subtract two matrices
 	{
 		int n = A.length;
 		int[][] C = new int[n][n];
+                                               // Iterating over elements of 2D matrix using nested for loops
+		for (int i = 0; i < n; i++)            // Outer loop for rows
+			for (int j = 0; j < n; j++)        // Inner loop for columns
+				C[i][j] = A[i][j] - B[i][j];   // Subtracting corresponding elements from matrices
 
-		// Iterating over elements of 2D matrix
-		// using nested for loops
-		// Outer loop for rows
-        
-		for (int i = 0; i < n; i++)
-
-			// Inner loop for columns
-			for (int j = 0; j < n; j++)
-
-				// Subtracting corresponding elements
-				// from matrices
-				C[i][j] = A[i][j] - B[i][j];
-
-		// Returning the resultant matrix
-		return C;
+		return C;                              // Returning the resultant matrix
 	}
 
-	// Method 3
-	// Function to add two matrices
-	public int[][] add(int[][] A, int[][] B)
+	public int[][] add(int[][] A, int[][] B)   // Function to add two matrices
 	{
-
-		//
 		int n = A.length;
 
-		// Creating a 2D square matrix
-		int[][] C = new int[n][n];
+		int[][] C = new int[n][n];             // Creating a 2D square matrix
 
-		// Iterating over elements of 2D matrix
-		// using nested for loops
-
-		// Outer loop for rows
 		for (int i = 0; i < n; i++)
-
-			// Inner loop for columns
 			for (int j = 0; j < n; j++)
-
-				// Adding corresponding elements
-				// of matrices
-				C[i][j] = A[i][j] + B[i][j];
-
-		// Returning the resultant matrix
+				C[i][j] = A[i][j] + B[i][j];   // Iterating over elements of 2D matrix
 		return C;
 	}
 
-	// Method 4
-	// Function to split parent matrix
-	// into child matrices
-	public void split(int[][] P, int[][] C, int iB, int jB)
+	
+	public void split(int[][] P, int[][] C, int iB, int jB)      // Function to split parent matrix into child matrices
 	{
-		// Iterating over elements of 2D matrix
-		// using nested for loops
-
-		// Outer loop for rows
 		for (int i1 = 0, i2 = iB; i1 < C.length; i1++, i2++)
-
-			// Inner loop for columns
-			for (int j1 = 0, j2 = jB; j1 < C.length;
-				j1++, j2++)
-
+			for (int j1 = 0, j2 = jB; j1 < C.length; j1++, j2++)
 				C[i1][j1] = P[i2][j2];
 	}
 
-	// Method 5
-	// Function to join child matrices
-	// into (to) parent matrix
-	public void join(int[][] C, int[][] P, int iB, int jB)
-
+	public void join(int[][] C, int[][] P, int iB, int jB)       // Function to join child matrices into (to) parent matrix
 	{
-		// Iterating over elements of 2D matrix
-		// using nested for loops
-
-		// Outer loop for rows
 		for (int i1 = 0, i2 = iB; i1 < C.length; i1++, i2++)
-
-			// Inner loop for columns
-			for (int j1 = 0, j2 = jB; j1 < C.length;
-				j1++, j2++)
-
+			for (int j1 = 0, j2 = jB; j1 < C.length; j1++, j2++)
 				P[i2][j2] = C[i1][j1];
 	}
 
-	// Method 5
-	// Main driver method
 	public static void main(String[] args)
 	{
-		// Display message
-		System.out.println(
-			"Strassen Multiplication Algorithm Implementation For Matrix Multiplication :\n");
+		System.out.println("Strassen Multiplication Algorithm Implementation For Matrix Multiplication :\n");
 
-		// Create an object of Strassen class
-		// in the main function
-		GFG s = new GFG();
+		StrassMan s = new StrassMan();                                      // Create an object of Strassen class
 
-		// Size of matrix
-		// Considering size as 4 in order to illustrate
-		int N = 4;
+		int N = 4;                                              // Let size of matrix be 4
 
-		// Matrix A
-		// Custom input to matrix
 		int[][] A = { { 1, 2, 3, 4 },
 					{ 4, 3, 0, 1 },
 					{ 5, 6, 1, 1 },
 					{ 0, 2, 5, 6 } };
 
-		// Matrix B
-		// Custom input to matrix
 		int[][] B = { { 1, 0, 5, 1 },
 					{ 1, 2, 0, 2 },
 					{ 0, 3, 2, 3 },
 					{ 1, 2, 1, 2 } };
 
-		// Matrix C computations
-
-		// Matrix C calling method to get Result
 		int[][] C = s.multiply(A, B);
 
-		// Display message
-		System.out.println(
-			"\nProduct of matrices A and B : ");
+		System.out.println("\nProduct of matrices A and B : ");
 
-		// Iterating over elements of 2D matrix
-		// using nested for loops
-
-		// Outer loop for rows
 		for (int i = 0; i < N; i++) {
-			// Inner loop for columns
 			for (int j = 0; j < N; j++)
-
-				// Printing elements of resultant matrix
-				// with whitespaces in between
 				System.out.print(C[i][j] + " ");
-
-			// New line once the all elements
-			// are printed for specific row
 			System.out.println();
 		}
 	}
