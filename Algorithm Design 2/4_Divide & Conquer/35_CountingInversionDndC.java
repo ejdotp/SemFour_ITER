@@ -49,7 +49,8 @@ class CountingInversionDnC
 	public static void main(String[] args) 
 	{ 
 		int[] arr = {1, 20, 6, 4, 5}; 
-		System.out.println(mergeSortAndCount(arr, 0, arr.length - 1)); 
+		System.out.println("Number of inversions are " + mergeSortAndCount(arr, 0, arr.length - 1)); 
 	} 
 }
 
+//Number of inversions are 5

@@ -92,8 +92,6 @@ class StrassMan
 
 	public static void main(String[] args)
 	{
-		System.out.println("Strassen Multiplication Algorithm Implementation For Matrix Multiplication :\n");
-
 		StrassMan s = new StrassMan();                                      // Create an object of Strassen class
 
 		int N = 4;                                              // Let size of matrix be 4
@@ -119,3 +117,9 @@ class StrassMan
 		}
 	}
 }
+
+/*Product of matrices A and B : 
+-55    7  -70  22 
+-107 -47  -30  37 
+-85   13   -1  24 
+-98    1  -11  31 */

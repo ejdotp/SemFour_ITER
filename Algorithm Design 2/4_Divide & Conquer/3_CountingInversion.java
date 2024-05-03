@@ -20,3 +20,5 @@ class CountingInversion
 	} 
 }
 
+/*Number of inversions are 5 */
+
