@@ -1,7 +1,4 @@
-; D.Balaji Patro      : 2241016307
-; Dipesh Kumar Patro  : 2241016308
 ; E. Jagadeeswar Patro: 2241016309 
-; Essa Rani Patro     : 2241016310
 
 ; Design a system that replace a character with a user input character in a given string using 8086 assembly language.
 
