@@ -5,12 +5,12 @@ class Mainnn
         int n = 8; //Number of Threads
         for(int i = 0; i < n; i++)
         {
-            Thread object = new Thread(new MultiThreadingDemo());
+            Thread object = new Thread(new MultiThreadImplementRunnable());
             object.start();
         }
     }
 }
-class MultiThreadingDemo implements Runnable
+class MultiThreadImplementRunnable implements Runnable
 {
     public void run()
     {
