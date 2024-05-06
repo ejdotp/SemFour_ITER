@@ -9,7 +9,7 @@ public class SpiralMatrix {
         for(int i=0;i<5;i++){
             //Forward
             for(j=0;j<4;j++){
-                s[m]=arr[i][j];
+                                                                                                      
                 m++;
                
             }
