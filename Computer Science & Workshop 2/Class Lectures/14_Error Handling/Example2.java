@@ -1,9 +1,8 @@
 class catch_finally {
     public static void main(String[] args) {
-        int[] arr = new int[4];
         try {
             int k = 100/0;
-            System.out.println("Inside try block");
+            System.out.println("Inside try block" + k);
         }
         catch(ArithmeticException e){
             System.out.println(e);

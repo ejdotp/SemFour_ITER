@@ -26,6 +26,7 @@ class Employees2
 
 class GarbageModified
 {
+    // @SuppressWarnings("removal")
     public static void main(String[] args)
     {
         Employees2 E = new Employees2("ABC",56);
@@ -47,9 +48,8 @@ class GarbageModified
             Y.showNextId();
             X = Y = null;
             System.gc();
-            System.runFinalization();
+            //System.runFinalization(); depreciated, supported by java8 or previous 
         }
-        
         E.showNextId(); 
     }
 }

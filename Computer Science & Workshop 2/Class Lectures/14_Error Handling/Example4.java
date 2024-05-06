@@ -3,7 +3,7 @@ class CatchyIWillRickYou {
         try{
             String str = "123s";
             int num =  Integer.parseInt(str);
-            System.out.println("Inside try block");
+            System.out.println("Inside try block" + num);
         }
         catch(NumberFormatException e){
             System.out.println("Catch block executed...");

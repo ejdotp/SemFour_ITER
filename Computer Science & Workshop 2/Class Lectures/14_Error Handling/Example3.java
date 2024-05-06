@@ -1,4 +1,5 @@
 class CatchityCatch {
+    @SuppressWarnings("null") //only for vscode
     public static void main(String[] args) {
         int[] arr = null;
         try{

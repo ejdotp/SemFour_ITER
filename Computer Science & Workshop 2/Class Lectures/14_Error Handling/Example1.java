@@ -3,7 +3,7 @@ class Try_Catch{
         int[] arr = new int[4];
         try{
             int i = arr[4];
-            System.out.println("Inside try block");
+            System.out.println("Inside try block" + i);
         }
         catch(ArrayIndexOutOfBoundsException e){
             System.out.println(e);
