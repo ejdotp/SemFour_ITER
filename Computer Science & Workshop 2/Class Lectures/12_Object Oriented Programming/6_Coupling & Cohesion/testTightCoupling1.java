@@ -27,6 +27,5 @@ class testTightCoupling1
         System.out.println("Name is " + a.name);
     }
 }
-/*
-Name is null
- */
+
+// Name is null
