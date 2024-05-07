@@ -46,3 +46,25 @@ class WorkerThread implements Runnable
         }
     }
 }
+
+/*pool-1-thread-1 (Start) message =  0
+pool-1-thread-3 (Start) message =  2
+pool-1-thread-4 (Start) message =  3
+pool-1-thread-2 (Start) message =  1
+pool-1-thread-5 (Start) message =  4
+pool-1-thread-1 (End)
+pool-1-thread-1 (Start) message =  5
+pool-1-thread-3 (End)
+pool-1-thread-3 (Start) message =  6
+pool-1-thread-2 (End)
+pool-1-thread-2 (Start) message =  7
+pool-1-thread-5 (End)
+pool-1-thread-5 (Start) message =  8
+pool-1-thread-4 (End)
+pool-1-thread-4 (Start) message =  9
+pool-1-thread-1 (End)
+pool-1-thread-3 (End)
+pool-1-thread-2 (End)
+pool-1-thread-5 (End)
+pool-1-thread-4 (End)
+All tasks completed*/
