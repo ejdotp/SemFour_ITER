@@ -15,7 +15,6 @@
 MAIN PROC
     MOV AX, data             ;Copy base address of .data
     MOV DS, AX               ;into DS Register
-    ;MOV ES, AX               ;also into ES for String Operations
     
    ;Print STR1:                         
     LEA DX, STR1             ;Offset Address of 1st letter in STR1 stored into DX
