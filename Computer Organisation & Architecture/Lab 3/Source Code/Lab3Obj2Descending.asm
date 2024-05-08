@@ -20,7 +20,7 @@ UP1:   mov al, [SI]     ; move 1st value of array into al
        cmp al, [si+1]   ; Compare 1st and 2nd element of array and update in al
        jnc DOWN         ; jump if not carry
        mov dl, [si+1]   ; move 2nd value of array into dl
-       xchg [si+1], dl  ; exchange 1st and 2nd element of array
+       xchg [si], dl    ; exchange 1st and 2nd element of array
        mov [si+1], dl   ; store dl in 2nd position of array
     
 DOWN:  inc si           ; increment index for next iteration 
