@@ -27,6 +27,6 @@ DOWN:  inc si           ; increment index for next iteration
        dec cl           ; decrease counter value
        jnz UP1          ; loop until counter becomes zero
        dec ch           ; decrement count
-       jnz UP2          ; jump is cl not equal to 0
+       jnz UP2          ; jump if cl not equal to 0
        
 END MAIN
