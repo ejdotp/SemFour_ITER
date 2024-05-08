@@ -11,7 +11,7 @@ MAIN PROC
     mov ax, data        ; store data to ax
     mov ds, ax          ; store value of ax in ds
     mov ch, count       ; cl = 04h
-    dec ch              ; decrementing cl by one (cl =  03h)
+    dec ch              ; decrementing cl by one (cl =  05h)
 
 UP2:   mov cl, ch       ; store the current index value in bl
        lea si, value    ; load effective address of 'value' into si

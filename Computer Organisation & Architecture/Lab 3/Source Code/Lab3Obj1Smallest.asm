@@ -22,7 +22,7 @@ up: inc si        ; Increment SI, Array index = 2nd
     mov al, [si]  ; if less, move value of si into al
     
 nxt: dec cl       ; decrement count
-     jnz up       ; jump is cl not equal to 0 
+     jnz up       ; jump if cl not equal to 0 
      LEA DI, res  ; address of 'res' set into DI
      mov [DI], al ; value of al is stored in address of res
      
