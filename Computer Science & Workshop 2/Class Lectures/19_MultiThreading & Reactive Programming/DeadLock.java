@@ -10,7 +10,7 @@ public class DeadLock
             public void run() {
                 synchronized (firstResource) {
                     System.out.println(this.getName() + " : First Resource is Locked");
-                    try {Thread.sleep(100);}
+                    try {Thread.sleep(1000);}
                     catch(Exception e){}
                     synchronized (secondResource) {
                         System.out.println("Second Resource is Locked.");
@@ -24,7 +24,7 @@ public class DeadLock
             public void run() {
                 synchronized (secondResource) {
                     System.out.println(this.getName() + " : Second Resource is locked ");
-                    try {Thread.sleep(50);}
+                    try {Thread.sleep(1000);}
                     catch(Exception e){}
                     synchronized (firstResource) {
                         System.out.println("First Resource is locked");
@@ -32,11 +32,20 @@ public class DeadLock
                 }
             }
         };
-        
+
         t1.start();
         t2.start();
     }
 }
 
-/*Second Thread : Second Resource is locked 
-First Thread : First Resource is Locked */
+/*
+O/P: Second Thread : Second Resource is locked 
+     First Thread : First Resource is Locked
+
+The first synchronization in thread 1 already sets first resource to
+locked, which is then suspended by using sleep. This means that the program proceeds to run thread 2, which produces the
+screen output about second resource, while once again sleeping to allow thread 1 to run.
+
+However, the program is now stuck due to deadlock because thread 1 must wait for second resource to be free of lock in
+thread 2, which means that the next thread for processing is thread 2. The thread 2 faces a similar situation as first resource is
+similarly locked by the thread 1, creating a condition where the program is logically stuck.*/
