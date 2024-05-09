@@ -28,12 +28,10 @@ public class Matrix
         }
         
         StringBuilder sb = new StringBuilder();
-        sb.append('[');
         for (int i = 0 ; i < arr.length ; i++ ) {
             sb.append('\n');
             sb.append(Arrays.toString(arr[i]));
         }
-        sb.append("\n]");
         System.out.println(sb.toString());
     }
 }
