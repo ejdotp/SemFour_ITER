@@ -28,12 +28,17 @@ public class Matrix
         }
         
         StringBuilder sb = new StringBuilder();
+        sb.append('[');
         for (int i = 0 ; i < arr.length ; i++ ) {
-            sb.append('\n');
             sb.append(Arrays.toString(arr[i]));
+            if(i <  arr.length - 1)
+                sb.append('\n');
         }
+        sb.append("]");
         System.out.println(sb.toString());
     }
 }
 
-/*[[-242341, -1785124, 728511], [414515, -1886714, -1863612], [1612101, 735169, -1749393]] */
+/*[[-1422397, -2063977, -712082]
+[-1308465, 1416489, -250414]
+[-1128396, -1730408, -637283]]*/
