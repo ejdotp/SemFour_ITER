@@ -71,3 +71,5 @@ class WeightedIntervalScheduling
 	}
 
 }
+
+// The optimal profit is 250
