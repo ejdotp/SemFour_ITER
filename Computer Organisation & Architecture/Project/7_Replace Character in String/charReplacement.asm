@@ -18,7 +18,7 @@ MAIN PROC
     
                                ;Print STR1:                         
     LEA DX, STR1               ;Offset Address of 1st letter in STR1 stored into DX
-    MOV AH, 09H                ;Instruction 09h -> Writes String to standard output(console) untill '$' encountered
+    MOV AH, 09H                ;Instruction 09h -> Writes String to standard output(console) until '$' encountered
     INT 21H                    ;Calls the Instruction       
       
     MOV DI, (STR1 + LEN - 1)   ;DI points to last Character of STR1
@@ -29,7 +29,7 @@ MAIN PROC
     MOV AH, 09H                ;Print STR2
     INT 21H   
     
-    MOV AH, 01H                ;INT 21H/01H: Halts the programm until user enters a character 
+    MOV AH, 01H                ;INT 21H/01H: Halts the program until user enters a character 
     INT 21H                    ;and stores character in ASCII in AL
     MOV BL, AL                 ;Copied into BL (Character to be replaced = target)         
     
@@ -37,9 +37,9 @@ MAIN PROC
     MOV AH, 09H                ;Print STR3
     INT 21H  
     
-    MOV AH, 01H                ;INT 21H/01H: Halts the programm until user enters a character
+    MOV AH, 01H                ;INT 21H/01H: Halts the program until user enters a character
     INT 21H                    ;and stores character in ASCII in AL                 
-    MOV BH, AL                 ;Store copy in BH(Characted to replace with) 
+    MOV BH, AL                 ;Store copy in BH(Character to replace with) 
     MOV AL, BL                 ;Take back target into AL  
     
 COMPARE:
