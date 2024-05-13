@@ -3,7 +3,7 @@
  * Provide the necessary constructor. Additionally, create a method to insert a
  * node into a binary search tree.*/
 
-public class BSTNode {
+class BSTNode {
     int info;
     BSTNode left;
     BSTNode right;
@@ -30,3 +30,15 @@ public class BSTNode {
         }
     }
 }
+
+public class Q1{
+    public static void main(String[] args) {
+        BSTNode root = new BSTNode(50);  // Root of the Binary Search Tree
+        root.insert(20);                       
+        root.insert(60);    
+
+        System.out.print(root.left.info + " " + root.info + " " + root.right.info); 
+    }
+}
+
+//20 50 60
