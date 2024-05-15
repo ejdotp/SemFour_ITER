@@ -5,70 +5,120 @@
  * Case 2: Node x has one child.
  * Case 3: Node x has two children.*/
 
- public class BST {
-    BNode root;
+class Node {
+    int key;
+    Node left, right;
 
-    // Other methods are defined here...
+    public Node(int item) {
+        key = item;
+        left = right = null;
+    }
+}
 
-    public void delete(int value) {
-        root = deleteRec(root, value);
+class BinarySearchTree {
+    Node root;
+
+    BinarySearchTree() {
+        root = null;
     }
 
-    private BNode deleteRec(BNode root, int value) {
+    void insert(int key) {
+        root = insertRec(root, key);
+    }
+
+    Node insertRec(Node root, int key) {
         if (root == null) {
+            root = new Node(key);
             return root;
         }
 
-        if (value < root.info.population) {
-            root.left = deleteRec(root.left, value);
-        } else if (value > root.info.population) {
-            root.right = deleteRec(root.right, value);
-        } else {
-            // Node with only one child or no child
-            if (root.left == null) {
+        if (key < root.key)
+            root.left = insertRec(root.left, key);
+        else if (key > root.key)
+            root.right = insertRec(root.right, key);
+
+        return root;
+    }
+
+    void inorder() {
+        inorderRec(root);
+    }
+
+    void inorderRec(Node root) {
+        if (root != null) {
+            inorderRec(root.left);
+            System.out.print(root.key + " ");
+            inorderRec(root.right);
+        }
+    }
+
+    void deleteKey(int key) {
+        root = deleteRec(root, key);
+    }
+
+    Node deleteRec(Node root, int key) {
+        if (root == null)
+            return root;
+
+        if (key < root.key)
+            root.left = deleteRec(root.left, key);
+        else if (key > root.key)
+            root.right = deleteRec(root.right, key);
+        else {
+            if (root.left == null)
                 return root.right;
-            } else if (root.right == null) {
+            else if (root.right == null)
                 return root.left;
-            }
 
-            // Node with two children: Get the inorder successor (smallest in the right subtree)
-            root.info = minValue(root.right);
+            root.key = minValue(root.right);
 
-            // Delete the inorder successor
-            root.right = deleteRec(root.right, root.info.population);
+            root.right = deleteRec(root.right, root.key);
         }
 
         return root;
     }
 
-    private Country minValue(BNode root) {
-        Country minv = root.info;
+    int minValue(Node root) {
+        int minv = root.key;
         while (root.left != null) {
-            minv = root.left.info;
+            minv = root.left.key;
             root = root.left;
         }
         return minv;
     }
+}
 
-    // Other methods such as levelOrderTraversal, findMax, findMin are defined here...
-
+class Main {
     public static void main(String[] args) {
-        BST bst = new BST();
+        BinarySearchTree tree = new BinarySearchTree();
 
-        bst.insert(new Country("USA", 328_200_000));
-        bst.insert(new Country("China", 1_394_015_977));
-        bst.insert(new Country("India", 1_366_417_754));
-        bst.insert(new Country("Brazil", 211_049_527));
-        bst.insert(new Country("Pakistan", 216_565_318));
+        tree.insert(50);
+        tree.insert(30);
+        tree.insert(20);
+        tree.insert(40);
+        tree.insert(70);
+        tree.insert(60);
+        tree.insert(80);
 
-        System.out.println("Original tree:");
-        bst.levelOrderTraversal();
+        System.out.println("Inorder traversal of the original tree:");
+        tree.inorder();
         System.out.println();
 
-        // Deleting a node
-        bst.delete(211049527); // Deleting Brazil
+        System.out.println("Deleting 20 from the tree:");
+        tree.deleteKey(20);
+        System.out.println("Inorder traversal of the modified tree:");
+        tree.inorder();
+        System.out.println();
 
-        System.out.println("Tree after deletion:");
-        bst.levelOrderTraversal();
+        System.out.println("Deleting 30 from the tree:");
+        tree.deleteKey(30);
+        System.out.println("Inorder traversal of the modified tree:");
+        tree.inorder();
+        System.out.println();
+
+        System.out.println("Deleting 50 from the tree:");
+        tree.deleteKey(50);
+        System.out.println("Inorder traversal of the modified tree:");
+        tree.inorder();
     }
 }
