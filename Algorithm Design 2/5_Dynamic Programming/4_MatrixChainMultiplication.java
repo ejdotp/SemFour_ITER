@@ -1,4 +1,3 @@
-
 // Java program for matrix chain multiplication using memoization 
 
 import java.util.*;
@@ -29,7 +28,7 @@ class Question4
 
     public static void main(String[] args)
     {
-        int[] arr = { 1, 2, 3, 4 };
+        int[] arr = { 3, 2, 4, 2, 5 };
         int n = arr.length;
 
         for (int[] row : m)
