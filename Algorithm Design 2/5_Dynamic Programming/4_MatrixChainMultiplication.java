@@ -28,7 +28,7 @@ class Question4
 
     public static void main(String[] args)
     {
-        int[] arr = { 3, 2, 4, 2, 5 };
+        int[] arr = { 3, 2, 4, 2, 5 }; //A3x2 x B2x4 x C4x2 x D2x5
         int n = arr.length;
 
         for (int[] row : m)
@@ -37,3 +37,5 @@ class Question4
         System.out.println("Minimum number of multiplications is " + MatrixChainOrder(arr, n));
     }
 }
+/*Output:
+Minimum number of multiplications is 58*/
