@@ -7,7 +7,8 @@ Project Metadata:
   1. Group: com.Section-44  
   2. Artifact & Name: Spring-learn-Jagadeeswar   
   3. Description: Change to your wish or leave it at default  
-  4. Package Name: should automatically be edited  
+  4. Package Name: should automatically be edited
+ 
 Packaging Jar  
 Java vs 22 or whaqtever you are comfortable with  
 Click generate  
