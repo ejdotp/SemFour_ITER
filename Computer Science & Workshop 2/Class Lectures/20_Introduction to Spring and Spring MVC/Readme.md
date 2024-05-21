@@ -1,4 +1,4 @@
-**Spring IOnitializer:**  
+**Spring Initializer:**  
 
 go to start.spring.io  
 select maven  
