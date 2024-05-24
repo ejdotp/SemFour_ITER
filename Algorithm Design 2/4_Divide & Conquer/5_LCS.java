@@ -5,7 +5,7 @@ class LCS{
     static int LCSmethod(int i, int j)
     {
         if ( i == 0 || j == 0)
-            return 0;
+            return LCS;
         
         if (X.charAt(i-1) == Y.charAt(j-1))
             return 1 + LCSmethod(i-1, j-1);
