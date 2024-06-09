@@ -23,4 +23,5 @@ public class Tester{
 false
 true
 23:59:59.999999999
-00:00*/
+00:00
+*/
