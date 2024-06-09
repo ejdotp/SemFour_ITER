@@ -4,11 +4,17 @@
 mov ax, 0000h
 mov ds, ax
                 ; part 1
-mov si, 2000h   ; input data at 2000 memory location
-mov al, [si]    ; give that data to al
-ror al, 04h     ; 4 times right shift
+mov si, 2000h   ; input data at 2000 memory location   si = 2000h   
+mov al, [si]    ; give that data to al                 mov al, [2000h]     indexed adressing
+
+;mov ax, 2000h   ; ax = 2000h                            immediate addressing
+
+;mov ax, [2000h]                                         ;direct addressing
+
+ror al, 04h     ; 4 times rotate right
 inc si          ; si=2001
-mov [si], al    ; al = data 1  
+mov [si+1], al    ; al = data 1   
+
                 ; part 2
 mov di, 2010h     
 mov bl, [di]    ; bl = data 2
