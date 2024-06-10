@@ -8,9 +8,9 @@ _start:
 	ldr r5, =odd @ r5 = base address of odd data location =odd[0]
 back: ldr r6, [r3], #4
 	  ands r7, r6, #1
-	  beq fwd
+	  beq fwd //when zero flag is set if and equals 0, even
 	  str r6, [r5], #4
-	  b fwd1
+	  b fwd1 // b mane direct jump
 fwd:  str r6, [r4], #4
 fwd1: subs r1, r1, #01
 	  bne back
