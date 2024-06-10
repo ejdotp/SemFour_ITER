@@ -7,10 +7,10 @@ _start:
 	ldr r2, =array
 back: ldr r3, [r2], #4
 	cmp r4, r3 
-	bgt fwd //signed integer comparision gave greater than
+	bgt fwd //signed integer comparision gave greater than //branch if greater than
 	mov r4, r3
 fwd: subs r1, r1, #01
-	bne back //comparision not equal or non zero result
+	bne back //comparision not equal or non zero result //branch if not equal to
 	str r4, [r2]
 exit: b exit
 
