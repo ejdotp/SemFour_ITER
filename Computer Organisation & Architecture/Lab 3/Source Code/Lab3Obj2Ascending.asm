@@ -10,17 +10,17 @@
 MAIN PROC
     mov ax, data        ; store data to ax
     mov ds, ax          ; store value of ax in ds
-    mov ch, count       ; cl = 04h
+    mov ch, count       ; ch = 06h
     dec ch              ; decrementing cl by one (cl =  05h)
 
-UP2:   mov cl, ch       ; store the current index value in bl
+UP2:   mov cl, ch       ; store the current index value in cl
        lea si, value    ; load effective address of 'value' into si
           
 UP1:   mov al, [SI]     ; move 1st value of array into al
        cmp al, [si+1]   ; Compare 1st and 2nd element of array and update in al
        jc DOWN          ; jump if carry
        mov dl, [si+1]   ; move 2nd value of array into dl
-       xchg [si+1], dl  ; exchange 1st and 2nd element of array
+       xchg [si], dl    ; exchange 1st and 2nd element of array
        mov [si+1], dl   ; store dl in 2nd position of array
     
 DOWN:  inc si           ; increment index for next iteration 

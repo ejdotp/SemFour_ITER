@@ -1,5 +1,7 @@
 ; E. Jagadeeswar Patro
 ; 2241016309
+; count number of zeroes
+
 mov ax, 0000h 
 mov ds, ax 
 

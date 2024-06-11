@@ -1,5 +1,6 @@
 ;E. Jagadeeswar Patro
 ;2241016309
+; Find sum and avg of 16bit data
 
 mov ax, 0000h
 mov ds, ax
