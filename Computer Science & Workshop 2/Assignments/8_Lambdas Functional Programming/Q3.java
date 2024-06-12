@@ -3,65 +3,44 @@
 // that generates prime numbers. Demonstrate lazy evaluationby printing the
 // first few prime numbers from the lazy sequence.
 
-import java.util.Iterator;
+import java.util.function.IntPredicate;
+import java.util.stream.IntStream;
 
-class LazyPrimeSequence implements Iterable<Integer> {
-    public static void main(String[] args) {
-        LazyPrimeSequence primeSequence = new LazyPrimeSequence();
-        Iterator<Integer> primeIterator = primeSequence.iterator();
-        for (int i = 0; i < 10; i++) {
-            System.out.println(primeIterator.next());
-        }
-    }
-
-    @Override
-    public Iterator<Integer> iterator() {
-        return new PrimeIterator();
-    }
-
-    private static class PrimeIterator implements Iterator<Integer> {
-        private int current = 1;
-
-        @Override
-        public boolean hasNext() {
-            return true; // Infinite sequence of primes
-        }
-
-        @Override
-        public Integer next() {
-            current = nextPrime(current);
-            return current;
-        }
-
-        private int nextPrime(int after) {
-            int number = after + 1;
-            while (!isPrime(number)) {
-                number++;
-            }
-            return number;
-        }
-
-        private boolean isPrime(int number) {
-            if (number <= 1) {
+public class Q3 {
+    public static IntPredicate primeNumbersInRange(int start, int end) {
+        return number -> {
+            if (number <= 1)
                 return false;
-            }
-            for (int i = 2; i <= Math.sqrt(number); i++) {
-                if (number % i == 0) {
+            if (number == 2)
+                return true;
+            if (number % 2 == 0)
+                return false;
+            for (int i = 3; i <= Math.sqrt(number); i += 2) {
+                if (number % i == 0)
                     return false;
-                }
             }
             return true;
-        }
+        };
+    }
+
+    public static void main(String[] args) {
+        int start = 10;
+        int end = 50;
+
+        System.out.println("Prime numbers between " + start + " and " + end + ":");
+        IntStream.rangeClosed(start, end)
+                .filter(primeNumbersInRange(start, end))
+                .forEach(System.out::println);
     }
 }
-// Output:
-// 2
-// 3
-// 5
-// 7
-// 11
-// 13
-// 17
-// 19
-// 23
-// 29
+/*
+ * N.B: The primeNumbersInRange method returns an IntPredicate, which is a
+ * functional interface representing a predicate (boolean-valued function) of
+ * one int-valued argument. This lambda expression checks if a number is prime
+ * by checking divisibility up to the square root of the number. In the main
+ * method, we define the start and end of the range. We use
+ * IntStream.rangeClosed(start, end) to generate a stream of integers from start
+ * to end (inclusive). The stream is filtered using the primeNumbersInRange
+ * predicate to retain only prime numbers. Finally, each prime number is printed
+ * using forEach(System.out::println).
+ */

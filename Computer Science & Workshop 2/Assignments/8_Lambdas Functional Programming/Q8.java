@@ -3,12 +3,15 @@
 // that implements the Runnable interface and prints"Hello, CSW2!". Create a
 // thread using the lambda expression and start the thread.
 
-public class Q8 {
+class LambdaThreadExample {
     public static void main(String[] args) {
-        Runnable task = () -> System.out.println("Hello, CSW2!");
-        Thread thread = new Thread(task);
+        // Define a lambda expression as the Runnable
+        Runnable runnable = () -> {
+            System.out.println(Thread.currentThread().getName() + " is running...");
+            System.out.println("Hello, CSW2!");
+        };
+        // Create and start the thread using the lambda expression
+        Thread thread = new Thread(runnable);
         thread.start();
     }
 }
-
-// Output: Hello, CSW2!

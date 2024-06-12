@@ -3,35 +3,29 @@
 // compares strings based on their lengths. Usethe custom comparator to sort the
 // list of strings in descending orderof length.
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-interface StringComparator {
-    int compareStrings(String str1, String str2);
-}
+import java.util.*;
 
 public class Q2 {
     public static void main(String[] args) {
+        // Create a list of strings
         List<String> strings = new ArrayList<>();
-        strings.add("black");
-        strings.add("Monday");
-        strings.add("mathematics");
-        strings.add("computer");
-        strings.add("kiwi");
-        StringComparator lengthComparator = (str1, str2) -> Integer.compare(str2.length(), str1.length());
-        Collections.sort(strings, (str1, str2) -> lengthComparator.compareStrings(str1, str2));
-        System.out.println("Sorted list of strings in descendingorder of length:");
-        for (String str : strings) {
+        strings.add("India");
+        strings.add("Canada");
+        strings.add("RKL");
+        strings.add("BBSR");
+        strings.add("UnitedKingdom");
+        strings.add("Fig");
+        strings.add("Nepal");
+
+        // Define a custom comparator using a lambda expression
+        Comparator<String> lengthComparator = (s1, s2) -> Integer.compare(s2.length(), s1.length());
+
+        // Sort the list of strings in descending order of length
+        Collections.sort(strings, lengthComparator);
+
+        // Print the sorted list
+        System.out.println("Strings sorted by length in descending order:");
+        for (String str : strings) 
             System.out.println(str);
-        }
     }
 }
-
-// Output:
-// Sorted list of strings in descending order of length:
-// mathematics
-// computer
-// Monday
-// black
-// kiwi

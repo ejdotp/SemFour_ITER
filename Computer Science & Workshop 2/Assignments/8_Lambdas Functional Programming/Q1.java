@@ -2,38 +2,34 @@
 //Implement thesemethods using lambda expressions. Define the Calculator functionalinterface with methods for arithmetic
 //operations. Implement theinterface methods using lambda expressions for basic arithmeticoperations.
 
+import java.util.*;
+
+@FunctionalInterface
 interface Calculator {
-    double calculate(double x, double y);
+    double calculate(double a, double b);
 }
 
 public class Q1 {
     public static void main(String[] args) {
-        double a = 10;
-        double b = 5;
-        Calculator addition = (x, y) -> x + y;
-        {
-            System.out.println("Addition: " + addition.calculate(a, b));
-        }
-        ;
-        Calculator subtraction = (x, y) -> x - y;
-        {
-            System.out.println("Subtraction: " + subtraction.calculate(a, b));
-        }
-        ;
-        Calculator multiplication = (x, y) -> x * y;
-        {
-            System.out.println("Multiplication: " + multiplication.calculate(a, b));
-        }
-        ;
-        Calculator division = (x, y) -> {
-            if (y == 0) {
-                throw new ArithmeticException("Division by zero!");
+
+        Calculator add = (a, b) -> a + b;
+        Calculator subtract = (a, b) -> a - b;
+        Calculator multiply = (a, b) -> a * b;
+        Calculator divide = (a, b) -> {
+            if (b == 0) {
+                throw new ArithmeticException("Division by zero is not allowed.");
             }
-            return x / y;
+            return a / b;
         };
-        System.out.println("Division: " + division.calculate(a, b));
+        double num1 = 10;
+        double num2 = 5;
+        System.out.println("Addition: " + add.calculate(num1, num2));
+        System.out.println("Subtraction: " + subtract.calculate(num1, num2));
+        System.out.println("Multiplication: " + multiply.calculate(num1, num2));
+        System.out.println("Division: " + divide.calculate(num1, num2));
     }
 }
+
 // Output:
 // Addition: 15.0
 // Subtraction: 5.0

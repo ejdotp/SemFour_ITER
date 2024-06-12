@@ -2,50 +2,19 @@
 // filters out the strings starting with a vowel, and thenprints the remaining
 // strings.
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
-public class Q5 {
+class StringTransformation {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the number of strings:");
-        int n = scanner.nextInt();
-        scanner.nextLine();
-        List<String> strings = new ArrayList<>();
-        System.out.println("Enter the strings:");
-        for (int i = 0; i < n; i++) {
-            strings.add(scanner.nextLine());
-        }
-        List<String> result = new ArrayList<>();
-        for (String str : strings) {
-            String upperStr = str.toUpperCase();
-            if (!startsWithVowel(upperStr)) {
-                result.add(upperStr);
-            }
-        }
-        System.out.println("Filtered strings:");
-        for (String str : result) {
-            System.out.println(str);
-        }
-        scanner.close();
-    }
+        List<String> strings = Arrays.asList("apple", "banana", "orange", "grape", "kiwi", "melon");
 
-    private static boolean startsWithVowel(String str) {
-        if (str.isEmpty())
-            return false;
-        char firstChar = str.charAt(0);
-        return firstChar == 'A' || firstChar == 'E' || firstChar == 'I' || firstChar == 'O' || firstChar == 'U';
+        List<String> transformedStrings = strings.stream()
+                .map(String::toUpperCase) // Convert to uppercase
+                .filter(str -> !str.matches("^[AEIOU].*")) // Filter out strings starting with a vowel
+                .collect(Collectors.toList()); // Collect the remaining strings into a list
+                
+        System.out.println("Transformed strings:");
+        transformedStrings.forEach(System.out::println); // Print the remaining strings
     }
 }
-
-// Output:
-
-// Enter the
-// number of strings:5
-// Enter the strings:
-// apple banana
-// orange grape
-// umbrella Filtered strings:
-// BANANA
-// GRAPE

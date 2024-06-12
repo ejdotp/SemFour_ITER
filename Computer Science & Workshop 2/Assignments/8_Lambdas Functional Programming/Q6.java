@@ -6,23 +6,22 @@
 
 import java.util.function.Function;
 
-public class Q6 {
-    public static void main(String[] args) {
-        Function<Integer, Integer> squareFunction = getSquareFunction();
-        int number1 = 5;
-        int number2 = 10;
-        System.out.println("The square of " + number1 + " is: " + squareFunction.apply(number1));
-        System.out.println("The square of " + number2 + " is: " + squareFunction.apply(number2));
+class FunctionReturningFunction {
+    // Define a function that returns another function
+    public static Function<Integer, Integer> squareFunction() {
+        return (Integer n) -> n * n;
     }
 
-    public static Function<Integer, Integer> getSquareFunction() {// Inner function
-        class SquareFunction implements Function<Integer, Integer> {
-            @Override
-            public Integer apply(Integer x) {
-                return x * x;
-            }
-        }
-        return new SquareFunction();
+    public static void main(String[] args) {
+        // Get the square function
+        Function<Integer, Integer> squareFn = squareFunction();
+        // Demonstrate the use of the returned function to calculate squares
+        int number1 = 5;
+        int number2 = 10;
+        int square1 = squareFn.apply(number1);
+        int square2 = squareFn.apply(number2);
+        System.out.println("Square of " + number1 + " is: " + square1);
+        System.out.println("Square of " + number2 + " is: " + square2);
     }
 }
 
