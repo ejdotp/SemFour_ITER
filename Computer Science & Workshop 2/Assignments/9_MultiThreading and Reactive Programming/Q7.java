@@ -36,3 +36,45 @@ class CompletableFutureExample {
 // Task 1 completed with result: 456
 // Task 2 completed with result: 789
 // Combined result: 1245
+
+/*import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+
+ class CompletableFutureDemo {
+    public static void main(String[] args) {
+        // Simulate fetching data from a remote server
+        CompletableFuture<String> fetchData = CompletableFuture.supplyAsync(() -> {
+            // Simulate delay
+            sleep(2000);
+            return "Data from remote server";
+        });
+
+        // Simulate processing a large file
+        CompletableFuture<String> processFile = CompletableFuture.supplyAsync(() -> {
+            // Simulate delay
+            sleep(3000);
+            return "Processed file content";
+        });
+
+        // Combine the results of both tasks
+        CompletableFuture<String> combinedResult = fetchData.thenCombine(processFile, (data, file) -> {
+            return "Combined result: " + data + " + " + file;
+        });
+
+        // Further process the combined result
+        CompletableFuture<String> finalResult = combinedResult.thenApply(result -> {
+            return result.toUpperCase();
+        });
+
+        // Print the final result
+        System.out.println(finalResult.get());
+    }
+
+    private static void sleep(int milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+} */
